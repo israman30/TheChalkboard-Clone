@@ -10,6 +10,8 @@ import UIKit
 
 let setBackgroundColor = UIColor(red: 41/255, green: 45/255, blue: 41/255, alpha: 1)
 
+let navBarBackgroundColor = UIColor(red: 76/255, green: 79/255, blue: 76/255, alpha: 1)
+
 class TaskVC:UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var selectedList: List!
@@ -78,7 +80,7 @@ class TaskVC:UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     // MARK: SET NAVBAR
     func setTaskNavBar(){
-        navigationController?.navigationBar.barTintColor = UIColor(red: 76/255, green: 79/255, blue: 76/255, alpha: 1)
+        navigationController?.navigationBar.barTintColor = navBarBackgroundColor
         
         navigationController?.navigationBar.titleTextAttributes = [
             NSAttributedStringKey.font: UIFont(name:"Marker Felt", size:25.0)!,
