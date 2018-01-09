@@ -1,4 +1,5 @@
 # TheChalkboard-Clone
+### This version is coded without storyboards and using user defaults to store data locally based on that any task once is done can be deleted.
 
 ![Alt Image Text](img/main.png)
 
