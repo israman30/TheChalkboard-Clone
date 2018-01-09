@@ -10,6 +10,8 @@ import UIKit
 
 let navBarTintColor = UIColor(red: 76/255, green: 79/255, blue: 76/255, alpha: 1)
 
+let mainViewBackgroundColor = UIColor(red: 41/255, green: 45/255, blue: 41/255, alpha: 1)
+
 class MainVC: UIViewController {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -98,14 +100,14 @@ class MainVC: UIViewController {
     
     private func setMainView(){
         
-        let backGroundColor = UIColor(red: 41/255, green: 45/255, blue: 41/255, alpha: 1)
+        let backGroundColor = mainViewBackgroundColor
         
         tableView.delegate = self
         tableView.dataSource = self
         
         tableView.layer.cornerRadius = 5
     
-        view.backgroundColor = backGroundColor
+        view.backgroundColor = mainViewBackgroundColor
         view.addSubview(tableView)
         view.addSubview(myLabel)
         view.addSubview(textField)
