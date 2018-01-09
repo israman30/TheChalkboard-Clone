@@ -89,6 +89,7 @@ class DetailVC: UIViewController {
     
     @objc func barButtonDoneTapped(){
         let dateFormatter = DateFormatter()
+        
         dateFormatter.dateStyle = .short
         dateFormatter.timeStyle = .short
         
