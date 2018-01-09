@@ -113,7 +113,7 @@ class DetailVC: UIViewController {
         guard let detail = textView.text else {return}
         guard let dateDetail = dateLabel.text else {return}
         
-        if !detail.isEmpty  || !dateDetail.isEmpty{
+        if !detail.isEmpty || !dateDetail.isEmpty {
             selectedTask?.detail = detail
             selectedTask?.date = dateDetail
             detailPersistDefaults.persistListToDefaults()
