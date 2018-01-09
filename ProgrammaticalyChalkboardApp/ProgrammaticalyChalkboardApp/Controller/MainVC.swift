@@ -8,9 +8,12 @@
 
 import UIKit
 
+
+
 let mainNavBarTintColor = UIColor(red: 76/255, green: 79/255, blue: 76/255, alpha: 1)
 
 let mainViewBackgroundColor = UIColor(red: 41/255, green: 45/255, blue: 41/255, alpha: 1)
+
 
 class MainVC: UIViewController {
     
