@@ -100,8 +100,6 @@ class MainVC: UIViewController {
     
     private func setMainView(){
         
-        let backGroundColor = mainViewBackgroundColor
-        
         tableView.delegate = self
         tableView.dataSource = self
         
