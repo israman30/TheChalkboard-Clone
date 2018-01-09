@@ -8,7 +8,7 @@
 
 import UIKit
 
-let navBarTintColor = UIColor(red: 76/255, green: 79/255, blue: 76/255, alpha: 1)
+let mainNavBarTintColor = UIColor(red: 76/255, green: 79/255, blue: 76/255, alpha: 1)
 
 let mainViewBackgroundColor = UIColor(red: 41/255, green: 45/255, blue: 41/255, alpha: 1)
 
@@ -89,7 +89,7 @@ class MainVC: UIViewController {
     }
     
     private func setNavBar(){
-        navigationController?.navigationBar.barTintColor = navBarTintColor
+        navigationController?.navigationBar.barTintColor = mainNavBarTintColor
         navigationController?.navigationBar.titleTextAttributes = [
             NSAttributedStringKey.font: UIFont(name:"Marker Felt", size:25.0)!,
             NSAttributedStringKey.foregroundColor:UIColor.white
