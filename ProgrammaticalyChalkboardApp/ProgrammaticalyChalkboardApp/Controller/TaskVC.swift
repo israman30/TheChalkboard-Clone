@@ -8,6 +8,8 @@
 
 import UIKit
 
+let setBackgroundColor = UIColor(red: 41/255, green: 45/255, blue: 41/255, alpha: 1)
+
 class TaskVC:UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var selectedList: List!
@@ -89,7 +91,7 @@ class TaskVC:UIViewController, UITableViewDelegate, UITableViewDataSource {
     // MARK: - SET TASK MAIN VIEW
     func setMainTaskView(){
         
-        let backGroundColor = UIColor(red: 41/255, green: 45/255, blue: 41/255, alpha: 1)
+        let backGroundColor = setBackgroundColor
         
         view.backgroundColor = backGroundColor
         view.addSubview(tableView)
