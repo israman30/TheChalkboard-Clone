@@ -8,6 +8,8 @@
 
 import UIKit
 
+let detailNavBarTintColor = UIColor(red: 76/255, green: 79/255, blue: 76/255, alpha: 1)
+
 class DetailVC: UIViewController {
     
     var selectedTask: Items?
@@ -96,7 +98,7 @@ class DetailVC: UIViewController {
     func setNav(){
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveDetail))
         
-        navigationController?.navigationBar.barTintColor = UIColor(red: 76/255, green: 79/255, blue: 76/255, alpha: 1)
+        navigationController?.navigationBar.barTintColor = detailNavBarTintColor
         
         navigationController?.navigationBar.titleTextAttributes = [
             NSAttributedStringKey.font: UIFont(name:"Marker Felt", size:25.0)!,
