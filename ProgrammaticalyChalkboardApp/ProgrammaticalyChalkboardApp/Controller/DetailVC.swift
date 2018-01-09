@@ -10,6 +10,8 @@ import UIKit
 
 let detailNavBarTintColor = UIColor(red: 76/255, green: 79/255, blue: 76/255, alpha: 1)
 
+let detailBackGroundColor = UIColor(red: 41/255, green: 45/255, blue: 41/255, alpha: 1)
+
 class DetailVC: UIViewController {
     
     var selectedTask: Items?
@@ -137,8 +139,7 @@ class DetailVC: UIViewController {
     // MARK: - SEt DETAIL MAIN VIEW
     func setDetailView(){
         
-        let backGroundColor = UIColor(red: 41/255, green: 45/255, blue: 41/255, alpha: 1)
-        view.backgroundColor = backGroundColor
+        view.backgroundColor = detailBackGroundColor
         
         view.addSubview(textView)
         view.addSubview(useTheForceLabel)
