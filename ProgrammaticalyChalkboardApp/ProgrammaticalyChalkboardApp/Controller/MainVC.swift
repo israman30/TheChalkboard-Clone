@@ -92,7 +92,7 @@ class MainVC: UIViewController {
     }
     
     private func setNavBar(){
-        navigationController?.navigationBar.barTintColor = mainNavBarTintColor
+        navigationController?.navigationBar.barTintColor = UIColor.Colors.setNavBarTintColor
         navigationController?.navigationBar.titleTextAttributes = [
             NSAttributedStringKey.font: UIFont(name:"Marker Felt", size:25.0)!,
             NSAttributedStringKey.foregroundColor:UIColor.white
@@ -108,7 +108,7 @@ class MainVC: UIViewController {
         
         tableView.layer.cornerRadius = 5
     
-        view.backgroundColor = mainViewBackgroundColor
+        view.backgroundColor = UIColor.Colors.setViewBackgroundColor
         view.addSubview(tableView)
         view.addSubview(myLabel)
         view.addSubview(textField)
