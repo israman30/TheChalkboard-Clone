@@ -1,3 +1,3 @@
 # TheChalkboard-Clone
 
-![Alt Image Text](images/SecondScreenShot.png)
+![Alt Image Text](images/main.png)
