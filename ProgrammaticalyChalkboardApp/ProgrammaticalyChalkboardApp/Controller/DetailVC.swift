@@ -8,10 +8,6 @@
 
 import UIKit
 
-let detailNavBarTintColor = UIColor(red: 76/255, green: 79/255, blue: 76/255, alpha: 1)
-
-let detailBackGroundColor = UIColor(red: 41/255, green: 45/255, blue: 41/255, alpha: 1)
-
 class DetailVC: UIViewController {
     
     var selectedTask: Items?
@@ -101,7 +97,7 @@ class DetailVC: UIViewController {
     func setNav(){
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveDetail))
         
-        navigationController?.navigationBar.barTintColor = detailNavBarTintColor
+        navigationController?.navigationBar.barTintColor = UIColor.Colors.setNavBarTintColor
         
         navigationController?.navigationBar.titleTextAttributes = [
             NSAttributedStringKey.font: UIFont(name:"Marker Felt", size:25.0)!,
@@ -140,7 +136,7 @@ class DetailVC: UIViewController {
     // MARK: - SEt DETAIL MAIN VIEW
     func setDetailView(){
         
-        view.backgroundColor = detailBackGroundColor
+        view.backgroundColor = UIColor.Colors.setViewBackgroundColor
         
         view.addSubview(textView)
         view.addSubview(useTheForceLabel)

@@ -18,7 +18,6 @@ extension UIColor {
             return UIColor(red: 41/255, green: 45/255, blue: 41/255, alpha: 1)
         }
     }
-    
 }
 
 extension UIView {
