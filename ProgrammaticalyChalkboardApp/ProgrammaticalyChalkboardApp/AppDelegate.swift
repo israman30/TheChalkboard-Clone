@@ -44,8 +44,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: newComponents, repeats: false)
         let content = UNMutableNotificationContent()
+        let detail = DetailVC()
         content.title = "Chalkboard Reminder"
-        content.body = "Reminding.., task is coming due"
+        content.body = detail.titleDetailLabel.text!
+//        content.body = "Reminding.., task is coming due"
         content.sound = UNNotificationSound.default()
         
         let rquest = UNNotificationRequest(identifier: "textNotification", content: content, trigger: trigger)
