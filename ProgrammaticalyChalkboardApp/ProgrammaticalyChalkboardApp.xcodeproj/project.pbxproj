@@ -101,9 +101,9 @@
 				8D3E4BE21FD255FB007142C9 /* ExtensionView.swift */,
 				8DA6F1C021339BBD00531ABB /* Extension+MainViewSetUp.swift */,
 				8DA6F1CB2134616000531ABB /* Extension+ViewDetail.swift */,
+				8DA6F1C521345E2E00531ABB /* ExtensionTaskView.swift */,
 				8DA6F1D121346C7400531ABB /* MyCell.swift */,
 				8DF687131FF324B500E8BF8E /* TaskCell.swift */,
-				8DA6F1C521345E2E00531ABB /* ExtensionTaskView.swift */,
 				8DB291F32028B57300593AF7 /* Pacifico */,
 			);
 			path = View;

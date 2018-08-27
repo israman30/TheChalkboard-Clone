@@ -27,9 +27,8 @@ extension TaskVC {
     func setMainTaskView(){
         
         view.backgroundColor = UIColor.Colors.setViewBackgroundColor
-        view.addSubview(tableView)
-        view.addSubview(textField)
-        view.addSubview(button)
+
+        [tableView, textField, button].forEach { view.addSubview($0) }
         
         tableView.layer.cornerRadius = 5
         

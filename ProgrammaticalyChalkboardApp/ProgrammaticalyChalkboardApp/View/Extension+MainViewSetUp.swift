@@ -28,10 +28,8 @@ extension MainVC {
         tableView.layer.cornerRadius = 5
         
         view.backgroundColor = UIColor.Colors.setViewBackgroundColor
-        view.addSubview(tableView)
-        view.addSubview(myLabel)
-        view.addSubview(textField)
-        view.addSubview(button)
+
+        [tableView, myLabel, textField, button].forEach { view.addSubview($0) }
         
         button.setAnchor(top: view.topAnchor, left: nil, bottom: nil, right: view.rightAnchor, paddingTop: 140, paddingLeft: 0, paddingBottom: 0, paddingRight: 8, width:50, height: 50)
         

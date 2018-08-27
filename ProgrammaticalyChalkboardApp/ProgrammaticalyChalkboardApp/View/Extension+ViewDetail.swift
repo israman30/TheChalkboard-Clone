@@ -31,10 +31,7 @@ extension DetailVC {
         
         view.backgroundColor = UIColor.Colors.setViewBackgroundColor
         
-        view.addSubview(textView)
-        view.addSubview(useTheForceLabel)
-        view.addSubview(titleDetailLabel)
-        view.addSubview(dateLabel)
+        [textView, useTheForceLabel, titleDetailLabel, dateLabel].forEach { view.addSubview($0) }
         
         textView.layer.cornerRadius = 8
         
