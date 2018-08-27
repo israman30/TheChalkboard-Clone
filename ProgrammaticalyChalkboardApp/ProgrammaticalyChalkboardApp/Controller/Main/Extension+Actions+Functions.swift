@@ -26,4 +26,20 @@ extension MainVC {
         }
     }
     
+    // MARK: - Keyboard dismiss
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let taskViewController = segue.destination as! TaskVC
+        taskViewController.selectedList = myLists[(tableView.indexPathForSelectedRow?.row)!]
+    }
+    
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    
 }

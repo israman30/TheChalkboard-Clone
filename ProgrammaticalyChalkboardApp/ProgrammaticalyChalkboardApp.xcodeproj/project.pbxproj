@@ -17,6 +17,10 @@
 		8D88A2C61FDB3AE600564B52 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D88A2C51FDB3AE500564B52 /* DetailVC.swift */; };
 		8DA6F1BD21339A4400531ABB /* Extension+delegates+dataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6F1BC21339A4400531ABB /* Extension+delegates+dataSource.swift */; };
 		8DA6F1BF21339AE200531ABB /* Extension+Actions+Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6F1BE21339AE200531ABB /* Extension+Actions+Functions.swift */; };
+		8DA6F1C121339BBD00531ABB /* Extension+MainViewSetUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6F1C021339BBD00531ABB /* Extension+MainViewSetUp.swift */; };
+		8DA6F1C621345E2E00531ABB /* ExtensionTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6F1C521345E2E00531ABB /* ExtensionTaskView.swift */; };
+		8DA6F1C821345EB700531ABB /* Extension+DataSouce+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6F1C721345EB700531ABB /* Extension+DataSouce+Delegates.swift */; };
+		8DA6F1CA21345F1300531ABB /* Extension+Action+Functions+TaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6F1C921345F1300531ABB /* Extension+Action+Functions+TaskVC.swift */; };
 		8DB291F42028B57300593AF7 /* Pacifico in Resources */ = {isa = PBXBuildFile; fileRef = 8DB291F32028B57300593AF7 /* Pacifico */; };
 		8DF687141FF324B500E8BF8E /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF687131FF324B500E8BF8E /* Cells.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +38,10 @@
 		8D88A2C51FDB3AE500564B52 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		8DA6F1BC21339A4400531ABB /* Extension+delegates+dataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+delegates+dataSource.swift"; sourceTree = "<group>"; };
 		8DA6F1BE21339AE200531ABB /* Extension+Actions+Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Actions+Functions.swift"; sourceTree = "<group>"; };
+		8DA6F1C021339BBD00531ABB /* Extension+MainViewSetUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+MainViewSetUp.swift"; sourceTree = "<group>"; };
+		8DA6F1C521345E2E00531ABB /* ExtensionTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTaskView.swift; sourceTree = "<group>"; };
+		8DA6F1C721345EB700531ABB /* Extension+DataSouce+Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+DataSouce+Delegates.swift"; sourceTree = "<group>"; };
+		8DA6F1C921345F1300531ABB /* Extension+Action+Functions+TaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Action+Functions+TaskVC.swift"; sourceTree = "<group>"; };
 		8DB291F32028B57300593AF7 /* Pacifico */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Pacifico; sourceTree = "<group>"; };
 		8DF687131FF324B500E8BF8E /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,8 +80,6 @@
 				8D3E4BE11FD255D6007142C9 /* Controller */,
 				8D3E4BE01FD255CF007142C9 /* Model */,
 				8D3E4BDF1FD255C9007142C9 /* View */,
-				8D3E4BD41FD250BB007142C9 /* Assets.xcassets */,
-				8D3E4BD61FD250BB007142C9 /* LaunchScreen.storyboard */,
 				8D3E4BD91FD250BB007142C9 /* Info.plist */,
 			);
 			path = ProgrammaticalyChalkboardApp;
@@ -82,8 +88,12 @@
 		8D3E4BDF1FD255C9007142C9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8D3E4BD41FD250BB007142C9 /* Assets.xcassets */,
+				8D3E4BD61FD250BB007142C9 /* LaunchScreen.storyboard */,
 				8D3E4BE21FD255FB007142C9 /* ExtensionView.swift */,
 				8DF687131FF324B500E8BF8E /* Cells.swift */,
+				8DB291F32028B57300593AF7 /* Pacifico */,
+				8DA6F1C521345E2E00531ABB /* ExtensionTaskView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -92,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				8D3684E31FDB8684001854E9 /* Data.swift */,
+				8DA6F1C021339BBD00531ABB /* Extension+MainViewSetUp.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -99,14 +110,39 @@
 		8D3E4BE11FD255D6007142C9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8DA6F1C221345D3000531ABB /* Main */,
+				8DA6F1C321345D6300531ABB /* Task */,
+				8DA6F1C421345D7900531ABB /* Detail */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8DA6F1C221345D3000531ABB /* Main */ = {
+			isa = PBXGroup;
+			children = (
 				8D3E4BCF1FD250BB007142C9 /* MainVC.swift */,
 				8DA6F1BE21339AE200531ABB /* Extension+Actions+Functions.swift */,
 				8DA6F1BC21339A4400531ABB /* Extension+delegates+dataSource.swift */,
-				8D88A2C31FDAE93400564B52 /* TaskVC.swift */,
-				8D88A2C51FDB3AE500564B52 /* DetailVC.swift */,
-				8DB291F32028B57300593AF7 /* Pacifico */,
 			);
-			path = Controller;
+			path = Main;
+			sourceTree = "<group>";
+		};
+		8DA6F1C321345D6300531ABB /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				8D88A2C31FDAE93400564B52 /* TaskVC.swift */,
+				8DA6F1C921345F1300531ABB /* Extension+Action+Functions+TaskVC.swift */,
+				8DA6F1C721345EB700531ABB /* Extension+DataSouce+Delegates.swift */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		8DA6F1C421345D7900531ABB /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				8D88A2C51FDB3AE500564B52 /* DetailVC.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,11 +218,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D88A2C61FDB3AE600564B52 /* DetailVC.swift in Sources */,
+				8DA6F1C121339BBD00531ABB /* Extension+MainViewSetUp.swift in Sources */,
 				8DA6F1BF21339AE200531ABB /* Extension+Actions+Functions.swift in Sources */,
 				8DF687141FF324B500E8BF8E /* Cells.swift in Sources */,
 				8D3684E41FDB8684001854E9 /* Data.swift in Sources */,
 				8DA6F1BD21339A4400531ABB /* Extension+delegates+dataSource.swift in Sources */,
+				8DA6F1CA21345F1300531ABB /* Extension+Action+Functions+TaskVC.swift in Sources */,
 				8D3E4BD01FD250BB007142C9 /* MainVC.swift in Sources */,
+				8DA6F1C621345E2E00531ABB /* ExtensionTaskView.swift in Sources */,
+				8DA6F1C821345EB700531ABB /* Extension+DataSouce+Delegates.swift in Sources */,
 				8D3E4BE31FD255FB007142C9 /* ExtensionView.swift in Sources */,
 				8D3E4BCE1FD250BB007142C9 /* AppDelegate.swift in Sources */,
 				8D88A2C41FDAE93400564B52 /* TaskVC.swift in Sources */,
