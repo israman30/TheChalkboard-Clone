@@ -9,6 +9,7 @@
 import UIKit
 
 extension MainVC {
+    
     @objc func addButton(){
         guard let listText = textField.text else {return}
         if !listText.isEmpty {
@@ -20,9 +21,7 @@ extension MainVC {
             persistLisToDefaults.persistListToDefaults()
             textField.text = ""
         } else {
-            let alert = UIAlertController(title: "Error 4☠️4!", message: "Not list entered found", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-            present(alert, animated: true, completion: nil)
+            AlertController.alert(viewController: self, title: "Error 4☠️4!", message: "Not list entered found")
         }
     }
     
@@ -35,7 +34,6 @@ extension MainVC {
         let taskViewController = segue.destination as! TaskVC
         taskViewController.selectedList = myLists[(tableView.indexPathForSelectedRow?.row)!]
     }
-    
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent

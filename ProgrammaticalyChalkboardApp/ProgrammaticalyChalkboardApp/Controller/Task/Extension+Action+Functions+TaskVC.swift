@@ -21,9 +21,7 @@ extension TaskVC {
             persistTaskDefault.persistListToDefaults()
             textField.text = ""
         } else {
-            let alert = UIAlertController(title: "Error 4☠️4!", message: "Not task entered found", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-            present(alert, animated: true, completion: nil)
+            AlertController.alert(viewController: self, title: "Error 4☠️4!", message: "Not task entered found")
         }
     }
     

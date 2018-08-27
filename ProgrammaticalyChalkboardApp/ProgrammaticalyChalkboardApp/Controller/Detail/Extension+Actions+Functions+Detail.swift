@@ -9,6 +9,7 @@
 import UIKit
 
 extension DetailVC {
+    
     func createDatePicker(){
         datePicker.datePickerMode = .dateAndTime
         datePicker.setValue(UIColor.white, forKey: "textColor")
@@ -38,8 +39,9 @@ extension DetailVC {
     
     // MARK: - BAR ITEM ACTION - SAVING INPUT
     @objc func saveDetail(){
-        guard let detail = textView.text else {return}
-        guard let dateDetail = dateLabel.text else {return}
+        
+        guard let detail = textView.text,
+              let dateDetail = dateLabel.text else {return}
         
         if !detail.isEmpty || !dateDetail.isEmpty {
             selectedTask?.detail = detail
