@@ -23,6 +23,7 @@
 		8DA6F1CA21345F1300531ABB /* Extension+Action+Functions+TaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6F1C921345F1300531ABB /* Extension+Action+Functions+TaskVC.swift */; };
 		8DA6F1CC2134616000531ABB /* Extension+ViewDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6F1CB2134616000531ABB /* Extension+ViewDetail.swift */; };
 		8DA6F1CE2134624900531ABB /* Extension+Actions+Functions+Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6F1CD2134624900531ABB /* Extension+Actions+Functions+Detail.swift */; };
+		8DA6F1D02134631E00531ABB /* AlertController+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6F1CF2134631E00531ABB /* AlertController+Helper.swift */; };
 		8DB291F42028B57300593AF7 /* Pacifico in Resources */ = {isa = PBXBuildFile; fileRef = 8DB291F32028B57300593AF7 /* Pacifico */; };
 		8DF687141FF324B500E8BF8E /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF687131FF324B500E8BF8E /* Cells.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,7 @@
 		8DA6F1C921345F1300531ABB /* Extension+Action+Functions+TaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Action+Functions+TaskVC.swift"; sourceTree = "<group>"; };
 		8DA6F1CB2134616000531ABB /* Extension+ViewDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+ViewDetail.swift"; sourceTree = "<group>"; };
 		8DA6F1CD2134624900531ABB /* Extension+Actions+Functions+Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Actions+Functions+Detail.swift"; sourceTree = "<group>"; };
+		8DA6F1CF2134631E00531ABB /* AlertController+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertController+Helper.swift"; sourceTree = "<group>"; };
 		8DB291F32028B57300593AF7 /* Pacifico */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Pacifico; sourceTree = "<group>"; };
 		8DF687131FF324B500E8BF8E /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +110,7 @@
 			children = (
 				8D3684E31FDB8684001854E9 /* Data.swift */,
 				8DA6F1C021339BBD00531ABB /* Extension+MainViewSetUp.swift */,
+				8DA6F1CF2134631E00531ABB /* AlertController+Helper.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				8D3E4BE31FD255FB007142C9 /* ExtensionView.swift in Sources */,
 				8D3E4BCE1FD250BB007142C9 /* AppDelegate.swift in Sources */,
 				8D88A2C41FDAE93400564B52 /* TaskVC.swift in Sources */,
+				8DA6F1D02134631E00531ABB /* AlertController+Helper.swift in Sources */,
 				8DA6F1CC2134616000531ABB /* Extension+ViewDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

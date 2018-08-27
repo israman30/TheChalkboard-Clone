@@ -47,17 +47,13 @@ extension DetailVC {
             detailPersistDefaults.persistListToDefaults()
             savingDataDetailAlertMsg()
         } else {
-            let alert = UIAlertController(title: "☠️", message: "Enter a description please", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-            present(alert, animated: true, completion: nil)
+            AlertController.alert(viewController: self, title: "☠️", message: "Enter a detail please")
         }
     }
     
     // Sub.MARK: - Saving info alarm message function
     func savingDataDetailAlertMsg(){
-        let alert = UIAlertController(title: "Bingo..👍", message: "You details are saved succesfully!", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
+        AlertController.alert(viewController: self, title: "Bingo..👍", message: "You details are saved succesfully!")
     }
     
     // MARK: Keyboard dismiss when touch outside
