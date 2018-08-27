@@ -58,106 +58,15 @@ class DetailVC: UIViewController {
         setNav()
         createDatePicker()
         
-        guard let title = selectedTask?.title else {return}
+        guard let title = selectedTask?.title,
+              let detail = selectedTask?.detail,
+              let date = selectedTask?.date else {return}
+        
         titleDetailLabel.text = title
-        guard let detail = selectedTask?.detail else {return}
         textView.text = detail
-        guard let date = selectedTask?.date else {return}
         dateLabel.text = date
     }
     
-    func createDatePicker(){
-        datePicker.datePickerMode = .dateAndTime
-        datePicker.setValue(UIColor.white, forKey: "textColor")
-        datePicker.backgroundColor = .black
-        
-        let toolBar = UIToolbar()
-        toolBar.sizeToFit()
-        toolBar.barTintColor = .black
-        
-        let doneTapped = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(barButtonDoneTapped))
-        toolBar.setItems([doneTapped], animated: true)
-        doneTapped.tintColor = .white
-        
-        dateLabel.inputAccessoryView = toolBar
-        dateLabel.inputView = datePicker
-    }
-    
-    @objc func barButtonDoneTapped(){
-        let dateFormatter = DateFormatter()
-        
-        dateFormatter.dateStyle = .short
-        dateFormatter.timeStyle = .short
-        
-        dateLabel.text = dateFormatter.string(from: datePicker.date)
-        view.endEditing(true)
-    }
-    
-    // MARK: - SET NAVBAR
-    func setNav(){
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveDetail))
-        
-        navigationController?.navigationBar.barTintColor = UIColor.Colors.setNavBarTintColor
-        
-        navigationController?.navigationBar.titleTextAttributes = [
-            NSAttributedStringKey.font: UIFont(name:"Marker Felt", size:25.0)!,
-            NSAttributedStringKey.foregroundColor:UIColor.white
-        ]
-        
-        navigationItem.title = "My Chalkboard"
-        
-        navigationController?.navigationBar.tintColor = .white
-    }
-    
-    // MARK: - BAR ITEM ACTION - SAVING INPUT
-    @objc func saveDetail(){
-        guard let detail = textView.text else {return}
-        guard let dateDetail = dateLabel.text else {return}
-        
-        if !detail.isEmpty || !dateDetail.isEmpty {
-            selectedTask?.detail = detail
-            selectedTask?.date = dateDetail
-            detailPersistDefaults.persistListToDefaults()
-            savingDataDetailAlertMsg()
-        } else {
-            let alert = UIAlertController(title: "☠️", message: "Enter a description please", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-            present(alert, animated: true, completion: nil)
-        }
-    }
-    
-    // Sub.MARK: - Saving info alarm message function
-    func savingDataDetailAlertMsg(){
-        let alert = UIAlertController(title: "Bingo..👍", message: "You details are saved succesfully!", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
-    }
-    
-    // MARK: - SEt DETAIL MAIN VIEW
-    func setDetailView(){
-        
-        view.backgroundColor = UIColor.Colors.setViewBackgroundColor
-        
-        view.addSubview(textView)
-        view.addSubview(useTheForceLabel)
-        view.addSubview(titleDetailLabel)
-        view.addSubview(dateLabel)
-        
-        textView.layer.cornerRadius = 8
-        
-        dateLabel.setAnchor(top: titleDetailLabel.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 35, paddingLeft: 10, paddingBottom: 0, paddingRight: 10)
-        
-        titleDetailLabel.setAnchor(top: view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 120, paddingLeft: 10, paddingBottom: 0, paddingRight: 10)
-        
-        useTheForceLabel.setAnchor(top: textView.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 350, paddingLeft: 50, paddingBottom: 50, paddingRight: 50)
-
-        textView.setAnchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 200, paddingLeft: 8, paddingBottom: 250, paddingRight: 8, width: 200, height: 400)
-    }
-    
-    // MARK: Keyboard dismiss when touch outside
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
-    
-    
 }
+
+

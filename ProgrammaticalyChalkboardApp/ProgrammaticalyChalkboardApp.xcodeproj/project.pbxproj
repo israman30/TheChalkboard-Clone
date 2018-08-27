@@ -21,6 +21,8 @@
 		8DA6F1C621345E2E00531ABB /* ExtensionTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6F1C521345E2E00531ABB /* ExtensionTaskView.swift */; };
 		8DA6F1C821345EB700531ABB /* Extension+DataSouce+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6F1C721345EB700531ABB /* Extension+DataSouce+Delegates.swift */; };
 		8DA6F1CA21345F1300531ABB /* Extension+Action+Functions+TaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6F1C921345F1300531ABB /* Extension+Action+Functions+TaskVC.swift */; };
+		8DA6F1CC2134616000531ABB /* Extension+ViewDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6F1CB2134616000531ABB /* Extension+ViewDetail.swift */; };
+		8DA6F1CE2134624900531ABB /* Extension+Actions+Functions+Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6F1CD2134624900531ABB /* Extension+Actions+Functions+Detail.swift */; };
 		8DB291F42028B57300593AF7 /* Pacifico in Resources */ = {isa = PBXBuildFile; fileRef = 8DB291F32028B57300593AF7 /* Pacifico */; };
 		8DF687141FF324B500E8BF8E /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF687131FF324B500E8BF8E /* Cells.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +44,8 @@
 		8DA6F1C521345E2E00531ABB /* ExtensionTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTaskView.swift; sourceTree = "<group>"; };
 		8DA6F1C721345EB700531ABB /* Extension+DataSouce+Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+DataSouce+Delegates.swift"; sourceTree = "<group>"; };
 		8DA6F1C921345F1300531ABB /* Extension+Action+Functions+TaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Action+Functions+TaskVC.swift"; sourceTree = "<group>"; };
+		8DA6F1CB2134616000531ABB /* Extension+ViewDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+ViewDetail.swift"; sourceTree = "<group>"; };
+		8DA6F1CD2134624900531ABB /* Extension+Actions+Functions+Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Actions+Functions+Detail.swift"; sourceTree = "<group>"; };
 		8DB291F32028B57300593AF7 /* Pacifico */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Pacifico; sourceTree = "<group>"; };
 		8DF687131FF324B500E8BF8E /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,9 +95,10 @@
 				8D3E4BD41FD250BB007142C9 /* Assets.xcassets */,
 				8D3E4BD61FD250BB007142C9 /* LaunchScreen.storyboard */,
 				8D3E4BE21FD255FB007142C9 /* ExtensionView.swift */,
+				8DA6F1CB2134616000531ABB /* Extension+ViewDetail.swift */,
 				8DF687131FF324B500E8BF8E /* Cells.swift */,
-				8DB291F32028B57300593AF7 /* Pacifico */,
 				8DA6F1C521345E2E00531ABB /* ExtensionTaskView.swift */,
+				8DB291F32028B57300593AF7 /* Pacifico */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -141,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				8D88A2C51FDB3AE500564B52 /* DetailVC.swift */,
+				8DA6F1CD2134624900531ABB /* Extension+Actions+Functions+Detail.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -225,11 +231,13 @@
 				8DA6F1BD21339A4400531ABB /* Extension+delegates+dataSource.swift in Sources */,
 				8DA6F1CA21345F1300531ABB /* Extension+Action+Functions+TaskVC.swift in Sources */,
 				8D3E4BD01FD250BB007142C9 /* MainVC.swift in Sources */,
+				8DA6F1CE2134624900531ABB /* Extension+Actions+Functions+Detail.swift in Sources */,
 				8DA6F1C621345E2E00531ABB /* ExtensionTaskView.swift in Sources */,
 				8DA6F1C821345EB700531ABB /* Extension+DataSouce+Delegates.swift in Sources */,
 				8D3E4BE31FD255FB007142C9 /* ExtensionView.swift in Sources */,
 				8D3E4BCE1FD250BB007142C9 /* AppDelegate.swift in Sources */,
 				8D88A2C41FDAE93400564B52 /* TaskVC.swift in Sources */,
+				8DA6F1CC2134616000531ABB /* Extension+ViewDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
