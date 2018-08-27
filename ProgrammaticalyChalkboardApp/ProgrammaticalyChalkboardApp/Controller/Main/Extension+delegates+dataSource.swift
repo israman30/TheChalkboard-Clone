@@ -21,8 +21,7 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: self.cell) as? MyCell
         
-        let displayList = myLists[indexPath.row].title
-        cell?.cellLabel.text = displayList
+        cell?.list = myLists[indexPath.row]
         
         return cell!
     }

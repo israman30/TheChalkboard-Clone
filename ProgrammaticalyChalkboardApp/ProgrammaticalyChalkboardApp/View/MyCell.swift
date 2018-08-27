@@ -10,7 +10,12 @@ import UIKit
 
 class MyCell: UITableViewCell {
     
-//    var list: 
+    var list: List? {
+        didSet{
+            guard let listLabel = list?.title else { return }
+            cellLabel.text = listLabel
+        }
+    }
     
     let cellLabel: UILabel = {
         let label = UILabel()
