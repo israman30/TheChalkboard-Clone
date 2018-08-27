@@ -31,7 +31,6 @@ class MyCell: UITableViewCell {
     
     func setCellView(){
         addSubview(cellLabel)
-        
         cellLabel.setAnchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 0, paddingLeft: 10, paddingBottom: 0, paddingRight: 0)
     }
     

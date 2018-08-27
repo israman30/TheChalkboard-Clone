@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension TaskVC:UITableViewDelegate, UITableViewDataSource {
+extension TaskVC: UITableViewDelegate, UITableViewDataSource {
     // MARK: - DATA SOURCE & DELEGATE FUNCTIONS
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
