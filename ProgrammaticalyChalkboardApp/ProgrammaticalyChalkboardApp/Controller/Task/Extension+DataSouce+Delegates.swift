@@ -21,10 +21,7 @@ extension TaskVC:UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: self.cell) as! TaskCell
         
-        let task = selectedList.items[indexPath.row].title
-        let date = selectedList.items[indexPath.row].date
-        cell.cellLabel.text = task
-        cell.dateLabel.text = date
+        cell.items = selectedList.items[indexPath.row]
         
         return cell
     }

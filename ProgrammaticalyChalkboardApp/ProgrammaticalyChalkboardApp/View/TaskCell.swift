@@ -10,6 +10,16 @@ import UIKit
 
 class TaskCell: UITableViewCell {
     
+    var items: Items? {
+        didSet {
+            guard let title = items?.title,
+                  let date = items?.date else { return }
+            
+            cellLabel.text = title
+            dateLabel.text = date
+        }
+    }
+    
     let cellLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
