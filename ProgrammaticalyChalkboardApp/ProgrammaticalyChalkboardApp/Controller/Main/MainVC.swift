@@ -60,5 +60,3 @@ class MainVC: UIViewController {
 
 
 
-
-
