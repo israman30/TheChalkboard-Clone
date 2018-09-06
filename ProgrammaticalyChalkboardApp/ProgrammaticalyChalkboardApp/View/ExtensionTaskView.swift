@@ -24,7 +24,11 @@ extension TaskVC {
     }
     
     // MARK: - SET TASK MAIN VIEW
-    func setMainTaskView(){
+    func setMainTaskView(_ tableView: UITableView){
+        
+        tableView.register(TaskCell.self, forCellReuseIdentifier: cell)
+        tableView.delegate = self
+        tableView.dataSource = self
         
         view.backgroundColor = UIColor.Colors.setViewBackgroundColor
 

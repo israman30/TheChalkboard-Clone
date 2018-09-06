@@ -24,6 +24,7 @@ extension MainVC {
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(MyCell.self, forCellReuseIdentifier: cell)
         
         tableView.layer.cornerRadius = 5
         

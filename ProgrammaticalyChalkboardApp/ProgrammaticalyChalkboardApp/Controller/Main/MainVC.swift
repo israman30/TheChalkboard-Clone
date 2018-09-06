@@ -51,7 +51,6 @@ class MainVC: UIViewController {
         
         setMainView(tableView)
         setNavBar()
-        tableView.register(MyCell.self, forCellReuseIdentifier: cell)
         
     }
     

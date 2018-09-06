@@ -10,9 +10,6 @@ import UIKit
 
 // MARK: - TableView Data Source Functions
 extension MainVC: UITableViewDelegate, UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return myLists.count

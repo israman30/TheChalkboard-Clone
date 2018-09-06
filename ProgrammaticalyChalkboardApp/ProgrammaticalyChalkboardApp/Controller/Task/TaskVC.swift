@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TaskVC:UIViewController {
+class TaskVC: UIViewController {
     
     var selectedList: List!
     
@@ -16,10 +16,7 @@ class TaskVC:UIViewController {
     
     let cell = "cell"
     
-    let tableView: UITableView = {
-        let tv = UITableView()
-        return tv
-    }()
+    let tableView = UITableView()
     
     let textField: UITextField = {
         let tf = UITextField()
@@ -43,12 +40,9 @@ class TaskVC:UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setMainTaskView()
+        setMainTaskView(tableView)
         setTaskNavBar()
         
-        tableView.register(TaskCell.self, forCellReuseIdentifier: cell)
-        tableView.delegate = self
-        tableView.dataSource = self
     }
     
 }
