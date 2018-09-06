@@ -16,10 +16,7 @@ class MainVC: UIViewController {
     
     var cell = "cell"
     
-    let tableView: UITableView = {
-        let tv = UITableView()
-        return tv
-    }()
+    let tableView = UITableView()
     
     let myLabel: UILabel = {
         let label = UILabel ()
@@ -52,7 +49,7 @@ class MainVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setMainView()
+        setMainView(tableView)
         setNavBar()
         tableView.register(MyCell.self, forCellReuseIdentifier: cell)
         

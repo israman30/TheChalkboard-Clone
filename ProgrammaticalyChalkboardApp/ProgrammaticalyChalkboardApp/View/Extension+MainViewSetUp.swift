@@ -20,7 +20,7 @@ extension MainVC {
         navigationItem.title = "Add a List"
     }
     
-    func setMainView(){
+    func setMainView(_ tableView: UITableView){
         
         tableView.delegate = self
         tableView.dataSource = self
