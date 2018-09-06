@@ -10,9 +10,6 @@ import UIKit
 
 extension TaskVC: UITableViewDelegate, UITableViewDataSource {
     // MARK: - DATA SOURCE & DELEGATE FUNCTIONS
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return selectedList.items.count
@@ -20,9 +17,7 @@ extension TaskVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: self.cell) as! TaskCell
-        
         cell.items = selectedList.items[indexPath.row]
-        
         return cell
     }
     
