@@ -17,7 +17,7 @@
 		8D88A2C61FDB3AE600564B52 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D88A2C51FDB3AE500564B52 /* DetailVC.swift */; };
 		8DA6F1BD21339A4400531ABB /* Extension+delegates+dataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6F1BC21339A4400531ABB /* Extension+delegates+dataSource.swift */; };
 		8DA6F1BF21339AE200531ABB /* Extension+Actions+Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6F1BE21339AE200531ABB /* Extension+Actions+Functions.swift */; };
-		8DA6F1C121339BBD00531ABB /* Extension+MainViewSetUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6F1C021339BBD00531ABB /* Extension+MainViewSetUp.swift */; };
+		8DA6F1C121339BBD00531ABB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6F1C021339BBD00531ABB /* MainView.swift */; };
 		8DA6F1C621345E2E00531ABB /* ExtensionTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6F1C521345E2E00531ABB /* ExtensionTaskView.swift */; };
 		8DA6F1C821345EB700531ABB /* Extension+DataSouce+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6F1C721345EB700531ABB /* Extension+DataSouce+Delegates.swift */; };
 		8DA6F1CA21345F1300531ABB /* Extension+Action+Functions+TaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6F1C921345F1300531ABB /* Extension+Action+Functions+TaskVC.swift */; };
@@ -42,7 +42,7 @@
 		8D88A2C51FDB3AE500564B52 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		8DA6F1BC21339A4400531ABB /* Extension+delegates+dataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+delegates+dataSource.swift"; sourceTree = "<group>"; };
 		8DA6F1BE21339AE200531ABB /* Extension+Actions+Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Actions+Functions.swift"; sourceTree = "<group>"; };
-		8DA6F1C021339BBD00531ABB /* Extension+MainViewSetUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+MainViewSetUp.swift"; sourceTree = "<group>"; };
+		8DA6F1C021339BBD00531ABB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		8DA6F1C521345E2E00531ABB /* ExtensionTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTaskView.swift; sourceTree = "<group>"; };
 		8DA6F1C721345EB700531ABB /* Extension+DataSouce+Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+DataSouce+Delegates.swift"; sourceTree = "<group>"; };
 		8DA6F1C921345F1300531ABB /* Extension+Action+Functions+TaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Action+Functions+TaskVC.swift"; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 				8D3E4BD41FD250BB007142C9 /* Assets.xcassets */,
 				8D3E4BD61FD250BB007142C9 /* LaunchScreen.storyboard */,
 				8D3E4BE21FD255FB007142C9 /* ExtensionView.swift */,
-				8DA6F1C021339BBD00531ABB /* Extension+MainViewSetUp.swift */,
+				8DA6F1C021339BBD00531ABB /* MainView.swift */,
 				8DA6F1CB2134616000531ABB /* Extension+ViewDetail.swift */,
 				8DA6F1C521345E2E00531ABB /* ExtensionTaskView.swift */,
 				8DA6F1D121346C7400531ABB /* MyCell.swift */,
@@ -230,7 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D88A2C61FDB3AE600564B52 /* DetailVC.swift in Sources */,
-				8DA6F1C121339BBD00531ABB /* Extension+MainViewSetUp.swift in Sources */,
+				8DA6F1C121339BBD00531ABB /* MainView.swift in Sources */,
 				8DA6F1BF21339AE200531ABB /* Extension+Actions+Functions.swift in Sources */,
 				8DA6F1D221346C7400531ABB /* MyCell.swift in Sources */,
 				8DF687141FF324B500E8BF8E /* TaskCell.swift in Sources */,

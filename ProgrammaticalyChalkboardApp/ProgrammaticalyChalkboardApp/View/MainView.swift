@@ -1,5 +1,5 @@
 //
-//  Extension+MainViewSetUp.swift
+//  MainView.swift
 //  ProgrammaticalyChalkboardApp
 //
 //  Created by Israel Manzo on 8/26/18.
