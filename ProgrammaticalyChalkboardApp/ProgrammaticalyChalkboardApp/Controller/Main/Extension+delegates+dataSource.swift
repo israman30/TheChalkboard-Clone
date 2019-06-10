@@ -33,7 +33,7 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         navigationController?.pushViewController(taskVC, animated: true)
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             myLists.remove(at: indexPath.row)
             let defaults = UserDefaults.standard

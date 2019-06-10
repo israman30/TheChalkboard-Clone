@@ -20,7 +20,7 @@ class TaskVC: UIViewController {
     
     let textField: UITextField = {
         let tf = UITextField()
-        tf.attributedPlaceholder = NSAttributedString(string: "Tap list here", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
+        tf.attributedPlaceholder = NSAttributedString(string: "Tap list here", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
         tf.backgroundColor = .clear
         tf.textColor = .white
         return tf

@@ -16,8 +16,8 @@ extension TaskVC {
         navigationController?.navigationBar.barTintColor = UIColor.Colors.setNavBarTintColor
         
         navigationController?.navigationBar.titleTextAttributes = [
-            NSAttributedStringKey.font: UIFont(name:"Marker Felt", size:25.0)!,
-            NSAttributedStringKey.foregroundColor:UIColor.white
+            NSAttributedString.Key.font: UIFont(name:"Marker Felt", size:25.0)!,
+            NSAttributedString.Key.foregroundColor:UIColor.white
         ]
         
         navigationController?.navigationBar.tintColor = .white

@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // MARK: - VIEW
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
@@ -48,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         content.title = "Chalkboard Reminder"
         content.body = detail.titleDetailLabel.text!
 //        content.body = "Reminding.., task is coming due"
-        content.sound = UNNotificationSound.default()
+        content.sound = UNNotificationSound.default
         
         let rquest = UNNotificationRequest(identifier: "textNotification", content: content, trigger: trigger)
         
