@@ -9,7 +9,7 @@
 import UIKit
 
 // MARK: - TableView Data Source Functions
-extension MainVC: UITableViewDelegate, UITableViewDataSource {
+extension MainController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return myLists.count

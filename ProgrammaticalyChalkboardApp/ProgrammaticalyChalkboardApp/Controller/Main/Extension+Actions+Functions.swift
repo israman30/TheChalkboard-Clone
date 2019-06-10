@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension MainVC {
+extension MainController {
     
     @objc func addButton(){
         guard let listText = textField.text else {return}

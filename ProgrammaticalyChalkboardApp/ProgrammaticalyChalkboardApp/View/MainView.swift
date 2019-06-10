@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension MainVC {
+extension MainController {
     
     func setNavBar(){
         navigationController?.navigationBar.barTintColor = UIColor.Colors.setNavBarTintColor

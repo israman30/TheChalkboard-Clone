@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainVC: UIViewController {
+class MainController: UIViewController {
     
     var selectedIndex: Int?
     

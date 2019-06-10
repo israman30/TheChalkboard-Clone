@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		8D3684E41FDB8684001854E9 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3684E31FDB8684001854E9 /* Data.swift */; };
 		8D3E4BCE1FD250BB007142C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E4BCD1FD250BB007142C9 /* AppDelegate.swift */; };
-		8D3E4BD01FD250BB007142C9 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E4BCF1FD250BB007142C9 /* MainVC.swift */; };
+		8D3E4BD01FD250BB007142C9 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E4BCF1FD250BB007142C9 /* MainController.swift */; };
 		8D3E4BD51FD250BB007142C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D3E4BD41FD250BB007142C9 /* Assets.xcassets */; };
 		8D3E4BD81FD250BB007142C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D3E4BD61FD250BB007142C9 /* LaunchScreen.storyboard */; };
 		8D3E4BE31FD255FB007142C9 /* ExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E4BE21FD255FB007142C9 /* ExtensionView.swift */; };
@@ -33,7 +33,7 @@
 		8D3684E31FDB8684001854E9 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		8D3E4BCA1FD250BB007142C9 /* ProgrammaticalyChalkboardApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProgrammaticalyChalkboardApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D3E4BCD1FD250BB007142C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8D3E4BCF1FD250BB007142C9 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		8D3E4BCF1FD250BB007142C9 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		8D3E4BD41FD250BB007142C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D3E4BD71FD250BB007142C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D3E4BD91FD250BB007142C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -131,7 +131,7 @@
 		8DA6F1C221345D3000531ABB /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				8D3E4BCF1FD250BB007142C9 /* MainVC.swift */,
+				8D3E4BCF1FD250BB007142C9 /* MainController.swift */,
 				8DA6F1BE21339AE200531ABB /* Extension+Actions+Functions.swift */,
 				8DA6F1BC21339A4400531ABB /* Extension+delegates+dataSource.swift */,
 			);
@@ -238,7 +238,7 @@
 				8D3684E41FDB8684001854E9 /* Data.swift in Sources */,
 				8DA6F1BD21339A4400531ABB /* Extension+delegates+dataSource.swift in Sources */,
 				8DA6F1CA21345F1300531ABB /* Extension+Action+Functions+TaskVC.swift in Sources */,
-				8D3E4BD01FD250BB007142C9 /* MainVC.swift in Sources */,
+				8D3E4BD01FD250BB007142C9 /* MainController.swift in Sources */,
 				8DA6F1CE2134624900531ABB /* Extension+Actions+Functions+Detail.swift in Sources */,
 				8DA6F1C621345E2E00531ABB /* ExtensionTaskView.swift in Sources */,
 				8DA6F1C821345EB700531ABB /* Extension+DataSouce+Delegates.swift in Sources */,

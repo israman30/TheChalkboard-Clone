@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
-        let ChalkTVC = MainVC()
+        let ChalkTVC = MainController()
         window?.rootViewController = UINavigationController(rootViewController: ChalkTVC)
         
         // MARK: - USER DEFAULTS & NOTIFICATION CENTER
