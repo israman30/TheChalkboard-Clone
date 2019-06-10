@@ -40,7 +40,8 @@ extension MainController {
     // MARK: - Passing data from Main to Task Controller using indexPath for each title
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let taskViewController = segue.destination as! TaskVC
-        taskViewController.selectedList = myLists[(tableView.indexPathForSelectedRow?.row)!]
+        guard let index = tableView.indexPathForSelectedRow?.row else { return }
+        taskViewController.selectedList = myLists[index]
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
