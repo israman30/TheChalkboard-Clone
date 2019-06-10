@@ -8,6 +8,13 @@
 
 import UIKit
 
+/*
+  ================== ALERT CONTROLLER EXTENSION ===================
+  - This Alertcontroller can be accessed from any where in the application.
+  - Tow methods: Alert & ActionSheet.
+ ==================================================================
+ */
+
 struct AlertController {
     
     static func alert(viewController: UIViewController, title: String, message: String){

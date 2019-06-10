@@ -9,7 +9,7 @@
 import UIKit
 
 
-extension TaskVC {
+extension TaskController {
     
     // MARK: SET NAVBAR
     func setTaskNavBar(){

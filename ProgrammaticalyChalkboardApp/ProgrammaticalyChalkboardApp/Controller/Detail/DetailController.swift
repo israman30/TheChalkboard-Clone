@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailVC: UIViewController {
+class DetailController: UIViewController {
     
     var selectedTask: Items?
     

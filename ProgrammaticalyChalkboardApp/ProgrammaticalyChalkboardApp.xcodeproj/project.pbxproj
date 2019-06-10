@@ -13,8 +13,8 @@
 		8D3E4BD51FD250BB007142C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D3E4BD41FD250BB007142C9 /* Assets.xcassets */; };
 		8D3E4BD81FD250BB007142C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D3E4BD61FD250BB007142C9 /* LaunchScreen.storyboard */; };
 		8D3E4BE31FD255FB007142C9 /* ExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E4BE21FD255FB007142C9 /* ExtensionView.swift */; };
-		8D88A2C41FDAE93400564B52 /* TaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D88A2C31FDAE93400564B52 /* TaskVC.swift */; };
-		8D88A2C61FDB3AE600564B52 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D88A2C51FDB3AE500564B52 /* DetailVC.swift */; };
+		8D88A2C41FDAE93400564B52 /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D88A2C31FDAE93400564B52 /* TaskController.swift */; };
+		8D88A2C61FDB3AE600564B52 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D88A2C51FDB3AE500564B52 /* DetailController.swift */; };
 		8DA6F1BD21339A4400531ABB /* Extension+delegates+dataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6F1BC21339A4400531ABB /* Extension+delegates+dataSource.swift */; };
 		8DA6F1BF21339AE200531ABB /* Extension+Actions+Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6F1BE21339AE200531ABB /* Extension+Actions+Functions.swift */; };
 		8DA6F1C121339BBD00531ABB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6F1C021339BBD00531ABB /* MainView.swift */; };
@@ -38,8 +38,8 @@
 		8D3E4BD71FD250BB007142C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D3E4BD91FD250BB007142C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D3E4BE21FD255FB007142C9 /* ExtensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionView.swift; sourceTree = "<group>"; };
-		8D88A2C31FDAE93400564B52 /* TaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskVC.swift; sourceTree = "<group>"; };
-		8D88A2C51FDB3AE500564B52 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		8D88A2C31FDAE93400564B52 /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
+		8D88A2C51FDB3AE500564B52 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		8DA6F1BC21339A4400531ABB /* Extension+delegates+dataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+delegates+dataSource.swift"; sourceTree = "<group>"; };
 		8DA6F1BE21339AE200531ABB /* Extension+Actions+Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Actions+Functions.swift"; sourceTree = "<group>"; };
 		8DA6F1C021339BBD00531ABB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 		8DA6F1C321345D6300531ABB /* Task */ = {
 			isa = PBXGroup;
 			children = (
-				8D88A2C31FDAE93400564B52 /* TaskVC.swift */,
+				8D88A2C31FDAE93400564B52 /* TaskController.swift */,
 				8DA6F1C921345F1300531ABB /* Extension+Action+Functions+TaskVC.swift */,
 				8DA6F1C721345EB700531ABB /* Extension+DataSouce+Delegates.swift */,
 			);
@@ -151,7 +151,7 @@
 		8DA6F1C421345D7900531ABB /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				8D88A2C51FDB3AE500564B52 /* DetailVC.swift */,
+				8D88A2C51FDB3AE500564B52 /* DetailController.swift */,
 				8DA6F1CD2134624900531ABB /* Extension+Actions+Functions+Detail.swift */,
 			);
 			path = Detail;
@@ -230,7 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D88A2C61FDB3AE600564B52 /* DetailVC.swift in Sources */,
+				8D88A2C61FDB3AE600564B52 /* DetailController.swift in Sources */,
 				8DA6F1C121339BBD00531ABB /* MainView.swift in Sources */,
 				8DA6F1BF21339AE200531ABB /* Extension+Actions+Functions.swift in Sources */,
 				8DA6F1D221346C7400531ABB /* MyCell.swift in Sources */,
@@ -244,7 +244,7 @@
 				8DA6F1C821345EB700531ABB /* Extension+DataSouce+Delegates.swift in Sources */,
 				8D3E4BE31FD255FB007142C9 /* ExtensionView.swift in Sources */,
 				8D3E4BCE1FD250BB007142C9 /* AppDelegate.swift in Sources */,
-				8D88A2C41FDAE93400564B52 /* TaskVC.swift in Sources */,
+				8D88A2C41FDAE93400564B52 /* TaskController.swift in Sources */,
 				8DA6F1D02134631E00531ABB /* AlertController+Helper.swift in Sources */,
 				8DA6F1CC2134616000531ABB /* Extension+ViewDetail.swift in Sources */,
 			);

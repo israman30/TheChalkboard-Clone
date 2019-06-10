@@ -33,9 +33,9 @@ extension MainController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let taskVC = TaskVC()
-        taskVC.selectedList = myLists[indexPath.row]
-        navigationController?.pushViewController(taskVC, animated: true)
+        let taskController = TaskController()
+        taskController.selectedList = myLists[indexPath.row]
+        navigationController?.pushViewController(taskController, animated: true)
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension DetailVC {
+extension DetailController {
     
     func createDatePicker(){
         datePicker.datePickerMode = .dateAndTime

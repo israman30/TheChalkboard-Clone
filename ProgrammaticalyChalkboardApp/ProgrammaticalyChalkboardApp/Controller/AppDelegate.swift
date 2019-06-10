@@ -44,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: newComponents, repeats: false)
         let content = UNMutableNotificationContent()
-        let detail = DetailVC()
+        let detail = DetailController()
         content.title = "Chalkboard Reminder"
         content.body = detail.titleDetailLabel.text!
 //        content.body = "Reminding.., task is coming due"

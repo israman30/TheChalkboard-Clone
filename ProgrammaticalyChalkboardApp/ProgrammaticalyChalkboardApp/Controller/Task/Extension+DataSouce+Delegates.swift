@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension TaskVC: UITableViewDelegate, UITableViewDataSource {
+extension TaskController: UITableViewDelegate, UITableViewDataSource {
     // MARK: - DATA SOURCE & DELEGATE FUNCTIONS
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -26,7 +26,7 @@ extension TaskVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detail = DetailVC()
+        let detail = DetailController()
         detail.selectedTask = selectedList.items[indexPath.row]
         navigationController?.pushViewController(detail, animated: true)
     }

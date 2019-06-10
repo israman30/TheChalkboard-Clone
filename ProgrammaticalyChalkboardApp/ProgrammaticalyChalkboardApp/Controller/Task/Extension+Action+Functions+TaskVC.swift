@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension TaskVC {
+extension TaskController {
     // MARK: ADD ITEM ACTION FUNCTION
     @objc func addButtonTask(){
         guard let taskText = textField.text else {return}

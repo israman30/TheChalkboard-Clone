@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension DetailVC {
+extension DetailController {
     
     // MARK: - SET NAVBAR
     func setNav(){
