@@ -8,6 +8,15 @@
 
 import UIKit
 
+/*
+  =================== TASK CONTROLLER ===================
+  - Task Controller saved a list of items for each Title list coming from Main Controller by index.
+  - As MainCotroller, TaskController saves a item or list of items by index.
+  - This index is used to save a detail for each item in TaskController.
+  - Swipe deletes an item by index when the task is done. These also delete the detail that the index contains.
+  =======================================================
+ */
+
 class TaskVC: UIViewController {
     
     var selectedList: List!

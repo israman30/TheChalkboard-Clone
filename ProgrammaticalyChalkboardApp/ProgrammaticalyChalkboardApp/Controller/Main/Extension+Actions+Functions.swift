@@ -9,10 +9,10 @@
 import UIKit
 
 /*
- - MAIN CONTROLLER EXTENSION - METHODS
+  =================== MAIN CONTROLLER EXTENSION - METHODS ===================
  - Add button execute action when user add a new Title list - index.
  - AlertController extension is used to prevent user tap in a empty TextField.
- 
+  ============================================================================
  */
 
 extension MainController {
