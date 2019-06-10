@@ -20,6 +20,7 @@ extension MainController {
         navigationItem.title = "Add a List"
     }
     
+    // MARK: - Setting Custom TableView method
     func setMainView(_ tableView: UITableView){
         
         tableView.delegate = self

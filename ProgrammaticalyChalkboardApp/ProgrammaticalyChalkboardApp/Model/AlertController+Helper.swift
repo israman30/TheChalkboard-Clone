@@ -17,6 +17,7 @@ import UIKit
 
 struct AlertController {
     
+    // MARK: - Alert controller method
     static func alert(viewController: UIViewController, title: String, message: String){
         
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -26,6 +27,7 @@ struct AlertController {
         viewController.present(alertController, animated: true, completion: nil)
     }
     
+    // MARK: - ActionSheet controller method
     static func actionSheet(viewController: UIAlertController, title: String, message: String){
         let actionSheet = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
         

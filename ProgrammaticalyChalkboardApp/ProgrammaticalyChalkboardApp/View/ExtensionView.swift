@@ -20,6 +20,12 @@ extension UIColor {
     }
 }
 
+
+/*
+  =================== LAYOUT EXTENSION ====================
+  - This extension have methods that help to set the layout using anchor constraint.
+  - These methods can be used any where in the application.
+ */
 extension UIView {
     
     func setCellShadow() {
@@ -77,32 +83,32 @@ extension UIView {
         }
     }
     
-//    var safeTopAnchor: NSLayoutYAxisAnchor {
-//        if #available(iOS 11.0, *) {
-//            return safeAreaLayoutGuide.topAnchor
-//        }
-//        return topAnchor
-//    }
-//    
-//    var safeLeftAnchor: NSLayoutXAxisAnchor {
-//        if #available(iOS 11.0, *) {
-//            return safeAreaLayoutGuide.leftAnchor
-//        }
-//        return leftAnchor
-//    }
-//    
-//    var safeBottomAnchor: NSLayoutYAxisAnchor {
-//        if #available(iOS 11.0, *) {
-//            return safeAreaLayoutGuide.bottomAnchor
-//        }
-//        return bottomAnchor
-//    }
-//    
-//    var safeRightAnchor: NSLayoutXAxisAnchor {
-//        if #available(iOS 11.0, *) {
-//            return safeAreaLayoutGuide.rightAnchor
-//        }
-//        return rightAnchor
-//    }
+    var safeTopAnchor: NSLayoutYAxisAnchor {
+        if #available(iOS 11.0, *) {
+            return safeAreaLayoutGuide.topAnchor
+        }
+        return topAnchor
+    }
+    
+    var safeLeftAnchor: NSLayoutXAxisAnchor {
+        if #available(iOS 11.0, *) {
+            return safeAreaLayoutGuide.leftAnchor
+        }
+        return leftAnchor
+    }
+    
+    var safeBottomAnchor: NSLayoutYAxisAnchor {
+        if #available(iOS 11.0, *) {
+            return safeAreaLayoutGuide.bottomAnchor
+        }
+        return bottomAnchor
+    }
+    
+    var safeRightAnchor: NSLayoutXAxisAnchor {
+        if #available(iOS 11.0, *) {
+            return safeAreaLayoutGuide.rightAnchor
+        }
+        return rightAnchor
+    }
     
 }
