@@ -8,6 +8,13 @@
 
 import UIKit
 
+/*
+ - MAIN CONTROLLER EXTENSION - METHODS
+ - Add button execute action when user add a new Title list - index.
+ - AlertController extension is used to prevent user tap in a empty TextField.
+ 
+ */
+
 extension MainController {
     
     @objc func addButton(){
@@ -30,6 +37,7 @@ extension MainController {
         self.view.endEditing(true)
     }
     
+    // MARK: - Passing data from Main to Task Controller using indexPath for each title
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let taskViewController = segue.destination as! TaskVC
         taskViewController.selectedList = myLists[(tableView.indexPathForSelectedRow?.row)!]

@@ -8,6 +8,17 @@
 
 import UIKit
 
+
+/*
+   ========================== MAIN CONTROLLER =================================
+ - Main Controller load first when app is opened.
+ - TableView show a list where user can add a new Title list for a TODO.
+ - This can be delete after the List is done. Swipe delete feauture.
+ - SelecectedIndex Int is the index of the Title list that user can add and storage a new task or list of tasks for it. Including a date picker for a reminder using Local Notifications.
+ - For this index is ued user defaults 
+   ============================================================================
+ */
+
 class MainController: UIViewController {
     
     var selectedIndex: Int?
