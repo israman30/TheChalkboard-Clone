@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4DBD3F6622B28E44007AC2F6 /* UserNotifications+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBD3F6522B28E44007AC2F6 /* UserNotifications+Ext.swift */; };
 		8D3684E41FDB8684001854E9 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3684E31FDB8684001854E9 /* Data.swift */; };
 		8D3E4BCE1FD250BB007142C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E4BCD1FD250BB007142C9 /* AppDelegate.swift */; };
 		8D3E4BD01FD250BB007142C9 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E4BCF1FD250BB007142C9 /* MainController.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4DBD3F6522B28E44007AC2F6 /* UserNotifications+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserNotifications+Ext.swift"; sourceTree = "<group>"; };
 		8D3684E31FDB8684001854E9 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		8D3E4BCA1FD250BB007142C9 /* ProgrammaticalyChalkboardApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProgrammaticalyChalkboardApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D3E4BCD1FD250BB007142C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			children = (
 				8D88A2C51FDB3AE500564B52 /* DetailController.swift */,
 				8DA6F1CD2134624900531ABB /* Extension+Actions+Functions+Detail.swift */,
+				4DBD3F6522B28E44007AC2F6 /* UserNotifications+Ext.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				8DA6F1BD21339A4400531ABB /* Extension+delegates+dataSource.swift in Sources */,
 				8DA6F1CA21345F1300531ABB /* Extension+Action+Functions+TaskVC.swift in Sources */,
 				8D3E4BD01FD250BB007142C9 /* MainController.swift in Sources */,
+				4DBD3F6622B28E44007AC2F6 /* UserNotifications+Ext.swift in Sources */,
 				8DA6F1CE2134624900531ABB /* Extension+Actions+Functions+Detail.swift in Sources */,
 				8DA6F1C621345E2E00531ABB /* ExtensionTaskView.swift in Sources */,
 				8DA6F1C821345EB700531ABB /* Extension+DataSouce+Delegates.swift in Sources */,
