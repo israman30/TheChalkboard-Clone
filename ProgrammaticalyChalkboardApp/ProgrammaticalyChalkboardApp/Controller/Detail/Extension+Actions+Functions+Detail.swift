@@ -33,7 +33,7 @@ extension DetailController {
         
         dateFormatter.dateStyle = .short
         dateFormatter.timeStyle = .short
-//        print(datePicker.date)
+
         dateLabel.text = dateFormatter.string(from: datePicker.date)
         view.endEditing(true)
     }
@@ -66,11 +66,12 @@ extension DetailController {
                 return
             }
         }
-        
+        guard let title = selectedTask?.title,
+              let body = selectedTask?.detail else { return }
         // 2. Add a content
         let content = UNMutableNotificationContent()
-        content.title = "This is the title"
-        content.body = "This a drescription"
+        content.title = title
+        content.body = body
         
         // 3. Create a trigger
         
