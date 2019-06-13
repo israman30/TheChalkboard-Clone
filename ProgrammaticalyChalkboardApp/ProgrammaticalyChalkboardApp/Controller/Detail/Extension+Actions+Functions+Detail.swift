@@ -55,6 +55,21 @@ extension DetailController {
         }
     }
     
+    
+    
+    // Sub.MARK: - Saving info alarm message function
+    func savingDataDetailAlertMsg(){
+        AlertController.alert(viewController: self, title: "Bingo..👍", message: "You details are saved succesfully!")
+    }
+    
+    // MARK: Keyboard dismiss when touch outside
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+}
+
+extension DetailController {
+    
     func notifications(for date: Date){
         // 1. Ask for permission
         let center = UNUserNotificationCenter.current()
@@ -66,7 +81,7 @@ extension DetailController {
             }
         }
         guard let subtitle = selectedTask?.title,
-              let body = selectedTask?.detail else { return }
+            let body = selectedTask?.detail else { return }
         // 2. Add a content
         let content = UNMutableNotificationContent()
         content.title = "Chalkboard Reminder"
@@ -86,17 +101,8 @@ extension DetailController {
         // 5. Register the request
         center.add(request) { (error) in
             // check error
+            if let error = error { print("Error getting a badge",error) }
             
         }
-    }
-    
-    // Sub.MARK: - Saving info alarm message function
-    func savingDataDetailAlertMsg(){
-        AlertController.alert(viewController: self, title: "Bingo..👍", message: "You details are saved succesfully!")
-    }
-    
-    // MARK: Keyboard dismiss when touch outside
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
     }
 }
