@@ -24,16 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // MARK: - USER DEFAULTS & NOTIFICATION CENTER
         Model.shared.loadPersistedListFromDefaults()
-//        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { (accepted, error) in
-//            if !accepted {
-//                print("Notification Denied")
-//            }
-//        }
-//
-//        let action = UNNotificationAction(identifier: "remindLater", title: "Remind me later", options: [])
-//        let category = UNNotificationCategory(identifier: "myCategory", actions: [action], intentIdentifiers: [], options: [])
-//        UNUserNotificationCenter.current().setNotificationCategories([category])
-        
         return true
     }
     
