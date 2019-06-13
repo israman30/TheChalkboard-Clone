@@ -24,15 +24,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // MARK: - USER DEFAULTS & NOTIFICATION CENTER
         Model.shared.loadPersistedListFromDefaults()
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { (accepted, error) in
-            if !accepted {
-                print("Notification Denied")
-            }
-        }
-        
-        let action = UNNotificationAction(identifier: "remindLater", title: "Remind me later", options: [])
-        let category = UNNotificationCategory(identifier: "myCategory", actions: [action], intentIdentifiers: [], options: [])
-        UNUserNotificationCenter.current().setNotificationCategories([category])
+//        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { (accepted, error) in
+//            if !accepted {
+//                print("Notification Denied")
+//            }
+//        }
+//
+//        let action = UNNotificationAction(identifier: "remindLater", title: "Remind me later", options: [])
+//        let category = UNNotificationCategory(identifier: "myCategory", actions: [action], intentIdentifiers: [], options: [])
+//        UNUserNotificationCenter.current().setNotificationCategories([category])
         
         return true
     }
@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let calendar = Calendar(identifier: .gregorian)
         let components = calendar.dateComponents(in: .current, from: date)
         let newComponents = DateComponents(calendar: calendar, timeZone: .current, month: components.month, day: components.day, hour: components.hour, minute: components.minute)
-        
+
         let trigger = UNCalendarNotificationTrigger(dateMatching: newComponents, repeats: false)
         let content = UNMutableNotificationContent()
         let detail = DetailController()
@@ -49,10 +49,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         content.body = detail.titleDetailLabel.text!
 //        content.body = "Reminding.., task is coming due"
         content.sound = UNNotificationSound.default
-        
+
         let rquest = UNNotificationRequest(identifier: "textNotification", content: content, trigger: trigger)
-        
-        UNUserNotificationCenter.current().delegate = self
+
+//        UNUserNotificationCenter.current().delegate = self
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
         UNUserNotificationCenter.current().add(rquest) { (error) in
             if let error = error {
@@ -86,13 +86,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
-extension AppDelegate: UNUserNotificationCenterDelegate {
-    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        
-        if response.actionIdentifier == "remindLater" {
-            let newDate = Date(timeInterval: 900, since: Date())
-            scheduleNotifications(at: newDate)
-        }
-    }
-}
+//extension AppDelegate: UNUserNotificationCenterDelegate {
+//    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+//        
+//        if response.actionIdentifier == "remindLater" {
+//            let newDate = Date(timeInterval: 900, since: Date())
+//            scheduleNotifications(at: newDate)
+//        }
+//    }
+//}
 

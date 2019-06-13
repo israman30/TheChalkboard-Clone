@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class DetailController: UIViewController {
     
@@ -51,8 +52,12 @@ class DetailController: UIViewController {
         return label
     }()
     
+    let uidString = UUID().uuidString
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       
         
         setDetailView()
         setNav()

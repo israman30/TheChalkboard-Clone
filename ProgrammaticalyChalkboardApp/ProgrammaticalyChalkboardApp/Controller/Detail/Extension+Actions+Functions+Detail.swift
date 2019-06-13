@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 extension DetailController {
     
@@ -32,7 +33,7 @@ extension DetailController {
         
         dateFormatter.dateStyle = .short
         dateFormatter.timeStyle = .short
-        
+//        print(datePicker.date)
         dateLabel.text = dateFormatter.string(from: datePicker.date)
         view.endEditing(true)
     }
@@ -48,8 +49,43 @@ extension DetailController {
             selectedTask?.date = dateDetail
             detailPersistDefaults.persistListToDefaults()
             savingDataDetailAlertMsg()
+            notifications(for: datePicker.date)
+            print(datePicker.date)
         } else {
             AlertController.alert(viewController: self, title: "☠️", message: "Enter a detail please")
+        }
+    }
+    
+    func notifications(for date: Date){
+        // 1. Ask for permission
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+            // If user no give permissions, let it know go to user settings
+            if let error = error {
+                print("Error", error)
+                return
+            }
+        }
+        
+        // 2. Add a content
+        let content = UNMutableNotificationContent()
+        content.title = "This is the title"
+        content.body = "This a drescription"
+        
+        // 3. Create a trigger
+        
+        let dateComponent = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: date)
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponent, repeats: false)
+        
+        // 4. Create a request
+        
+        let request = UNNotificationRequest(identifier: uidString, content: content, trigger: trigger)
+        
+        // 5. Register the request
+        center.add(request) { (error) in
+            // check error
+            
         }
     }
     
