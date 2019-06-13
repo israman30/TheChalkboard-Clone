@@ -21,7 +21,7 @@ extension TaskController {
             persistTaskDefault.persistListToDefaults()
             textField.text = ""
         } else {
-            AlertController.alert(viewController: self, title: "Error 4☠️4!", message: "Not task entered found")
+            AlertController.alert(viewController: self, title: "Error 4☠️4!", message: "Not task entered")
         }
     }
     

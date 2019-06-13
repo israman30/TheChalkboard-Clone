@@ -86,9 +86,9 @@
 		8D3E4BCC1FD250BB007142C9 /* ProgrammaticalyChalkboardApp */ = {
 			isa = PBXGroup;
 			children = (
-				8D3E4BE11FD255D6007142C9 /* Controller */,
 				8D3E4BE01FD255CF007142C9 /* Model */,
 				8D3E4BDF1FD255C9007142C9 /* View */,
+				8D3E4BE11FD255D6007142C9 /* Controller */,
 				8D3E4BD91FD250BB007142C9 /* Info.plist */,
 			);
 			path = ProgrammaticalyChalkboardApp;

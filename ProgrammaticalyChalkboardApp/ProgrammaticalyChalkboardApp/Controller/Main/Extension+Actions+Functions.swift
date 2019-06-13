@@ -28,7 +28,7 @@ extension MainController {
             persistLisToDefaults.persistListToDefaults()
             textField.text = ""
         } else {
-            AlertController.alert(viewController: self, title: "Error 4☠️4!", message: "Not list entered found")
+            AlertController.alert(viewController: self, title: "Error 4☠️4!", message: "Not list entered")
         }
     }
     
