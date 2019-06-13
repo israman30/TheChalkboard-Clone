@@ -17,6 +17,9 @@ class DetailController: UIViewController {
     
     let detailPersistDefaults = Model.shared
     
+    // MARK: - User Notifications identifier for notification request
+    let uidString = UUID().uuidString
+    
     let textView: UITextView = {
         let tf = UITextView()
         tf.backgroundColor = .black
@@ -52,12 +55,8 @@ class DetailController: UIViewController {
         return label
     }()
     
-    let uidString = UUID().uuidString
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       
         
         setDetailView()
         setNav()

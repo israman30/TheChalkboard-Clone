@@ -79,7 +79,7 @@ extension DetailController {
             }
         }
         guard let subtitle = selectedTask?.title,
-            let body = selectedTask?.detail else { return }
+              let body = selectedTask?.detail else { return }
         // 2. Add a content
         let content = UNMutableNotificationContent()
         content.title = "Chalkboard Reminder"
@@ -100,7 +100,6 @@ extension DetailController {
         center.add(request) { (error) in
             // check error
             if let error = error { print("Error getting a badge",error) }
-            
         }
     }
 }
