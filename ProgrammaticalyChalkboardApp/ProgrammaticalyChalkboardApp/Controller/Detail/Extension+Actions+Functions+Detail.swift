@@ -55,8 +55,6 @@ extension DetailController {
         }
     }
     
-    
-    
     // Sub.MARK: - Saving info alarm message function
     func savingDataDetailAlertMsg(){
         AlertController.alert(viewController: self, title: "Bingo..👍", message: "You details are saved succesfully!")
