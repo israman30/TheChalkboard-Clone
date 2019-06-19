@@ -45,7 +45,7 @@ class TaskCell: UITableViewCell {
     
     func setUpCellView(){
         
-        [cellLabel, dateLabel].forEach { addSubview($0) }
+        addSubViews(cellLabel, dateLabel)
         
         cellLabel.setAnchor(top: topAnchor, left: leftAnchor, bottom: dateLabel.bottomAnchor, right: rightAnchor, paddingTop: 0, paddingLeft: 10, paddingBottom: 0, paddingRight: 0)
         

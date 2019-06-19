@@ -32,7 +32,7 @@ extension TaskController {
         
         view.backgroundColor = UIColor.Colors.setViewBackgroundColor
 
-        [tableView, textField, button].forEach { view.addSubview($0) }
+        view.addSubViews(tableView, textField, button)
         
         tableView.layer.cornerRadius = 5
         

@@ -31,7 +31,7 @@ extension MainController {
         
         view.backgroundColor = UIColor.Colors.setViewBackgroundColor
 
-        [tableView, myLabel, textField, button].forEach { view.addSubview($0) }
+        view.addSubViews(tableView, myLabel, textField, button)
         
         button.setAnchor(top: view.topAnchor, left: nil, bottom: nil, right: view.rightAnchor, paddingTop: 140, paddingLeft: 0, paddingBottom: 0, paddingRight: 8, width:50, height: 50)
         
