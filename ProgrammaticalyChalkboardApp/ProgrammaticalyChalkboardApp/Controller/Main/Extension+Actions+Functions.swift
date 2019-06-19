@@ -20,16 +20,20 @@ extension MainController {
     @objc func addButton(){
         guard let listText = textField.text else {return}
         if !listText.isEmpty {
-            let lists = List(title: listText)
-            myLists.append(lists)
-            selectedListIndex = myLists.count
-            tableView.reloadData()
-            textField.resignFirstResponder()
+            addNewList(for: listText)
             persistLisToDefaults.persistListToDefaults()
             textField.text = ""
         } else {
             AlertController.alert(viewController: self, title: "Error 4☠️4!", message: "Not list entered")
         }
+    }
+    
+    func addNewList(for listText: String) {
+        let lists = List(title: listText)
+        myLists.append(lists)
+        selectedListIndex = myLists.count
+        tableView.reloadData()
+        textField.resignFirstResponder()
     }
     
     // MARK: - Keyboard dismiss
