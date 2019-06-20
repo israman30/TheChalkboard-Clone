@@ -17,6 +17,10 @@ import UIKit
 
 extension MainController {
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     @objc func addButton(){
         guard let listText = textField.text else {return}
         if !listText.isEmpty {
@@ -24,7 +28,7 @@ extension MainController {
             persistLisToDefaults.persistListToDefaults()
             textField.text = ""
         } else {
-            AlertController.alert(viewController: self, title: "Error 4☠️4!", message: "Not list entered")
+            AlertController.alert(self, title: "Error 4☠️4!", message: "Not list entered")
         }
     }
     
@@ -46,10 +50,6 @@ extension MainController {
         let taskViewController = segue.destination as! TaskController
         guard let index = tableView.indexPathForSelectedRow?.row else { return }
         taskViewController.selectedList = myLists[index]
-    }
-    
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
     }
     
     

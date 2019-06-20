@@ -14,15 +14,19 @@ extension TaskController {
         guard let taskText = textField.text else {return}
         
         if !taskText.isEmpty {
-            let addItem = Items(title: taskText, detail: "", date: "")
-            selectedList.items.append(addItem)
-            tableView.reloadData()
-            textField.resignFirstResponder()
+            addNewTask(for: taskText)
             persistTaskDefault.persistListToDefaults()
             textField.text = ""
         } else {
-            AlertController.alert(viewController: self, title: "Error 4☠️4!", message: "Not task entered")
+            AlertController.alert(self, title: "Error 4☠️4!", message: "Not task entered")
         }
+    }
+    
+    func addNewTask(for taskText: String) {
+        let addItem = Items(title: taskText, detail: "", date: "")
+        selectedList.items.append(addItem)
+        tableView.reloadData()
+        textField.resignFirstResponder()
     }
     
     // MARK: Keyboard dismiss when touch outside

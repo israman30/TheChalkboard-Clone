@@ -51,13 +51,13 @@ extension DetailController {
             savingDataDetailAlertMsg()
             notifications(for: datePicker.date)
         } else {
-            AlertController.alert(viewController: self, title: "☠️", message: "Enter a detail please")
+            AlertController.alert(self, title: "☠️", message: "Enter a detail please")
         }
     }
     
     // Sub.MARK: - Saving info alarm message function
     func savingDataDetailAlertMsg(){
-        AlertController.alert(viewController: self, title: "Bingo..👍", message: "You details are saved succesfully!")
+        AlertController.alert(self, title: "Bingo..👍", message: "You details are saved succesfully!")
     }
     
     // MARK: Keyboard dismiss when touch outside

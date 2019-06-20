@@ -18,7 +18,7 @@ import UIKit
 struct AlertController {
     
     // MARK: - Alert controller method
-    static func alert(viewController: UIViewController, title: String, message: String){
+    static func alert(_ viewController: UIViewController, title: String, message: String){
         
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
