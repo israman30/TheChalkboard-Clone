@@ -23,8 +23,6 @@ class TaskController: UIViewController {
     
     let persistTaskDefault = Model.shared
     
-    let cell = "cell"
-    
     let tableView = UITableView()
     
     let textField: UITextField = {

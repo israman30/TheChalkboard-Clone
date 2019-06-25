@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4DBD3F6622B28E44007AC2F6 /* UserNotifications+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBD3F6522B28E44007AC2F6 /* UserNotifications+Ext.swift */; };
+		4DE1713C22C26E1A000835F8 /* CellID+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE1713B22C26E1A000835F8 /* CellID+Enum.swift */; };
 		8D3684E41FDB8684001854E9 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3684E31FDB8684001854E9 /* Data.swift */; };
 		8D3E4BCE1FD250BB007142C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E4BCD1FD250BB007142C9 /* AppDelegate.swift */; };
 		8D3E4BD01FD250BB007142C9 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E4BCF1FD250BB007142C9 /* MainController.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		4DBD3F6522B28E44007AC2F6 /* UserNotifications+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserNotifications+Ext.swift"; sourceTree = "<group>"; };
+		4DE1713B22C26E1A000835F8 /* CellID+Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CellID+Enum.swift"; sourceTree = "<group>"; };
 		8D3684E31FDB8684001854E9 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		8D3E4BCA1FD250BB007142C9 /* ProgrammaticalyChalkboardApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProgrammaticalyChalkboardApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D3E4BCD1FD250BB007142C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				8D3684E31FDB8684001854E9 /* Data.swift */,
+				4DE1713B22C26E1A000835F8 /* CellID+Enum.swift */,
 				8DA6F1CF2134631E00531ABB /* AlertController+Helper.swift */,
 			);
 			path = Model;
@@ -238,6 +241,7 @@
 				8DA6F1BF21339AE200531ABB /* Extension+Actions+Functions.swift in Sources */,
 				8DA6F1D221346C7400531ABB /* MyCell.swift in Sources */,
 				8DF687141FF324B500E8BF8E /* TaskCell.swift in Sources */,
+				4DE1713C22C26E1A000835F8 /* CellID+Enum.swift in Sources */,
 				8D3684E41FDB8684001854E9 /* Data.swift in Sources */,
 				8DA6F1BD21339A4400531ABB /* Extension+delegates+dataSource.swift in Sources */,
 				8DA6F1CA21345F1300531ABB /* Extension+Action+Functions+TaskVC.swift in Sources */,
