@@ -19,13 +19,17 @@ import UIKit
    ============================================================================
  */
 
+enum CellID: String {
+    case mainCell, taskCell
+}
+
 class MainController: UIViewController {
     
     var selectedIndex: Int?
     
     let persistLisToDefaults = Model.shared
     
-    var cell = "cell"
+//    var cell = "cell"
     
     let tableView = UITableView()
     

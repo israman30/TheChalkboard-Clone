@@ -25,7 +25,7 @@ extension MainController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(MyCell.self, forCellReuseIdentifier: cell)
+        tableView.register(MyCell.self, forCellReuseIdentifier: CellID.mainCell.rawValue)
         
         tableView.layer.cornerRadius = 5
         

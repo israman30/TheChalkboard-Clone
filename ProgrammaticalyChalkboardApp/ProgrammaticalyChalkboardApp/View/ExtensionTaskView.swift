@@ -26,7 +26,7 @@ extension TaskController {
     // MARK: - SET TASK MAIN VIEW
     func setMainTaskView(_ tableView: UITableView){
         
-        tableView.register(TaskCell.self, forCellReuseIdentifier: cell)
+        tableView.register(TaskCell.self, forCellReuseIdentifier: CellID.taskCell.rawValue)
         tableView.delegate = self
         tableView.dataSource = self
         

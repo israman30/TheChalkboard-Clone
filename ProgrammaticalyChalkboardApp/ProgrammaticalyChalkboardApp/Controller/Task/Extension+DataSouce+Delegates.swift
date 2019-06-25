@@ -16,7 +16,7 @@ extension TaskController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: self.cell) as! TaskCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellID.taskCell.rawValue) as! TaskCell
         cell.items = selectedList.items[indexPath.row]
         return cell
     }

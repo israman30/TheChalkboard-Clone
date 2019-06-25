@@ -21,7 +21,7 @@ extension MainController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: self.cell) as? MyCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellID.mainCell.rawValue) as? MyCell
         
         cell?.list = myLists[indexPath.row]
         
@@ -50,5 +50,4 @@ extension MainController: UITableViewDelegate, UITableViewDataSource {
             tableView.reloadData()
         }
     }
-    
 }
