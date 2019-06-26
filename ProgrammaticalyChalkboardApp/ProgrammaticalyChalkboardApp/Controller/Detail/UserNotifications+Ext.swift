@@ -14,7 +14,7 @@ extension DetailController {
     func notifications(for date: Date){
         // 1. Ask for permission
         let center = UNUserNotificationCenter.current()
-        center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+        center.requestAuthorization(options: [.badge, .alert, .sound]) { (granted, error) in
             // If user no give permissions, let it know go to user settings
             if let error = error {
                 print("Error", error)
