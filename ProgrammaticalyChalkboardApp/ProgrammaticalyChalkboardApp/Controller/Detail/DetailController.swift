@@ -29,20 +29,12 @@ class DetailController: UIViewController {
     }()
     
     let titleDetailLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Detail of task label"
-        label.font = UIFont(name: "Marker Felt", size: 25.0)
-        label.textColor = .white
-        label.textAlignment = .center
+        let label = UILabel(text: "Detail of task label", fontName: "Marker Felt", fontSize: 25, color: .white, aligment: .center)
         return label
     }()
     
     let useTheForceLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Use the Force!"
-        label.font = UIFont(name: "Marker Felt", size: 30.0)
-        label.textColor = .white
-        label.textAlignment = .center
+        let label = UILabel(text: "Use the Force!", fontName: "Marker Felt", fontSize: 30, color: .white, aligment: .center)
         return label
     }()
     

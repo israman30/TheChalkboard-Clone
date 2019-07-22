@@ -8,12 +8,78 @@
 
 import UIKit
 
+/*
+ ================= UILabel Custom extension =====================
+ - This method is called at Detail Controller
+ ================================================================
+ */
+
+extension UILabel {
+    
+    convenience init(text string: String, fontName: String, fontSize: CGFloat, color: UIColor, aligment: NSTextAlignment) {
+        self.init()
+        text = string
+        font = UIFont(name: fontName, size: fontSize)
+        textColor = color
+        textAlignment = aligment
+    }
+}
+
+/*
+ ================= UITexField Custom extension ==================
+ - This method is called at List & Task Controller
+ ================================================================
+ */
+
+extension UITextField {
+    
+    convenience init(placeholder: String, background: UIColor, color: UIColor, fontSize: CGFloat) {
+        self.init()
+        let attributes = NSAttributedString(
+            string: placeholder,
+            attributes: [.foregroundColor: UIColor.lightGray]
+        )
+        attributedPlaceholder = attributes
+        backgroundColor = background
+        textColor = color
+        font = UIFont.systemFont(ofSize: fontSize)
+    }
+}
+
+/*
+  ================= UIButton Custom extension =================
+  - This method is called at List & Task Controller
+  =============================================================
+ */
+
+extension UIButton {
+    
+    convenience init(title: String, background: UIColor, border: CGFloat, colorBorder: CGColor, radius: CGFloat) {
+        self.init()
+        setTitle(title, for: .normal)
+        backgroundColor = background
+        layer.borderWidth = border
+        layer.borderColor = colorBorder
+        layer.cornerRadius = radius
+    }
+}
+
+/*
+ ================= UIView addSubviews extension ==================
+ - This method is called when view is loading
+ =================================================================
+ */
 extension UIView {
     func addSubViews(_ views: UIView...) {
         views.forEach { addSubview($0) }
     }
 }
 
+/*
+ ================= UIColor Custom extension ==================
+ - This method is called to set custom colors on List, Task & Detail Controller
+ =============================================================
+ */
 extension UIColor {
     struct Colors {
         static var setNavBarTintColor: UIColor {
@@ -31,6 +97,7 @@ extension UIColor {
   =================== LAYOUT EXTENSION ====================
   - This extension have methods that help to set the layout using anchor constraint.
   - These methods can be used any where in the application.
+  =========================================================
  */
 extension UIView {
     

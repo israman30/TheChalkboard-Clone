@@ -22,9 +22,7 @@ extension MainController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellID.mainCell.rawValue) as? MyCell
-        
         cell?.list = myLists[indexPath.row]
-        
         return cell!
     }
     

@@ -20,9 +20,7 @@ extension DetailController {
             NSAttributedString.Key.font: UIFont(name:"Marker Felt", size:25.0)!,
             NSAttributedString.Key.foregroundColor:UIColor.white
         ]
-        
         navigationItem.title = "My Chalkboard"
-        
         navigationController?.navigationBar.tintColor = .white
     }
     

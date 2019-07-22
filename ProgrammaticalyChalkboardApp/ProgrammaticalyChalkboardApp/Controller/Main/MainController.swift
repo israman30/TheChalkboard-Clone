@@ -37,20 +37,12 @@ class MainController: UIViewController {
     }()
     
     let textField: UITextField = {
-        let tf = UITextField()
-        tf.attributedPlaceholder = NSAttributedString(string: "Enter list here", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
-        tf.backgroundColor = .clear
-        tf.textColor = .white
+        let tf = UITextField(placeholder: "Enter list here", background: .clear, color: .white, fontSize: 22)
         return tf
     }()
     
     let button: UIButton = {
-        let btn = UIButton()
-        btn.backgroundColor = .clear
-        btn.layer.borderWidth = 2
-        btn.layer.borderColor = UIColor.white.cgColor
-        btn.layer.cornerRadius = 25
-        btn.setTitle("Add", for: .normal)
+        let btn = UIButton(title: "Add", background: .clear, border: 2, colorBorder: UIColor.white.cgColor, radius: 25)
         btn.addTarget(self, action: #selector(addButton), for: .touchUpInside)
         return btn
     }()
