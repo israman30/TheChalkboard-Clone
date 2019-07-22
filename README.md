@@ -16,6 +16,8 @@ Save the date and get your todos organized :iphone:
 
 - Alert Controller Extension
 
+- No framework used
+
 ### Launch :rocket:
 First release on early 2017
 
