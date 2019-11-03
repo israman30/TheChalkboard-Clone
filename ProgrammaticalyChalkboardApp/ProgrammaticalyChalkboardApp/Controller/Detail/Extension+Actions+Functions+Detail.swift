@@ -10,7 +10,7 @@ import UIKit
 import UserNotifications
 
 extension DetailController {
-    
+    // MARK: - Create date picker function + tool bar with done button
     func createDatePicker(){
         datePicker.datePickerMode = .dateAndTime
         datePicker.setValue(UIColor.white, forKey: "textColor")
@@ -27,7 +27,7 @@ extension DetailController {
         dateLabel.inputAccessoryView = toolBar
         dateLabel.inputView = datePicker
     }
-    
+    //MARK: - Date format for done tapped button on tool bar for date picker
     @objc func barButtonDoneTapped(){
         let dateFormatter = DateFormatter()
         

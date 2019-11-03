@@ -9,7 +9,8 @@
 import UIKit
 
 extension TaskController {
-    // MARK: ADD ITEM ACTION FUNCTION
+    
+    // MARK: ADD ITEM ACTION FUNCTION AND RESET INPUT TEXTFIELD
     @objc func addButtonTask(){
         guard let taskText = textField.text else {return}
         
@@ -21,7 +22,7 @@ extension TaskController {
             AlertController.alert(self, title: "Error 4☠️4!", message: "Not task entered")
         }
     }
-    
+    // MARK: -Add new task listener - creates an object fro task and added to the Items array
     func addNewTask(for taskText: String) {
         let addItem = Items(title: taskText, detail: "", date: "")
         selectedList.items.append(addItem)

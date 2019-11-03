@@ -9,26 +9,6 @@
 import UIKit
 import Foundation
 
-extension UITableView {
-
-    func setEmptyTableMessage(_ message: String) {
-        let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
-        messageLabel.text = message
-        messageLabel.textColor = .lightGray
-        messageLabel.numberOfLines = 0;
-        messageLabel.textAlignment = .center;
-        messageLabel.font = UIFont(name: "TrebuchetMS", size: 25)
-        messageLabel.sizeToFit()
-
-        self.backgroundView = messageLabel;
-        self.separatorStyle = .none;
-    }
-
-    func restore() {
-        self.backgroundView = nil
-        self.separatorStyle = .singleLine
-    }
-}
 /*
   =================== DELEGATES & DATA SOURCE ===================
   ===============================================================
@@ -37,10 +17,11 @@ extension UITableView {
 // MARK: - TableView Data Source Functions
 extension MainController: UITableViewDelegate, UITableViewDataSource {
 
+    // MARK: - Check if tableView is empty, display a message else reload tableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         myLists.count == 0 ?
             tableView.setEmptyTableMessage("No event added yet") :
-            tableView.restore()
+            tableView.reloadTable()
         return myLists.count
     }
     

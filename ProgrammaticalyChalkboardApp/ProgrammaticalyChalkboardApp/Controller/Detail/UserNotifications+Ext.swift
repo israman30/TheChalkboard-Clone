@@ -8,9 +8,14 @@
 
 import UIKit
 import UserNotifications
+/*
+ ================= USER NOTIFICATION EXTENSION =================
+ ===============================================================
+*/
 
 extension DetailController {
     
+    // MARK: - USER NOTIFICATION FUNCTION WITH DATE
     func notifications(for date: Date) {
         // 1. Ask for permission
         let center = UNUserNotificationCenter.current()

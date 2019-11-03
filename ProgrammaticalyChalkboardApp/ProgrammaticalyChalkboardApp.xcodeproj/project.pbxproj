@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D571FED236F46B800CA68CE /* EmptyTableViewMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D571FEC236F46B800CA68CE /* EmptyTableViewMessageView.swift */; };
 		4DBD3F6622B28E44007AC2F6 /* UserNotifications+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBD3F6522B28E44007AC2F6 /* UserNotifications+Ext.swift */; };
 		4DE1713C22C26E1A000835F8 /* CellID+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE1713B22C26E1A000835F8 /* CellID+Enum.swift */; };
 		8D3684E41FDB8684001854E9 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3684E31FDB8684001854E9 /* Data.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D571FEC236F46B800CA68CE /* EmptyTableViewMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableViewMessageView.swift; sourceTree = "<group>"; };
 		4DBD3F6522B28E44007AC2F6 /* UserNotifications+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserNotifications+Ext.swift"; sourceTree = "<group>"; };
 		4DE1713B22C26E1A000835F8 /* CellID+Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CellID+Enum.swift"; sourceTree = "<group>"; };
 		8D3684E31FDB8684001854E9 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				8D3E4BD61FD250BB007142C9 /* LaunchScreen.storyboard */,
 				8D3E4BE21FD255FB007142C9 /* ExtensionView.swift */,
 				8DA6F1C021339BBD00531ABB /* MainView.swift */,
+				4D571FEC236F46B800CA68CE /* EmptyTableViewMessageView.swift */,
 				8DA6F1CB2134616000531ABB /* Extension+ViewDetail.swift */,
 				8DA6F1C521345E2E00531ABB /* ExtensionTaskView.swift */,
 				8DA6F1D121346C7400531ABB /* MyCell.swift */,
@@ -252,6 +255,7 @@
 				8DA6F1C821345EB700531ABB /* Extension+DataSouce+Delegates.swift in Sources */,
 				8D3E4BE31FD255FB007142C9 /* ExtensionView.swift in Sources */,
 				8D3E4BCE1FD250BB007142C9 /* AppDelegate.swift in Sources */,
+				4D571FED236F46B800CA68CE /* EmptyTableViewMessageView.swift in Sources */,
 				8D88A2C41FDAE93400564B52 /* TaskController.swift in Sources */,
 				8DA6F1D02134631E00531ABB /* AlertController+Helper.swift in Sources */,
 				8DA6F1CC2134616000531ABB /* Extension+ViewDetail.swift in Sources */,

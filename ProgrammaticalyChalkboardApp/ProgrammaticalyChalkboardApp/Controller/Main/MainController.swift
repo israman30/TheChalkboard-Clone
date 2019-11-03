@@ -20,9 +20,9 @@ import UIKit
  */
 
 class MainController: UIViewController {
-    
+    // MARK: - Selected index for list selected
     var selectedIndex: Int?
-    
+    // MARK: - db model 
     let persistLisToDefaults = Model.shared
     
     let tableView = UITableView()
