@@ -11,11 +11,10 @@ import UIKit
 extension TaskController: UITableViewDelegate, UITableViewDataSource {
     // MARK: - DATA SOURCE & DELEGATE FUNCTIONS
     
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        if sele
-//    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        selectedList.items.count == 0 ?
+            tableView.setEmptyTableMessage("No task added yet...") :
+            tableView.restore()
         return selectedList.items.count
     }
     

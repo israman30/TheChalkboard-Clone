@@ -8,15 +8,16 @@
 
 import UIKit
 import Foundation
+
 extension UITableView {
 
     func setEmptyTableMessage(_ message: String) {
         let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
         messageLabel.text = message
-        messageLabel.textColor = .black
+        messageLabel.textColor = .lightGray
         messageLabel.numberOfLines = 0;
         messageLabel.textAlignment = .center;
-        messageLabel.font = UIFont(name: "TrebuchetMS", size: 15)
+        messageLabel.font = UIFont(name: "TrebuchetMS", size: 25)
         messageLabel.sizeToFit()
 
         self.backgroundView = messageLabel;
@@ -38,7 +39,7 @@ extension MainController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         myLists.count == 0 ?
-            tableView.setEmptyTableMessage("No list added yet") :
+            tableView.setEmptyTableMessage("No event added yet") :
             tableView.restore()
         return myLists.count
     }
