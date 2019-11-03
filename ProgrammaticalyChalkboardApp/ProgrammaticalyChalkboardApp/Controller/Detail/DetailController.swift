@@ -40,8 +40,10 @@ class DetailController: UIViewController {
     
     let dateLabel: UITextField = {
         let label = UITextField()
-        label.placeholder = "Date Here"
-        label.font = UIFont(name: "Marker Felt", size: 18.0)
+        label.attributedPlaceholder = NSAttributedString(string: "Date Here", attributes: [
+            NSAttributedString.Key.font : UIFont(name: "Marker Felt", size: 18.0)!,
+            NSAttributedString.Key.foregroundColor : UIColor.lightGray
+        ])
         label.textColor = .white
         label.textAlignment = .center
         return label
