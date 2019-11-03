@@ -33,7 +33,7 @@ extension UILabel {
 
 extension UITextField {
     
-    convenience init(placeholder: String, background: UIColor, color: UIColor, fontSize: CGFloat) {
+    convenience init(placeholder: String, background: UIColor, color: UIColor, fontSize: CGFloat, alignment: NSTextAlignment = .natural) {
         self.init()
         let attributes = NSAttributedString(
             string: placeholder,
@@ -43,6 +43,7 @@ extension UITextField {
         backgroundColor = background
         textColor = color
         font = UIFont.systemFont(ofSize: fontSize)
+        textAlignment = alignment
     }
 }
 
