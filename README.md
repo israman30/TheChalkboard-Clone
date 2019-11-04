@@ -12,7 +12,7 @@ Save the date and get your todos organized :iphone:
 
 - Xcode & Swift
 
-- UIKit, CoreData, User defaults, Date Picker, User  Notifications
+- UIKit, Date Picker, User Notifications
 
 - Alert Controller Extension
 
