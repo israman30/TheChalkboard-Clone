@@ -26,7 +26,7 @@ class TaskController: UIViewController {
     let tableView = UITableView()
     
     let textField: UITextField = {
-        let tf = UITextField(placeholder: "Enter task here", background: .clear, color: .white, fontSize: 22)
+        let tf = UITextField(placeholder: "Enter task here...", background: .clear, color: .white, fontSize: 22)
         return tf
     }()
     

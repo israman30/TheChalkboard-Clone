@@ -37,7 +37,7 @@ class MainController: UIViewController {
     }()
     
     let textField: UITextField = {
-        let tf = UITextField(placeholder: "Enter list here", background: .clear, color: .white, fontSize: 22)
+        let tf = UITextField(placeholder: "Enter a new event here...", background: .clear, color: .white, fontSize: 22)
         return tf
     }()
     
