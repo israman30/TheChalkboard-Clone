@@ -55,7 +55,28 @@ class MainController: UIViewController {
     
 }
 
+import SwiftUI
 
+struct MainPreview: PreviewProvider {
+    
+    @available(iOS 13.0.0, *)
+    static var previews: some View {
+        ContainerView().edgesIgnoringSafeArea(.all)
+    }
+    
+    @available(iOS 13.0, *)
+    struct ContainerView: UIViewControllerRepresentable {
+        
+        @available(iOS 13.0, *)
+        func makeUIViewController(context: UIViewControllerRepresentableContext<MainPreview.ContainerView>) -> UIViewController {
+            return UINavigationController(rootViewController: MainController())
+        }
+        
+        func updateUIViewController(_ uiViewController: UIViewController, context: UIViewControllerRepresentableContext<MainPreview.ContainerView>) {
+            // NOTHING YET
+        }
+    }
+}
 
 
 
