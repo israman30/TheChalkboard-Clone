@@ -46,19 +46,6 @@ class TaskController: UIViewController {
     
 }
 
-import SwiftUI
-
-@available(iOS 13.0.0, *)
-struct TaskPreview: PreviewProvider {
-    
-    static var previews: some View {
-        Text("Task View")
-    }
-}
-
-
-
-
 
 
 
