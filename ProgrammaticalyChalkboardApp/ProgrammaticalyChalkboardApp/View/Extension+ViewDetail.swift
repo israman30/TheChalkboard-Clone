@@ -39,6 +39,6 @@ extension DetailController {
         
         useTheForceLabel.setAnchor(top: textView.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 350, paddingLeft: 50, paddingBottom: 50, paddingRight: 50)
         
-        textView.setAnchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 200, paddingLeft: 8, paddingBottom: 250, paddingRight: 8, width: 200, height: 400)
+        textView.setAnchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 200, paddingLeft: 8, paddingBottom: 250, paddingRight: 8, width: 0, height: 0)
     }
 }
