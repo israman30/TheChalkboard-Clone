@@ -20,7 +20,7 @@ extension MainController: UITableViewDelegate, UITableViewDataSource {
     // MARK: - Check if tableView is empty, display a message else reload tableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         myLists.count == 0 ?
-            tableView.setEmptyTableMessage("No event added yet") :
+            tableView.setEmptyTableMessage("No event added...") :
             tableView.reloadTable()
         return myLists.count
     }

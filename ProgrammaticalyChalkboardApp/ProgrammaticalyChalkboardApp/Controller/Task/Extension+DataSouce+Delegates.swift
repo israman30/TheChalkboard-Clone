@@ -13,7 +13,7 @@ extension TaskController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         selectedList.items.count == 0 ?
-            tableView.setEmptyTableMessage("No task added yet...") :
+            tableView.setEmptyTableMessage("No task added...") :
             tableView.reloadTable()
         return selectedList.items.count
     }
