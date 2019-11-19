@@ -24,7 +24,7 @@ extension DetailController {
         navigationController?.navigationBar.tintColor = .white
     }
     
-    // MARK: - SEt DETAIL MAIN VIEW
+    // MARK: - SET DETAIL MAIN VIEW
     func setDetailView(){
         
         view.backgroundColor = UIColor.Colors.setViewBackgroundColor

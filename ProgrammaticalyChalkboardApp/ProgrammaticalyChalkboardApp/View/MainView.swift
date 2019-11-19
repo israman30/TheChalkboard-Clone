@@ -10,7 +10,7 @@ import UIKit
 
 extension MainController {
     
-    func setNavBar(){
+    func setNavBar() {
         navigationController?.navigationBar.barTintColor = UIColor.Colors.setNavBarTintColor
         navigationController?.navigationBar.titleTextAttributes = [
             NSAttributedString.Key.font: UIFont(name:"Marker Felt", size:25.0)!,
@@ -20,7 +20,7 @@ extension MainController {
     }
     
     // MARK: - Setting Custom TableView method
-    func setMainView(_ tableView: UITableView){
+    func setMainView(_ tableView: UITableView) {
         
         tableView.delegate = self
         tableView.dataSource = self
