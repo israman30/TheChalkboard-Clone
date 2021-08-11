@@ -20,7 +20,7 @@ extension MainController: UITableViewDelegate, UITableViewDataSource {
     // MARK: - Check if tableView is empty, display a message else reload tableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         myLists.count == 0 ?
-            tableView.setEmptyTableMessage("No event added...") :
+            tableView.setEmptyTableMessage(with: "No event added...") :
             tableView.reloadTable()
         return myLists.count
     }
@@ -37,7 +37,7 @@ extension MainController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let taskController = TaskController()
-        taskController.selectedList = myLists[indexPath.row]
+        taskController.taskViewModel.selectedList = myLists[indexPath.row]
         navigationController?.pushViewController(taskController, animated: true)
     }
     

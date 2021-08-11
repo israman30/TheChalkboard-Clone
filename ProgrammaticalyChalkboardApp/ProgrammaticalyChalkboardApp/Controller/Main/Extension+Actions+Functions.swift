@@ -35,7 +35,7 @@ extension MainController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let taskViewController = segue.destination as! TaskController
         guard let index = tableView.indexPathForSelectedRow?.row else { return }
-        taskViewController.selectedList = myLists[index]
+        taskViewController.taskViewModel.selectedList = myLists[index]
     }
     
 }

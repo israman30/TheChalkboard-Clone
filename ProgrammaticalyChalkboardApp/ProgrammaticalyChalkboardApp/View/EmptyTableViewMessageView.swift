@@ -16,7 +16,7 @@ import UIKit
 extension UITableView {
 
     // MARK: - TABLE VIEW EMPTY MESSAGE DISPLAY FUNCTION
-    func setEmptyTableMessage(_ message: String) {
+    func setEmptyTableMessage(with message: String) {
         let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
         messageLabel.text = message
         messageLabel.textColor = .lightGray

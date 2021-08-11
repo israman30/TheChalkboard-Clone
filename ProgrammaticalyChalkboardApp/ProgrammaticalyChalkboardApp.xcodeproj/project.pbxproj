@@ -19,6 +19,7 @@
 		8D88A2C41FDAE93400564B52 /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D88A2C31FDAE93400564B52 /* TaskController.swift */; };
 		8D88A2C61FDB3AE600564B52 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D88A2C51FDB3AE500564B52 /* DetailController.swift */; };
 		8DA6812926C473AA0091DBD0 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6812826C473AA0091DBD0 /* MainViewModel.swift */; };
+		8DA6812B26C4829E0091DBD0 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6812A26C4829E0091DBD0 /* TaskViewModel.swift */; };
 		8DA6F1BD21339A4400531ABB /* Extension+delegates+dataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6F1BC21339A4400531ABB /* Extension+delegates+dataSource.swift */; };
 		8DA6F1BF21339AE200531ABB /* Extension+Actions+Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6F1BE21339AE200531ABB /* Extension+Actions+Functions.swift */; };
 		8DA6F1C121339BBD00531ABB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6F1C021339BBD00531ABB /* MainView.swift */; };
@@ -48,6 +49,7 @@
 		8D88A2C31FDAE93400564B52 /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
 		8D88A2C51FDB3AE500564B52 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		8DA6812826C473AA0091DBD0 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		8DA6812A26C4829E0091DBD0 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
 		8DA6F1BC21339A4400531ABB /* Extension+delegates+dataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+delegates+dataSource.swift"; sourceTree = "<group>"; };
 		8DA6F1BE21339AE200531ABB /* Extension+Actions+Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Actions+Functions.swift"; sourceTree = "<group>"; };
 		8DA6F1C021339BBD00531ABB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				8DA6812826C473AA0091DBD0 /* MainViewModel.swift */,
+				8DA6812A26C4829E0091DBD0 /* TaskViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				8DA6F1CA21345F1300531ABB /* Extension+Action+Functions+TaskVC.swift in Sources */,
 				8D3E4BD01FD250BB007142C9 /* MainController.swift in Sources */,
 				4DBD3F6622B28E44007AC2F6 /* UserNotifications+Ext.swift in Sources */,
+				8DA6812B26C4829E0091DBD0 /* TaskViewModel.swift in Sources */,
 				8DA6F1CE2134624900531ABB /* Extension+Actions+Functions+Detail.swift in Sources */,
 				8DA6F1C621345E2E00531ABB /* ExtensionTaskView.swift in Sources */,
 				8DA6F1C821345EB700531ABB /* Extension+DataSouce+Delegates.swift in Sources */,

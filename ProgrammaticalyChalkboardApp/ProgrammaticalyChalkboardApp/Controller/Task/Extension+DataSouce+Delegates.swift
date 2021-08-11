@@ -12,15 +12,15 @@ extension TaskController: UITableViewDelegate, UITableViewDataSource {
     // MARK: - DATA SOURCE & DELEGATE FUNCTIONS
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        selectedList.items.count == 0 ?
-            tableView.setEmptyTableMessage("No task added...") :
+        taskViewModel.selectedList.items.count == 0 ?
+            tableView.setEmptyTableMessage(with: "No task added...") :
             tableView.reloadTable()
-        return selectedList.items.count
+        return taskViewModel.selectedList.items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellID.taskCell.rawValue) as! TaskCell
-        cell.items = selectedList.items[indexPath.row]
+        cell.items = taskViewModel.selectedList.items[indexPath.row]
         return cell
     }
     
@@ -30,20 +30,20 @@ extension TaskController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detail = DetailController()
-        detail.selectedTask = selectedList.items[indexPath.row]
+        detail.selectedTask = taskViewModel.selectedList.items[indexPath.row]
         navigationController?.pushViewController(detail, animated: true)
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            selectedList.items.remove(at: indexPath.row)
+            taskViewModel.selectedList.items.remove(at: indexPath.row)
             let defaults = UserDefaults.standard
             tableView.deleteRows(at: [indexPath as IndexPath], with: .fade)
             defaults.removeObject(forKey: "detail")
             defaults.removeObject(forKey: "title")
             defaults.removeObject(forKey: "date")
             defaults.synchronize()
-            persistTaskDefault.persistListToDefaults()
+            taskViewModel.persistTaskDefault.persistListToDefaults()
         } else {
             tableView.reloadData()
         }

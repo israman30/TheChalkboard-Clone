@@ -11,23 +11,8 @@ import UIKit
 extension TaskController {
     
     // MARK: ADD ITEM ACTION FUNCTION AND RESET INPUT TEXTFIELD
-    @objc func addButtonTask(){
-        guard let taskText = textField.text else {return}
-        
-        if !taskText.isEmpty {
-            addNewTask(for: taskText)
-            persistTaskDefault.persistListToDefaults()
-            textField.text = ""
-        } else {
-            AlertController.alert(self, title: "Error 4☠️4!", message: "Not task entered")
-        }
-    }
-    // MARK: -Add new task listener - creates an object fro task and added to the Items array
-    func addNewTask(for taskText: String) {
-        let addItem = Items(title: taskText, detail: "", date: "")
-        selectedList.items.append(addItem)
-        tableView.reloadData()
-        textField.resignFirstResponder()
+    @objc func addButtonTask() {
+        taskViewModel.addTask(textField: textField, tableView: tableView, vc: self)
     }
     
     // MARK: Keyboard dismiss when touch outside
