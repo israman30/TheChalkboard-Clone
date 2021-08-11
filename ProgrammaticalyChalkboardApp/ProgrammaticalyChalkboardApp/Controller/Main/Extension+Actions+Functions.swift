@@ -20,24 +20,10 @@ extension MainController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    
     // MARK: - Add list function with db and re-set textField - if input textField is empty, alert user.
     @objc func addButton(){
-        guard let listText = textField.text else {return}
-        if !listText.isEmpty {
-            addNewList(for: listText)
-            persistLisToDefaults.persistListToDefaults()
-            textField.text = ""
-        } else {
-            AlertController.alert(self, title: "Error 4☠️4!", message: "Not list entered")
-        }
-    }
-    // MARK: - Add new list listener - create new object and add into the List array + create a new indx for each list.
-    func addNewList(for listText: String) {
-        let lists = List(title: listText)
-        myLists.append(lists)
-        selectedListIndex = myLists.count
-        tableView.reloadData()
-        textField.resignFirstResponder()
+        mainViewModel.add(tableView: tableView, textField: textField, vc: self)
     }
     
     // MARK: - Keyboard dismiss when user touches any where out of the input textField
@@ -53,3 +39,5 @@ extension MainController {
     }
     
 }
+
+

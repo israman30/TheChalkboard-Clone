@@ -48,7 +48,7 @@ extension MainController: UITableViewDelegate, UITableViewDataSource {
             tableView.deleteRows(at: [indexPath as IndexPath], with: .fade)
             defaults.removeObject(forKey: "title")
             defaults.synchronize()
-            persistLisToDefaults.persistListToDefaults()
+            mainViewModel.persistLisToDefaults.persistListToDefaults()
         } else {
             tableView.reloadData()
         }

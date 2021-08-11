@@ -18,6 +18,7 @@
 		8D3E4BE31FD255FB007142C9 /* ExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E4BE21FD255FB007142C9 /* ExtensionView.swift */; };
 		8D88A2C41FDAE93400564B52 /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D88A2C31FDAE93400564B52 /* TaskController.swift */; };
 		8D88A2C61FDB3AE600564B52 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D88A2C51FDB3AE500564B52 /* DetailController.swift */; };
+		8DA6812926C473AA0091DBD0 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6812826C473AA0091DBD0 /* MainViewModel.swift */; };
 		8DA6F1BD21339A4400531ABB /* Extension+delegates+dataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6F1BC21339A4400531ABB /* Extension+delegates+dataSource.swift */; };
 		8DA6F1BF21339AE200531ABB /* Extension+Actions+Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6F1BE21339AE200531ABB /* Extension+Actions+Functions.swift */; };
 		8DA6F1C121339BBD00531ABB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6F1C021339BBD00531ABB /* MainView.swift */; };
@@ -46,6 +47,7 @@
 		8D3E4BE21FD255FB007142C9 /* ExtensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionView.swift; sourceTree = "<group>"; };
 		8D88A2C31FDAE93400564B52 /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
 		8D88A2C51FDB3AE500564B52 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
+		8DA6812826C473AA0091DBD0 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		8DA6F1BC21339A4400531ABB /* Extension+delegates+dataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+delegates+dataSource.swift"; sourceTree = "<group>"; };
 		8DA6F1BE21339AE200531ABB /* Extension+Actions+Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Actions+Functions.swift"; sourceTree = "<group>"; };
 		8DA6F1C021339BBD00531ABB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 		8D3E4BCC1FD250BB007142C9 /* ProgrammaticalyChalkboardApp */ = {
 			isa = PBXGroup;
 			children = (
+				8DA6812726C472340091DBD0 /* ViewModel */,
 				8D3E4BE01FD255CF007142C9 /* Model */,
 				8D3E4BDF1FD255C9007142C9 /* View */,
 				8D3E4BE11FD255D6007142C9 /* Controller */,
@@ -134,6 +137,14 @@
 				8DA6F1C421345D7900531ABB /* Detail */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		8DA6812726C472340091DBD0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8DA6812826C473AA0091DBD0 /* MainViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		8DA6F1C221345D3000531ABB /* Main */ = {
@@ -253,6 +264,7 @@
 				8DA6F1CE2134624900531ABB /* Extension+Actions+Functions+Detail.swift in Sources */,
 				8DA6F1C621345E2E00531ABB /* ExtensionTaskView.swift in Sources */,
 				8DA6F1C821345EB700531ABB /* Extension+DataSouce+Delegates.swift in Sources */,
+				8DA6812926C473AA0091DBD0 /* MainViewModel.swift in Sources */,
 				8D3E4BE31FD255FB007142C9 /* ExtensionView.swift in Sources */,
 				8D3E4BCE1FD250BB007142C9 /* AppDelegate.swift in Sources */,
 				4D571FED236F46B800CA68CE /* EmptyTableViewMessageView.swift in Sources */,
