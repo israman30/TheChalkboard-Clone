@@ -13,7 +13,7 @@ import UIKit
 class Model {
     static let shared = Model()
     
-    private init(){}
+    private init() {}
     
     let key = "persisted-List"
     
@@ -24,7 +24,7 @@ class Model {
     }
     
     // Sub.MARK: - Load data from user defaults
-    func loadPersistedListFromDefaults(){
+    func loadPersistedListFromDefaults() {
         if let data = UserDefaults.standard.object(forKey: key) as? Data {
             let peps = NSKeyedUnarchiver.unarchiveObject(with: data) as! [List]
             myLists = peps

@@ -58,6 +58,8 @@ extension UIButton {
     convenience init(title: String, background: UIColor, border: CGFloat, colorBorder: CGColor, radius: CGFloat) {
         self.init()
         setTitle(title, for: .normal)
+        titleLabel?.font = .preferredFont(forTextStyle: .title3)
+        titleLabel?.adjustsFontForContentSizeCategory = true
         backgroundColor = background
         layer.borderWidth = border
         layer.borderColor = colorBorder

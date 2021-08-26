@@ -30,7 +30,7 @@ extension TaskController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detail = DetailController()
-        detail.selectedTask = taskViewModel.selectedList.items[indexPath.row]
+        detail.detailViewModel.selectedTask = taskViewModel.selectedList.items[indexPath.row]
         navigationController?.pushViewController(detail, animated: true)
     }
     

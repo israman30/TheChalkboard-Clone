@@ -30,9 +30,13 @@ class MainController: UIViewController {
     let myLabel: UILabel = {
         let label = UILabel ()
         label.text = "My Chalkboard"
-        label.font = UIFont(name: "Marker Felt", size: 30.0)
+        if let customFont = UIFont(name: "Marker Felt", size: 25) {
+            label.font = UIFontMetrics(forTextStyle: .body).scaledFont(for: customFont)
+            label.adjustsFontForContentSizeCategory = true
+        }
         label.textColor = .white
         label.textAlignment = .center
+        
         return label
     }()
     

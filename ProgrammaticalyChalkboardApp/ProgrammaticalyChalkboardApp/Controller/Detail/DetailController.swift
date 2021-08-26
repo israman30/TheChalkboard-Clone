@@ -11,14 +11,24 @@ import UserNotifications
 
 class DetailController: UIViewController {
     
-    var selectedTask: Items?
+//    var selectedTask: Items?
+//
+    let datePicker: UIDatePicker = {
+        let dp = UIDatePicker()
+        if #available(iOS 13.4, *) {
+            dp.preferredDatePickerStyle = .wheels
+        } else {
+            // Fallback on earlier versions
+        }
+        return dp
+    }()
+//
+//    let detailPersistDefaults = Model.shared
+//
+//    // MARK: - User Notifications identifier for notification request
+//    let uidString = UUID().uuidString
     
-    var datePicker = UIDatePicker()
-    
-    let detailPersistDefaults = Model.shared
-    
-    // MARK: - User Notifications identifier for notification request
-    let uidString = UUID().uuidString
+    let detailViewModel = DetailViewModel()
     
     let textView: UITextView = {
         let tf = UITextView()
@@ -56,13 +66,14 @@ class DetailController: UIViewController {
         setNav()
         createDatePicker()
         
-        guard let title = selectedTask?.title,
-              let detail = selectedTask?.detail,
-              let date = selectedTask?.date else {return}
+        guard let title = detailViewModel.selectedTask?.title,
+              let detail = detailViewModel.selectedTask?.detail,
+              let date = detailViewModel.selectedTask?.date else {return}
         
         titleDetailLabel.text = title
         textView.text = detail
         dateLabel.text = date
+        
     }
     
 }

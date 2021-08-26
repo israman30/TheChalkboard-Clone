@@ -15,7 +15,7 @@ class MainViewModel {
     
     // MARK: - Add list function with db and re-set textField - if input textField is empty, alert user.
     func add(tableView: UITableView, textField: UITextField, vc: UIViewController) {
-        guard let listText = textField.text else {return}
+        guard let listText = textField.text else { return }
         if !listText.isEmpty {
             addNewList(for: listText)
             persistLisToDefaults.persistListToDefaults()
