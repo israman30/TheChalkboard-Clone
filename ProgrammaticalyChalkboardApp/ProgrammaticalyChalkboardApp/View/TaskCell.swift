@@ -23,14 +23,16 @@ class TaskCell: UITableViewCell {
     let cellLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 25)
+        label.font = .preferredFont(forTextStyle: .title2)
+        label.adjustsFontForContentSizeCategory = true
         return label
     }()
     
     let dateLabel: UILabel = {
         let label = UILabel()
         label.textColor = .darkGray
-        label.font = UIFont.boldSystemFont(ofSize: 10)
+        label.font = .preferredFont(forTextStyle: .caption1)
+        label.adjustsFontForContentSizeCategory = true
         return label
     }()
     

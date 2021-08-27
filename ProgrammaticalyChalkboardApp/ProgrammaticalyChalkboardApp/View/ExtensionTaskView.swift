@@ -40,6 +40,6 @@ extension TaskController {
         
         tableView.setAnchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 200, paddingLeft: 8, paddingBottom: 50, paddingRight: 8)
         
-        textField.setAnchor(top: view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 145, paddingLeft: 10, paddingBottom: 0, paddingRight: 8,width: 0, height: 30)
+        textField.setAnchor(top: view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 145, paddingLeft: 10, paddingBottom: 0, paddingRight: 8,width: 0, height: 44)
     }
 }
