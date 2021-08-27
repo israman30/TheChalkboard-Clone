@@ -45,13 +45,19 @@ class TaskCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setUpCellView(){
+    func setUpCellView() {
         
-        addSubViews(cellLabel, dateLabel)
+        let stackView = UIStackView(arrangedSubviews: [cellLabel, dateLabel])
+        stackView.axis = .vertical
+        addSubview(stackView)
         
-        cellLabel.setAnchor(top: topAnchor, left: leftAnchor, bottom: dateLabel.bottomAnchor, right: rightAnchor, paddingTop: 0, paddingLeft: 10, paddingBottom: 0, paddingRight: 0)
-        
-        dateLabel.setAnchor(top: cellLabel.topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 40, paddingLeft: 15, paddingBottom: 0, paddingRight: 0)
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            stackView.topAnchor.constraint(equalTo: topAnchor, constant: 15),
+            stackView.leftAnchor.constraint(equalTo: leftAnchor, constant: 10),
+            stackView.rightAnchor.constraint(equalTo: rightAnchor, constant: -10),
+            stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -15)
+        ])
     }
 }
 
