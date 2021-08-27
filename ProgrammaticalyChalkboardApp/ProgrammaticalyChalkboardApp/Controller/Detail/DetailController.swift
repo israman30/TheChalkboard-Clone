@@ -33,7 +33,8 @@ class DetailController: UIViewController {
     let textView: UITextView = {
         let tf = UITextView()
         tf.backgroundColor = .black
-        tf.font = UIFont.systemFont(ofSize: 18)
+        tf.font = .preferredFont(forTextStyle: .title3)
+        tf.adjustsFontForContentSizeCategory = true
         tf.textColor = .white
         return tf
     }()
@@ -50,10 +51,10 @@ class DetailController: UIViewController {
     
     let dateLabel: UITextField = {
         let label = UITextField()
-        label.attributedPlaceholder = NSAttributedString(string: "Date Here", attributes: [
-            NSAttributedString.Key.font : UIFont(name: "Marker Felt", size: 18.0)!,
-            NSAttributedString.Key.foregroundColor : UIColor.lightGray
-        ])
+        if let customFont = UIFont(name: "Marker Felt", size: 18) {
+            label.font = UIFontMetrics(forTextStyle: .body).scaledFont(for: customFont)
+            label.adjustsFontForContentSizeCategory = true
+        }
         label.textColor = .white
         label.textAlignment = .center
         return label

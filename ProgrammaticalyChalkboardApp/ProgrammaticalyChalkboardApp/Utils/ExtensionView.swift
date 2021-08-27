@@ -20,6 +20,10 @@ extension UILabel {
         self.init()
         text = string
         font = UIFont(name: fontName, size: fontSize)
+        if let customFont = UIFont(name: fontName, size: 25) {
+            font = UIFontMetrics(forTextStyle: .caption1).scaledFont(for: customFont)
+        }
+        adjustsFontForContentSizeCategory = true
         textColor = color
         textAlignment = aligment
     }

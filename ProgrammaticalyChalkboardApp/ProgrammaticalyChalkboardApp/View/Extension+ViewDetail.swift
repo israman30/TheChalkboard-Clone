@@ -33,7 +33,13 @@ extension DetailController {
         
         textView.layer.cornerRadius = 8
         
-        dateLabel.setAnchor(top: titleDetailLabel.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 35, paddingLeft: 10, paddingBottom: 0, paddingRight: 10)
+        dateLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            dateLabel.heightAnchor.constraint(equalToConstant: 44),
+            dateLabel.topAnchor.constraint(equalTo: titleDetailLabel.bottomAnchor),
+            dateLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10),
+            dateLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 10)
+        ])
         
         titleDetailLabel.setAnchor(top: view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 120, paddingLeft: 10, paddingBottom: 0, paddingRight: 10)
         
