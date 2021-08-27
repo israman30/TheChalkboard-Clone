@@ -94,6 +94,7 @@
 		8D3E4BCC1FD250BB007142C9 /* ProgrammaticalyChalkboardApp */ = {
 			isa = PBXGroup;
 			children = (
+				8D8E7B1926D88049000BB252 /* Utils */,
 				8DA6812726C472340091DBD0 /* ViewModel */,
 				8D3E4BE01FD255CF007142C9 /* Model */,
 				8D3E4BDF1FD255C9007142C9 /* View */,
@@ -108,7 +109,6 @@
 			children = (
 				8D3E4BD41FD250BB007142C9 /* Assets.xcassets */,
 				8D3E4BD61FD250BB007142C9 /* LaunchScreen.storyboard */,
-				8D3E4BE21FD255FB007142C9 /* ExtensionView.swift */,
 				8DA6F1C021339BBD00531ABB /* MainView.swift */,
 				4D571FEC236F46B800CA68CE /* EmptyTableViewMessageView.swift */,
 				8DA6F1CB2134616000531ABB /* Extension+ViewDetail.swift */,
@@ -139,6 +139,14 @@
 				8DA6F1C421345D7900531ABB /* Detail */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		8D8E7B1926D88049000BB252 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8D3E4BE21FD255FB007142C9 /* ExtensionView.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		8DA6812726C472340091DBD0 /* ViewModel */ = {

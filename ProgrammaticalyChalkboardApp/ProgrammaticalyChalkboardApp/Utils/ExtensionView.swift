@@ -43,6 +43,11 @@ extension UITextField {
         backgroundColor = background
         textColor = color
         font = UIFont.systemFont(ofSize: fontSize)
+        
+        if let customFont = UIFont(name: "Apple SD Gothic Neo Light", size: 22) {
+            font = UIFontMetrics(forTextStyle: .caption1).scaledFont(for: customFont)
+        }
+        adjustsFontForContentSizeCategory = true
         textAlignment = alignment
     }
 }
