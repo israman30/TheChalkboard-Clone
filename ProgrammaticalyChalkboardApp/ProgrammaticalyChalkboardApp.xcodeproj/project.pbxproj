@@ -35,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2974D4CB002B772C96DEC8A5 /* Pods-ProgrammaticalyChalkboardApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProgrammaticalyChalkboardApp.release.xcconfig"; path = "Target Support Files/Pods-ProgrammaticalyChalkboardApp/Pods-ProgrammaticalyChalkboardApp.release.xcconfig"; sourceTree = "<group>"; };
 		4D571FEC236F46B800CA68CE /* EmptyTableViewMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableViewMessageView.swift; sourceTree = "<group>"; };
 		4DBD3F6522B28E44007AC2F6 /* UserNotifications+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserNotifications+Ext.swift"; sourceTree = "<group>"; };
 		4DE1713B22C26E1A000835F8 /* CellID+Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CellID+Enum.swift"; sourceTree = "<group>"; };
@@ -62,6 +63,7 @@
 		8DA6F1D121346C7400531ABB /* MyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
 		8DB291F32028B57300593AF7 /* Pacifico */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Pacifico; sourceTree = "<group>"; };
 		8DF687131FF324B500E8BF8E /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		F37A987460B9365CBF4DFB43 /* Pods-ProgrammaticalyChalkboardApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProgrammaticalyChalkboardApp.debug.xcconfig"; path = "Target Support Files/Pods-ProgrammaticalyChalkboardApp/Pods-ProgrammaticalyChalkboardApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,11 +77,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58D7C24E7F9B723C598F5988 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F37A987460B9365CBF4DFB43 /* Pods-ProgrammaticalyChalkboardApp.debug.xcconfig */,
+				2974D4CB002B772C96DEC8A5 /* Pods-ProgrammaticalyChalkboardApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8D3E4BC11FD250BB007142C9 = {
 			isa = PBXGroup;
 			children = (
 				8D3E4BCC1FD250BB007142C9 /* ProgrammaticalyChalkboardApp */,
 				8D3E4BCB1FD250BB007142C9 /* Products */,
+				58D7C24E7F9B723C598F5988 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -195,6 +207,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D3E4BDC1FD250BB007142C9 /* Build configuration list for PBXNativeTarget "ProgrammaticalyChalkboardApp" */;
 			buildPhases = (
+				6CD814D64CC7A53CBABC6FA7 /* [CP] Check Pods Manifest.lock */,
 				8D3E4BC61FD250BB007142C9 /* Sources */,
 				8D3E4BC71FD250BB007142C9 /* Frameworks */,
 				8D3E4BC81FD250BB007142C9 /* Resources */,
@@ -255,6 +268,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6CD814D64CC7A53CBABC6FA7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ProgrammaticalyChalkboardApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D3E4BC61FD250BB007142C9 /* Sources */ = {
@@ -413,6 +451,7 @@
 		};
 		8D3E4BDD1FD250BB007142C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F37A987460B9365CBF4DFB43 /* Pods-ProgrammaticalyChalkboardApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -428,6 +467,7 @@
 		};
 		8D3E4BDE1FD250BB007142C9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2974D4CB002B772C96DEC8A5 /* Pods-ProgrammaticalyChalkboardApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
