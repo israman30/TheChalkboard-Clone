@@ -36,9 +36,9 @@ struct AddingView: View {
                                 .accessibilityLabel("The Chalkboard")
                                 .accessibilityAddTraits(.isHeader)
                                 .accessibilityHeading(.h1)
-                            Text("Add an item")
-                                .font(.title3)
-                                .accessibilityHeading(.h2)
+//                            Text("Add an item")
+//                                .font(.title3)
+//                                .accessibilityHeading(.h2)
                             
                             Text("\(dateFormatter.string(from: date))")
                         }
@@ -67,25 +67,17 @@ struct AddingView: View {
                 
             }
             VStack {
-                TextEditor(text: $addedItem)
-                    .focused($focusState)
+                ZStack {
+                    TextEditor(text: $addedItem)
+                    Text(addedItem).opacity(0).padding(.all, 8)
+                }
+                .shadow(radius: 1)
                     .background(Color(UIColor.secondarySystemBackground))
                     .foregroundColor(Color(.label))
                     .accessibilityLabel("\(addedItem)")
                     .onAppear {
                         UITextView.appearance().backgroundColor = .clear
                     }
-//                    .animation(.linear, value: scale)
-                    .toolbar {
-                        ToolbarItemGroup(placement: .keyboard) {
-                            Button("Done") {
-                                self.focusState = false
-                            }
-                        }
-                    }
-                    .gesture(DragGesture().onChanged({ _ in
-                        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-                    }))
                 
                 HStack {
                     Button {
@@ -99,15 +91,14 @@ struct AddingView: View {
                                 .fontWeight(.bold)
                         }
                         .padding(.horizontal, 50)
-                        .padding(.vertical, 5)
+                        .padding(.vertical, 0)
+                        .frame(maxWidth: UIScreen.main.bounds.size.width)
                     }
                     .buttonStyle(.bordered)
                     .tint(.blue)
                     .disabled(!addedItem.isEmpty ? false : true)
                     .controlSize(.large)
-                    
                     .padding(.bottom, keyboard.currentHeight)
-                    
 //                    .padding(.bottom, keyboardHandler.keyboardHeight)
                     
                 }
