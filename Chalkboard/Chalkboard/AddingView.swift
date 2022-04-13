@@ -9,10 +9,8 @@ import SwiftUI
 
 struct AddingView: View {
     
-    @State var scale = 1.0
     @State var addedItem = ""
     @State private var date = Date()
-    @FocusState private var focusState: Bool
     @Environment(\.presentationMode) var presentationMode
     @ObservedObject private var keyboard = KeyboardResponder()
     @StateObject private var keyboardHandler = KeyboardHandler()
@@ -27,45 +25,8 @@ struct AddingView: View {
     
     var body: some View {
         VStack {
-            HStack {
-                VStack(alignment:.leading) {
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text("The Chalkboard")
-                                .font(.title)
-                                .accessibilityLabel("The Chalkboard")
-                                .accessibilityAddTraits(.isHeader)
-                                .accessibilityHeading(.h1)
-//                            Text("Add an item")
-//                                .font(.title3)
-//                                .accessibilityHeading(.h2)
-                            
-                            Text("\(dateFormatter.string(from: date))")
-                        }
-                        
-                        Spacer()
-                        Button {
-                            self.close()
-                        } label: {
-                            Image(systemName: "xmark")
-                                .foregroundColor(Color(.label))
-                                .font(.title3)
-                                .padding(10)
-                                .background(Color(UIColor.secondarySystemBackground))
-                                .cornerRadius(20)
-                                .offset(y:-10)
-                        }
-                    }
-                    HStack(alignment: .center) {
-                        Spacer()
-                        DatePicker("", selection: $date)
-                    }
-                    .padding(.top, -5)
-                    
-                }
-                Spacer()
-                
-            }
+            headerSection
+
             VStack {
                 ZStack {
                     TextEditor(text: $addedItem)
@@ -100,15 +61,51 @@ struct AddingView: View {
                     .controlSize(.large)
                     .padding(.bottom, keyboard.currentHeight)
 //                    .padding(.bottom, keyboardHandler.keyboardHeight)
-                    
                 }
             }
-            
             Spacer()
         }
         .padding()
         .edgesIgnoringSafeArea(.bottom)
         
+    }
+    
+    private var headerSection: some View {
+        HStack {
+            VStack(alignment:.leading) {
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text("The Chalkboard")
+                            .font(.title)
+                            .accessibilityLabel("The Chalkboard")
+                            .accessibilityAddTraits(.isHeader)
+                            .accessibilityHeading(.h1)
+                        
+                        Text("\(dateFormatter.string(from: date))")
+                    }
+                    
+                    Spacer()
+                    
+                    Button {
+                        self.close()
+                    } label: {
+                        Image(systemName: "xmark")
+                            .foregroundColor(Color(.label))
+                            .font(.title3)
+                            .padding(10)
+                            .background(Color(UIColor.secondarySystemBackground))
+                            .cornerRadius(20)
+                            .offset(y:-10)
+                    }
+                }
+                HStack(alignment: .center) {
+                    Spacer()
+                    DatePicker("", selection: $date)
+                }
+                .padding(.top, -5)
+            }
+            Spacer()
+        }
     }
     
     private func add() {
