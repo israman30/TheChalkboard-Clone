@@ -28,7 +28,7 @@ struct ContentView: View {
     @State var input = ""
     @StateObject var vm = ItemViewModel()
     @Environment(\.managedObjectContext) var moc
-    @FetchRequest(sortDescriptors: []) var tasks: FetchedResults<Task>
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.timestamp)]) var tasks: FetchedResults<Task>
     
     var body: some View {
         NavigationView {
@@ -36,9 +36,9 @@ struct ContentView: View {
                 List {
                     ForEach(tasks) { task in
                         VStack(alignment: .leading) {
-                            Text(task.name ?? "")
+                            Text(task.name ?? "NO TITLE")
                                 .font(.title)
-                            Text(task.timestamp ?? "")
+                            Text(task.timestamp ?? "NO DATE")
                                 .font(.footnote)
                         }
                     }
