@@ -42,12 +42,16 @@ struct ContentView: View {
                                 .font(.footnote)
                         }
                     }
+                    .onDelete(perform: deleteTask)
                 }
             }
             .padding(5)
             .listStyle(.grouped)
             .navigationBarTitle("The Chalkboard")
             .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    EditButton()
+                }
                 ToolbarItem(placement: .primaryAction) {
                     Button {
                         self.vm.isShowing.toggle()
@@ -66,6 +70,14 @@ struct ContentView: View {
             
         }
         .navigationViewStyle(.stack)
+    }
+    
+    func deleteTask(at offset: IndexSet) {
+        offset.forEach { index in
+            let task = tasks[index]
+            moc.delete(task)
+        }
+        try? moc.save()
     }
 }
 
