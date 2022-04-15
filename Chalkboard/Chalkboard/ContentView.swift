@@ -27,16 +27,18 @@ struct ContentView: View {
     
     @State var input = ""
     @StateObject var vm = ItemViewModel()
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(sortDescriptors: []) var tasks: FetchedResults<Task>
     
     var body: some View {
         NavigationView {
             VStack {
                 List {
-                    ForEach(vm.items) { item in
+                    ForEach(tasks) { task in
                         VStack(alignment: .leading) {
-                            Text(item.title)
+                            Text(task.name ?? "")
                                 .font(.title)
-                            Text(item.date)
+                            Text(task.timestamp ?? "")
                                 .font(.footnote)
                         }
                     }
@@ -59,9 +61,7 @@ struct ContentView: View {
                 
             }
             .sheet(isPresented: $vm.isShowing, content: {
-                AddingView { item in
-                    self.vm.addingItem(item: item)
-                }
+                AddingView()
             })
             
         }
