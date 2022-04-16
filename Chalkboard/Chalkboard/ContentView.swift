@@ -37,9 +37,11 @@ struct ContentView: View {
                     ForEach(tasks) { task in
                         VStack(alignment: .leading) {
                             Text(task.name ?? "NO TITLE")
-                                .font(.title)
+                                .font(.title3)
+                                .fontWeight(.medium)
                             Text(task.timestamp ?? "NO DATE")
                                 .font(.footnote)
+                                .foregroundColor(.secondary)
                         }
                     }
                     .onDelete(perform: deleteTask)
@@ -50,7 +52,7 @@ struct ContentView: View {
             .navigationBarTitle("The Chalkboard")
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    EditButton() 
+                    EditButton()
                 }
                 ToolbarItem(placement: .primaryAction) {
                     Button {
