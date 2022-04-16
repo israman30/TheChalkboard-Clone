@@ -50,7 +50,7 @@ struct ContentView: View {
             .navigationBarTitle("The Chalkboard")
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    EditButton()
+                    EditButton() 
                 }
                 ToolbarItem(placement: .primaryAction) {
                     Button {
