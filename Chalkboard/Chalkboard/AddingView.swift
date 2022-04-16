@@ -11,10 +11,11 @@ struct AddingView: View {
     
     @State var addedItem = ""
     @State private var date = Date()
-    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.dismiss) var dismiss
+    @Environment(\.managedObjectContext) var moc
     @ObservedObject private var keyboard = KeyboardResponder()
     @StateObject private var keyboardHandler = KeyboardHandler()
-    var item: (Item) -> ()
+//    var item: (Item) -> ()
     
     var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
@@ -109,22 +110,25 @@ struct AddingView: View {
     }
     
     private func add() {
-        let item = Item(title: addedItem, date: dateFormatter.string(from: date))
-        self.item(item)
+//        let item = Item(title: addedItem, date: dateFormatter.string(from: date))
+//        self.item(item)
+        let newTask = Task(context: moc)
+        newTask.id = UUID()
+        newTask.name = addedItem
+        newTask.timestamp = dateFormatter.string(from: date)
+        try? moc.save()
         close()
     }
     
     private func close() {
         self.addedItem = ""
-        self.presentationMode.wrappedValue.dismiss()
+        self.dismiss()
     }
     
 }
 
 struct AddingView_Previews: PreviewProvider {
     static var previews: some View {
-        AddingView { i in
-
-        }
+        AddingView()
     }
 }

@@ -14,6 +14,8 @@
 		8D6DF0C827F92FAE007AC409 /* ChalkboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6DF0C727F92FAE007AC409 /* ChalkboardTests.swift */; };
 		8D6DF0D227F92FAE007AC409 /* ChalkboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6DF0D127F92FAE007AC409 /* ChalkboardUITests.swift */; };
 		8D6DF0D427F92FAE007AC409 /* ChalkboardUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6DF0D327F92FAE007AC409 /* ChalkboardUITestsLaunchTests.swift */; };
+		8D886E29280903BB00F74167 /* Chalkboard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D886E27280903BB00F74167 /* Chalkboard.xcdatamodeld */; };
+		8D886E2B2809043A00F74167 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D886E2A2809043A00F74167 /* DataController.swift */; };
 		8DE23CB627FE89B000E0C69B /* AddingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE23CB527FE89B000E0C69B /* AddingView.swift */; };
 		8DE23CB82805123A00E0C69B /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE23CB72805123A00E0C69B /* KeyboardHandler.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +48,8 @@
 		8D6DF0CD27F92FAE007AC409 /* ChalkboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChalkboardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D6DF0D127F92FAE007AC409 /* ChalkboardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChalkboardUITests.swift; sourceTree = "<group>"; };
 		8D6DF0D327F92FAE007AC409 /* ChalkboardUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChalkboardUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8D886E28280903BB00F74167 /* Chalkboard.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Chalkboard.xcdatamodel; sourceTree = "<group>"; };
+		8D886E2A2809043A00F74167 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		8DE23CB527FE89B000E0C69B /* AddingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingView.swift; sourceTree = "<group>"; };
 		8DE23CB72805123A00E0C69B /* KeyboardHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,11 +103,13 @@
 			isa = PBXGroup;
 			children = (
 				8D6DF0B627F92FA4007AC409 /* ChalkboardApp.swift */,
+				8D886E2A2809043A00F74167 /* DataController.swift */,
 				8D6DF0B827F92FA4007AC409 /* ContentView.swift */,
 				8DE23CB527FE89B000E0C69B /* AddingView.swift */,
 				8DE23CB72805123A00E0C69B /* KeyboardHandler.swift */,
 				8D6DF0BA27F92FAD007AC409 /* Assets.xcassets */,
 				8D6DF0BC27F92FAD007AC409 /* Preview Content */,
+				8D886E27280903BB00F74167 /* Chalkboard.xcdatamodeld */,
 			);
 			path = Chalkboard;
 			sourceTree = "<group>";
@@ -264,9 +270,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D6DF0B927F92FA4007AC409 /* ContentView.swift in Sources */,
+				8D886E2B2809043A00F74167 /* DataController.swift in Sources */,
 				8DE23CB627FE89B000E0C69B /* AddingView.swift in Sources */,
 				8D6DF0B727F92FA4007AC409 /* ChalkboardApp.swift in Sources */,
 				8DE23CB82805123A00E0C69B /* KeyboardHandler.swift in Sources */,
+				8D886E29280903BB00F74167 /* Chalkboard.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,6 +599,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8D886E27280903BB00F74167 /* Chalkboard.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8D886E28280903BB00F74167 /* Chalkboard.xcdatamodel */,
+			);
+			currentVersion = 8D886E28280903BB00F74167 /* Chalkboard.xcdatamodel */;
+			path = Chalkboard.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8D6DF0AB27F92FA4007AC409 /* Project object */;
 }

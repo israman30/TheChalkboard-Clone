@@ -27,25 +27,33 @@ struct ContentView: View {
     
     @State var input = ""
     @StateObject var vm = ItemViewModel()
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.timestamp)]) var tasks: FetchedResults<Task>
     
     var body: some View {
         NavigationView {
             VStack {
                 List {
-                    ForEach(vm.items) { item in
+                    ForEach(tasks) { task in
                         VStack(alignment: .leading) {
-                            Text(item.title)
-                                .font(.title)
-                            Text(item.date)
+                            Text(task.name ?? "NO TITLE")
+                                .font(.title3)
+                                .fontWeight(.medium)
+                            Text(task.timestamp ?? "NO DATE")
                                 .font(.footnote)
+                                .foregroundColor(.secondary)
                         }
                     }
+                    .onDelete(perform: deleteTask)
                 }
             }
             .padding(5)
             .listStyle(.grouped)
             .navigationBarTitle("The Chalkboard")
             .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    EditButton()
+                }
                 ToolbarItem(placement: .primaryAction) {
                     Button {
                         self.vm.isShowing.toggle()
@@ -59,13 +67,19 @@ struct ContentView: View {
                 
             }
             .sheet(isPresented: $vm.isShowing, content: {
-                AddingView { item in
-                    self.vm.addingItem(item: item)
-                }
+                AddingView()
             })
             
         }
         .navigationViewStyle(.stack)
+    }
+    
+    func deleteTask(at offset: IndexSet) {
+        offset.forEach { index in
+            let task = tasks[index]
+            moc.delete(task)
+        }
+        try? moc.save()
     }
 }
 
