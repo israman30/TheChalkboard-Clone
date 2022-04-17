@@ -82,6 +82,7 @@ struct AddingView: View {
                             .accessibilityHeading(.h1)
                         
                         Text("\(dateFormatter.string(from: date))")
+                            .foregroundColor(.secondary)
                     }
                     
                     Spacer()
