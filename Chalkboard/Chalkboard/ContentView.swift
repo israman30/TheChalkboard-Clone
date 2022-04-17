@@ -7,26 +7,10 @@
 
 import SwiftUI
 
-struct Item: Identifiable {
-    var id = UUID().uuidString
-    let title: String
-    let date: String
-}
-
-class ItemViewModel: ObservableObject {
-    
-    @Published var items = [Item]()
-    @Published var isShowing = false
-    
-    func addingItem(item: Item) {
-        items.append(item)
-    }
-}
-
 struct ContentView: View {
     
     @State var input = ""
-    @StateObject var vm = ItemViewModel()
+    @State var isShowing = false
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(sortDescriptors: [SortDescriptor(\.timestamp)]) var tasks: FetchedResults<Task>
     
@@ -39,6 +23,12 @@ struct ContentView: View {
                             Text(task.name ?? "NO TITLE")
                                 .font(.title3)
                                 .fontWeight(.medium)
+                                .strikethrough(task.isCompleted, color: .red)
+                                .contentShape(Rectangle())
+                                .onTapGesture {
+                                    task.isCompleted.toggle()
+                                    self.save()
+                                }
                             Text(task.timestamp ?? "NO DATE")
                                 .font(.footnote)
                                 .foregroundColor(.secondary)
@@ -56,7 +46,7 @@ struct ContentView: View {
                 }
                 ToolbarItem(placement: .primaryAction) {
                     Button {
-                        self.vm.isShowing.toggle()
+                        self.isShowing.toggle()
                     } label: {
                         Image(systemName: "plus")
                             .foregroundColor(Color(.label))
@@ -64,9 +54,8 @@ struct ContentView: View {
                             .frame(height: 96, alignment: .trailing)
                     }
                 }
-                
             }
-            .sheet(isPresented: $vm.isShowing, content: {
+            .sheet(isPresented: $isShowing, content: {
                 AddingView()
             })
             
@@ -74,14 +63,23 @@ struct ContentView: View {
         .navigationViewStyle(.stack)
     }
     
-    func deleteTask(at offset: IndexSet) {
+    private func deleteTask(at offset: IndexSet) {
         offset.forEach { index in
             let task = tasks[index]
             moc.delete(task)
         }
-        try? moc.save()
+        save()
+    }
+    
+    private func save() {
+        do {
+            try moc.save()
+        } catch {
+            print("Error saving task in db: \(error.localizedDescription)")
+        }
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

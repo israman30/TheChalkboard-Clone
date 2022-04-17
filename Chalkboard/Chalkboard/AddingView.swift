@@ -15,7 +15,6 @@ struct AddingView: View {
     @Environment(\.managedObjectContext) var moc
     @ObservedObject private var keyboard = KeyboardResponder()
     @StateObject private var keyboardHandler = KeyboardHandler()
-//    var item: (Item) -> ()
     
     var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
@@ -43,7 +42,7 @@ struct AddingView: View {
                 
                 HStack {
                     Button {
-                        print("Added item")
+                        print("======== Added item =======")
                         self.add()
                     } label: {
                         HStack {
@@ -83,6 +82,7 @@ struct AddingView: View {
                             .accessibilityHeading(.h1)
                         
                         Text("\(dateFormatter.string(from: date))")
+                            .foregroundColor(.secondary)
                     }
                     
                     Spacer()
@@ -110,14 +110,20 @@ struct AddingView: View {
     }
     
     private func add() {
-//        let item = Item(title: addedItem, date: dateFormatter.string(from: date))
-//        self.item(item)
         let newTask = Task(context: moc)
         newTask.id = UUID()
         newTask.name = addedItem
         newTask.timestamp = dateFormatter.string(from: date)
-        try? moc.save()
+        save()
         close()
+    }
+    
+    private func save() {
+        do {
+            try moc.save()
+        } catch {
+            print("Error saving task in db: \(error.localizedDescription)")
+        }
     }
     
     private func close() {
