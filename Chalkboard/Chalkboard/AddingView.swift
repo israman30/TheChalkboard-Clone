@@ -6,15 +6,18 @@
 //
 
 import SwiftUI
+import CoreData
 
-struct AddingView: View {
-    
-    @State var addedItem = ""
-    @State private var date = Date()
-    @Environment(\.dismiss) var dismiss
-    @Environment(\.managedObjectContext) var moc
-    @ObservedObject private var keyboard = KeyboardResponder()
-    @StateObject private var keyboardHandler = KeyboardHandler()
+struct NewItem {
+    let item: String = ""
+    let date = Date()
+}
+
+class ItemViewModel: ObservableObject {
+    var context: NSManagedObjectContext?
+    private let newItem = NewItem()
+    @Published var addedItem = ""
+    @Published var date = Date()
     
     var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
@@ -23,19 +26,53 @@ struct AddingView: View {
         return formatter
     }
     
+    init(context: NSManagedObjectContext? = nil) {
+        self.context = context
+    }
+    
+    func add() {
+        let newTask = Task(context: context!)
+        newTask.id = UUID()
+        newTask.name = addedItem
+        newTask.timestamp = dateFormatter.string(from: date)
+        save()
+        close()
+    }
+    private func save() {
+        do {
+            try context!.save()
+        } catch {
+            print("Error saving task in db: \(error.localizedDescription)")
+        }
+    }
+    
+    func close() {
+        self.addedItem = ""
+    }
+}
+
+struct AddingView: View {
+    
+    @Environment(\.dismiss) var dismiss
+    @Environment(\.managedObjectContext) var moc
+    @ObservedObject private var keyboard = KeyboardResponder()
+    @StateObject private var keyboardHandler = KeyboardHandler()
+    
+    @StateObject private var vm = ItemViewModel()
+    
     var body: some View {
         VStack {
             headerSection
 
             VStack {
                 ZStack {
-                    TextEditor(text: $addedItem)
-                    Text(addedItem).opacity(0).padding(.all, 8)
+                    TextEditor(text: $vm.addedItem)
+                    Text(vm.addedItem).opacity(0).padding(.all, 8)
                 }
                 .shadow(radius: 1)
                     .background(Color(UIColor.secondarySystemBackground))
                     .foregroundColor(Color(.label))
-                    .accessibilityLabel("\(addedItem)")
+                    .accessibilityLabel("\(vm.addedItem)")
                     .onAppear {
                         UITextView.appearance().backgroundColor = .clear
                     }
@@ -43,7 +80,8 @@ struct AddingView: View {
                 HStack {
                     Button {
                         print("======== Added item =======")
-                        self.add()
+                        self.vm.add()
+                        self.dismiss()
                     } label: {
                         HStack {
                             Image(systemName: "checkmark")
@@ -57,7 +95,7 @@ struct AddingView: View {
                     }
                     .buttonStyle(.bordered)
                     .tint(.blue)
-                    .disabled(!addedItem.isEmpty ? false : true)
+                    .disabled(!vm.addedItem.isEmpty ? false : true)
                     .controlSize(.large)
                     .padding(.bottom, keyboard.currentHeight)
 //                    .padding(.bottom, keyboardHandler.keyboardHeight)
@@ -67,9 +105,21 @@ struct AddingView: View {
         }
         .padding()
         .edgesIgnoringSafeArea(.bottom)
+        .onAppear {
+            self.vm.context = moc
+        }
         
     }
     
+}
+
+struct AddingView_Previews: PreviewProvider {
+    static var previews: some View {
+        AddingView()
+    }
+}
+
+extension AddingView {
     private var headerSection: some View {
         HStack {
             VStack(alignment:.leading) {
@@ -81,14 +131,15 @@ struct AddingView: View {
                             .accessibilityAddTraits(.isHeader)
                             .accessibilityHeading(.h1)
                         
-                        Text("\(dateFormatter.string(from: date))")
+                        Text("\(vm.dateFormatter.string(from: vm.date))")
                             .foregroundColor(.secondary)
                     }
                     
                     Spacer()
                     
                     Button {
-                        self.close()
+                        self.vm.close()
+                        self.dismiss()
                     } label: {
                         Image(systemName: "xmark")
                             .foregroundColor(Color(.label))
@@ -101,40 +152,11 @@ struct AddingView: View {
                 }
                 HStack(alignment: .center) {
                     Spacer()
-                    DatePicker("", selection: $date)
+                    DatePicker("", selection: $vm.date)
                 }
                 .padding(.top, -5)
             }
             Spacer()
         }
-    }
-    
-    private func add() {
-        let newTask = Task(context: moc)
-        newTask.id = UUID()
-        newTask.name = addedItem
-        newTask.timestamp = dateFormatter.string(from: date)
-        save()
-        close()
-    }
-    
-    private func save() {
-        do {
-            try moc.save()
-        } catch {
-            print("Error saving task in db: \(error.localizedDescription)")
-        }
-    }
-    
-    private func close() {
-        self.addedItem = ""
-        self.dismiss()
-    }
-    
-}
-
-struct AddingView_Previews: PreviewProvider {
-    static var previews: some View {
-        AddingView()
     }
 }
