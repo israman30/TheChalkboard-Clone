@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D27B9D029C0EE4F00A805C8 /* MainListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D27B9CF29C0EE4F00A805C8 /* MainListView.swift */; };
 		8D6DF0B727F92FA4007AC409 /* ChalkboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6DF0B627F92FA4007AC409 /* ChalkboardApp.swift */; };
 		8D6DF0B927F92FA4007AC409 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6DF0B827F92FA4007AC409 /* ContentView.swift */; };
 		8D6DF0BB27F92FAD007AC409 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D6DF0BA27F92FAD007AC409 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D27B9CF29C0EE4F00A805C8 /* MainListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListView.swift; sourceTree = "<group>"; };
 		8D6DF0B327F92FA4007AC409 /* Chalkboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chalkboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D6DF0B627F92FA4007AC409 /* ChalkboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChalkboardApp.swift; sourceTree = "<group>"; };
 		8D6DF0B827F92FA4007AC409 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				8D6DF0B627F92FA4007AC409 /* ChalkboardApp.swift */,
 				8D886E2A2809043A00F74167 /* DataController.swift */,
 				8D6DF0B827F92FA4007AC409 /* ContentView.swift */,
+				4D27B9CF29C0EE4F00A805C8 /* MainListView.swift */,
 				8DE23CB527FE89B000E0C69B /* AddingView.swift */,
 				8DE23CB72805123A00E0C69B /* KeyboardHandler.swift */,
 				8D6DF0BA27F92FAD007AC409 /* Assets.xcassets */,
@@ -273,6 +276,7 @@
 				8D886E2B2809043A00F74167 /* DataController.swift in Sources */,
 				8DE23CB627FE89B000E0C69B /* AddingView.swift in Sources */,
 				8D6DF0B727F92FA4007AC409 /* ChalkboardApp.swift in Sources */,
+				4D27B9D029C0EE4F00A805C8 /* MainListView.swift in Sources */,
 				8DE23CB82805123A00E0C69B /* KeyboardHandler.swift in Sources */,
 				8D886E29280903BB00F74167 /* Chalkboard.xcdatamodeld in Sources */,
 			);
