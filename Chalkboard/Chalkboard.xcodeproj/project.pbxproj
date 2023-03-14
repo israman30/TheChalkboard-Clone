@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D27B9D029C0EE4F00A805C8 /* MainListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D27B9CF29C0EE4F00A805C8 /* MainListView.swift */; };
+		4D27B9D629C12DF300A805C8 /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D27B9D529C12DF300A805C8 /* ItemViewModel.swift */; };
 		8D6DF0B727F92FA4007AC409 /* ChalkboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6DF0B627F92FA4007AC409 /* ChalkboardApp.swift */; };
 		8D6DF0B927F92FA4007AC409 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6DF0B827F92FA4007AC409 /* ContentView.swift */; };
 		8D6DF0BB27F92FAD007AC409 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D6DF0BA27F92FAD007AC409 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		4D27B9CF29C0EE4F00A805C8 /* MainListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListView.swift; sourceTree = "<group>"; };
+		4D27B9D529C12DF300A805C8 /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
 		8D6DF0B327F92FA4007AC409 /* Chalkboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chalkboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D6DF0B627F92FA4007AC409 /* ChalkboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChalkboardApp.swift; sourceTree = "<group>"; };
 		8D6DF0B827F92FA4007AC409 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,6 +83,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D27B9D129C12D5E00A805C8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8D6DF0B827F92FA4007AC409 /* ContentView.swift */,
+				4D27B9CF29C0EE4F00A805C8 /* MainListView.swift */,
+				8DE23CB527FE89B000E0C69B /* AddingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4D27B9D229C12D8100A805C8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8D886E2A2809043A00F74167 /* DataController.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4D27B9D329C12D9200A805C8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8DE23CB72805123A00E0C69B /* KeyboardHandler.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4D27B9D429C12DE000A805C8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4D27B9D529C12DF300A805C8 /* ItemViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		8D6DF0AA27F92FA4007AC409 = {
 			isa = PBXGroup;
 			children = (
@@ -105,11 +141,10 @@
 			isa = PBXGroup;
 			children = (
 				8D6DF0B627F92FA4007AC409 /* ChalkboardApp.swift */,
-				8D886E2A2809043A00F74167 /* DataController.swift */,
-				8D6DF0B827F92FA4007AC409 /* ContentView.swift */,
-				4D27B9CF29C0EE4F00A805C8 /* MainListView.swift */,
-				8DE23CB527FE89B000E0C69B /* AddingView.swift */,
-				8DE23CB72805123A00E0C69B /* KeyboardHandler.swift */,
+				4D27B9D429C12DE000A805C8 /* ViewModel */,
+				4D27B9D329C12D9200A805C8 /* Utils */,
+				4D27B9D229C12D8100A805C8 /* Model */,
+				4D27B9D129C12D5E00A805C8 /* View */,
 				8D6DF0BA27F92FAD007AC409 /* Assets.xcassets */,
 				8D6DF0BC27F92FAD007AC409 /* Preview Content */,
 				8D886E27280903BB00F74167 /* Chalkboard.xcdatamodeld */,
@@ -273,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D6DF0B927F92FA4007AC409 /* ContentView.swift in Sources */,
+				4D27B9D629C12DF300A805C8 /* ItemViewModel.swift in Sources */,
 				8D886E2B2809043A00F74167 /* DataController.swift in Sources */,
 				8DE23CB627FE89B000E0C69B /* AddingView.swift in Sources */,
 				8D6DF0B727F92FA4007AC409 /* ChalkboardApp.swift in Sources */,
