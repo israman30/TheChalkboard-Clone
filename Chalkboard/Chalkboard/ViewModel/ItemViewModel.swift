@@ -33,6 +33,7 @@ class ItemViewModel: ObservableObject {
         save()
         close()
     }
+    
     private func save() {
         do {
             try context!.save()
