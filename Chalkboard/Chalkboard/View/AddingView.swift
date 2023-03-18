@@ -16,22 +16,30 @@ struct AddingView: View {
     
     @StateObject private var vm = ItemViewModel()
     
+    @State var text = ""
+    
     var body: some View {
         VStack {
             headerSection
 
             VStack {
+                TextField("Title", text: $text)
+                    .padding(8)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 5) .stroke(Color(UIColor.secondarySystemBackground))
+                    )
+                    .shadow(radius: 0.2)
                 ZStack {
                     TextEditor(text: $vm.addedItem)
                     Text(vm.addedItem).opacity(0).padding(.all, 8)
                 }
                 .shadow(radius: 1)
-                    .background(Color(UIColor.secondarySystemBackground))
-                    .foregroundColor(Color(.label))
-                    .accessibilityLabel("\(vm.addedItem)")
-                    .onAppear {
-                        UITextView.appearance().backgroundColor = .clear
-                    }
+                .background(Color(UIColor.secondarySystemBackground))
+                .foregroundColor(Color(.label))
+                .accessibilityLabel("\(vm.addedItem)")
+                .onAppear {
+                    UITextView.appearance().backgroundColor = .clear
+                }
                 
                 HStack {
                     Button {

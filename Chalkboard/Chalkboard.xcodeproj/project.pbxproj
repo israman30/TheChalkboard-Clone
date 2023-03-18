@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4D27B9D029C0EE4F00A805C8 /* MainListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D27B9CF29C0EE4F00A805C8 /* MainListView.swift */; };
 		4D27B9D629C12DF300A805C8 /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D27B9D529C12DF300A805C8 /* ItemViewModel.swift */; };
+		4D27B9DA29C5518700A805C8 /* CustomTextEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D27B9D929C5518700A805C8 /* CustomTextEditorView.swift */; };
 		8D6DF0B727F92FA4007AC409 /* ChalkboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6DF0B627F92FA4007AC409 /* ChalkboardApp.swift */; };
 		8D6DF0B927F92FA4007AC409 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6DF0B827F92FA4007AC409 /* ContentView.swift */; };
 		8D6DF0BB27F92FAD007AC409 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D6DF0BA27F92FAD007AC409 /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		4D27B9CF29C0EE4F00A805C8 /* MainListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListView.swift; sourceTree = "<group>"; };
 		4D27B9D529C12DF300A805C8 /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
+		4D27B9D929C5518700A805C8 /* CustomTextEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextEditorView.swift; sourceTree = "<group>"; };
 		8D6DF0B327F92FA4007AC409 /* Chalkboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chalkboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D6DF0B627F92FA4007AC409 /* ChalkboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChalkboardApp.swift; sourceTree = "<group>"; };
 		8D6DF0B827F92FA4007AC409 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				8D6DF0B827F92FA4007AC409 /* ContentView.swift */,
 				4D27B9CF29C0EE4F00A805C8 /* MainListView.swift */,
 				8DE23CB527FE89B000E0C69B /* AddingView.swift */,
+				4D27B9D929C5518700A805C8 /* CustomTextEditorView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 			files = (
 				8D6DF0B927F92FA4007AC409 /* ContentView.swift in Sources */,
 				4D27B9D629C12DF300A805C8 /* ItemViewModel.swift in Sources */,
+				4D27B9DA29C5518700A805C8 /* CustomTextEditorView.swift in Sources */,
 				8D886E2B2809043A00F74167 /* DataController.swift in Sources */,
 				8DE23CB627FE89B000E0C69B /* AddingView.swift in Sources */,
 				8D6DF0B727F92FA4007AC409 /* ChalkboardApp.swift in Sources */,
