@@ -19,7 +19,7 @@ struct MainListView: View {
                 List {
                     ForEach(tasks) { task in
                         VStack(alignment: .leading) {
-                            Text(task.name ?? "NO TITLE")
+                            Text(task.title ?? "NO ITEM")
                                 .font(.title3)
                                 .fontWeight(.medium)
                                 .strikethrough(task.isCompleted, color: .red)
@@ -28,6 +28,9 @@ struct MainListView: View {
                                     task.isCompleted.toggle()
                                     self.save()
                                 }
+                            Text(task.name ?? "NO TITLE")
+                                .font(.body)
+                                .fontWeight(.light)
                             Text(task.timestamp ?? "NO DATE")
                                 .font(.footnote)
                                 .foregroundColor(.secondary)

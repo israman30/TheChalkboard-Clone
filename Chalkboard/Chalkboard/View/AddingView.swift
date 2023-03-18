@@ -16,14 +16,12 @@ struct AddingView: View {
     
     @StateObject private var vm = ItemViewModel()
     
-    @State var text = ""
-    
     var body: some View {
         VStack {
             headerSection
 
             VStack {
-                TextField("Title", text: $text)
+                TextField("Title", text: $vm.titleItem)
                     .padding(8)
                     .overlay(
                         RoundedRectangle(cornerRadius: 5) .stroke(Color(UIColor.secondarySystemBackground))
@@ -59,7 +57,7 @@ struct AddingView: View {
                     }
                     .buttonStyle(.bordered)
                     .tint(.blue)
-                    .disabled(!vm.addedItem.isEmpty ? false : true)
+                    .disabled(!vm.titleItem.isEmpty ? false : true)
                     .controlSize(.large)
                     .padding(.bottom, keyboard.currentHeight)
 //                    .padding(.bottom, keyboardHandler.keyboardHeight)

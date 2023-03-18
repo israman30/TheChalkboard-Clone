@@ -11,6 +11,7 @@ import CoreData
 class ItemViewModel: ObservableObject {
     
     var context: NSManagedObjectContext?
+    @Published var titleItem = ""
     @Published var addedItem = ""
     @Published var date = Date()
     
@@ -28,6 +29,7 @@ class ItemViewModel: ObservableObject {
     func add() {
         let newTask = Task(context: context!)
         newTask.id = UUID()
+        newTask.title = titleItem
         newTask.name = addedItem
         newTask.timestamp = dateFormatter.string(from: date)
         save()
