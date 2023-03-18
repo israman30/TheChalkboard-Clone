@@ -1,14 +1,13 @@
 //
-//  ContentView.swift
+//  MainListView.swift
 //  Chalkboard
 //
-//  Created by Israel Manzo on 4/2/22.
+//  Created by Israel Manzo on 3/14/23.
 //
 
 import SwiftUI
 
-struct ContentView: View {
-    
+struct MainListView: View {
     @State var input = ""
     @State var isShowing = false
     @Environment(\.managedObjectContext) var moc
@@ -80,9 +79,8 @@ struct ContentView: View {
     }
 }
 
-
-struct ContentView_Previews: PreviewProvider {
+struct MainListView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MainListView()
     }
 }
