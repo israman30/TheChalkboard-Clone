@@ -16,6 +16,8 @@ struct AddingView: View {
     
     @StateObject private var vm = ItemViewModel()
     
+    @State var isPriority = false
+    
     var body: some View {
         VStack {
             headerSection
@@ -30,6 +32,31 @@ struct AddingView: View {
                 ZStack {
                     TextEditor(text: $vm.addedItem)
                     Text(vm.addedItem).opacity(0).padding(.all, 8)
+                    
+                    VStack(alignment: .trailing) {
+                        Spacer()
+                        HStack {
+                            Spacer()
+                            Button {
+                                self.isPriority.toggle()
+                            } label: {
+                                HStack {
+                                    Image(systemName: isPriority ? "checkmark" : "exclamationmark.circle")
+                                    Text("Important")
+                                }
+                                .font(.system(size: 12))
+                                .foregroundColor(Color(.label))
+                            }
+                            .padding(5)
+                            .buttonStyle(.bordered)
+                            .tint(isPriority ? .red : .clear)
+                            .opacity(!vm.addedItem.isEmpty ? 1 : 0)
+                            
+                        }
+                        
+                    }
+                    .padding(.top)
+
                 }
                 .shadow(radius: 1)
                 .background(Color(UIColor.secondarySystemBackground))
