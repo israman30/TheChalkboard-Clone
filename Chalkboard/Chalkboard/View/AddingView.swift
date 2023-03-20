@@ -46,6 +46,7 @@ struct AddingView: View {
                                 }
                                 .font(.system(size: 12))
                                 .foregroundColor(Color(.label))
+                                .accessibilityHint(Text("tap for make the task important"))
                             }
                             .padding(5)
                             .buttonStyle(.bordered)
