@@ -21,17 +21,48 @@ struct AddingView: View {
             headerSection
 
             VStack {
+                TextField("Title", text: $vm.titleItem)
+                    .padding(8)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 5) .stroke(Color(UIColor.secondarySystemBackground))
+                    )
+                    .shadow(radius: 0.2)
                 ZStack {
                     TextEditor(text: $vm.addedItem)
                     Text(vm.addedItem).opacity(0).padding(.all, 8)
+                    
+                    VStack(alignment: .trailing) {
+                        Spacer()
+                        HStack {
+                            Spacer()
+                            Button {
+                                self.vm.isPriority.toggle()
+                            } label: {
+                                HStack {
+                                    Image(systemName: vm.isPriority ? "checkmark" : "exclamationmark.circle")
+                                    Text("Important")
+                                }
+                                .font(.system(size: 12))
+                                .foregroundColor(Color(.label))
+                            }
+                            .padding(5)
+                            .buttonStyle(.bordered)
+                            .tint(vm.isPriority ? .red : .clear)
+                            .opacity(!vm.addedItem.isEmpty ? 1 : 0)
+                            
+                        }
+                        
+                    }
+                    .padding(.top)
+
                 }
                 .shadow(radius: 1)
-                    .background(Color(UIColor.secondarySystemBackground))
-                    .foregroundColor(Color(.label))
-                    .accessibilityLabel("\(vm.addedItem)")
-                    .onAppear {
-                        UITextView.appearance().backgroundColor = .clear
-                    }
+                .background(Color(UIColor.secondarySystemBackground))
+                .foregroundColor(Color(.label))
+                .accessibilityLabel("\(vm.addedItem)")
+                .onAppear {
+                    UITextView.appearance().backgroundColor = .clear
+                }
                 
                 HStack {
                     Button {
@@ -51,7 +82,7 @@ struct AddingView: View {
                     }
                     .buttonStyle(.bordered)
                     .tint(.blue)
-                    .disabled(!vm.addedItem.isEmpty ? false : true)
+                    .disabled(!vm.titleItem.isEmpty ? false : true)
                     .controlSize(.large)
                     .padding(.bottom, keyboard.currentHeight)
 //                    .padding(.bottom, keyboardHandler.keyboardHeight)

@@ -18,19 +18,32 @@ struct MainListView: View {
             VStack {
                 List {
                     ForEach(tasks) { task in
-                        VStack(alignment: .leading) {
-                            Text(task.name ?? "NO TITLE")
-                                .font(.title3)
-                                .fontWeight(.medium)
-                                .strikethrough(task.isCompleted, color: .red)
-                                .contentShape(Rectangle())
-                                .onTapGesture {
-                                    task.isCompleted.toggle()
-                                    self.save()
-                                }
-                            Text(task.timestamp ?? "NO DATE")
-                                .font(.footnote)
-                                .foregroundColor(.secondary)
+                        HStack {
+                            VStack {}
+                                .frame(maxHeight: .infinity)
+                                .frame(width: 5)
+                                .background(task.isPriority ? .red : Color(.systemGray4))
+                                .padding(.leading, -10)
+//                                .opacity(task.isPriority ? 1 : 0)
+                            
+                            VStack(alignment: .leading) {
+                                Text(task.title ?? "NO ITEM")
+                                    .font(.title3)
+                                    .fontWeight(.medium)
+                                    .strikethrough(task.isCompleted, color: .red)
+                                    .contentShape(Rectangle())
+                                    .onTapGesture {
+                                        task.isCompleted.toggle()
+                                        self.save()
+                                    }
+                                Text(task.name ?? "NO TITLE")
+                                    .font(.body)
+                                    .fontWeight(.light)
+                                    .strikethrough(task.isCompleted, color: .red)
+                                Text(task.timestamp ?? "NO DATE")
+                                    .font(.footnote)
+                                    .foregroundColor(.secondary)
+                            }
                         }
                     }
                     .onDelete(perform: deleteTask)
