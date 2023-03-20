@@ -5,7 +5,7 @@ Save the date and get your todos organized :iphone:
 This version is full updated on ``SwiftU``. Store data using ``Core Data`` entities with ``CRUD`` posibilities. Plus local notifications if you select a date.
 
 <p align="center">
-<img src="/img/main.png" width="200"> <img src="/img/add.png" width="200">
+<img src="/img/main.png" width="300"> <img src="/img/add.png" width="300">
 </p>
 
 ## Thecnology
