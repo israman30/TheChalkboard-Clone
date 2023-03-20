@@ -13,6 +13,7 @@ class ItemViewModel: ObservableObject {
     var context: NSManagedObjectContext?
     @Published var titleItem = ""
     @Published var addedItem = ""
+    @Published var isPriority = false
     @Published var date = Date()
     
     var dateFormatter: DateFormatter {
@@ -31,6 +32,7 @@ class ItemViewModel: ObservableObject {
         newTask.id = UUID()
         newTask.title = titleItem
         newTask.name = addedItem
+        newTask.isPriority = isPriority
         newTask.timestamp = dateFormatter.string(from: date)
         save()
         close()
