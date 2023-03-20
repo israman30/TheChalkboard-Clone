@@ -27,8 +27,10 @@ struct AddingView: View {
                         RoundedRectangle(cornerRadius: 5) .stroke(Color(UIColor.secondarySystemBackground))
                     )
                     .shadow(radius: 0.2)
+                    .accessibilityLabel(Text("Input task"))
                 ZStack {
                     TextEditor(text: $vm.addedItem)
+                        .accessibilityHint(Text("input description"))
                     Text(vm.addedItem).opacity(0).padding(.all, 8)
                     
                     VStack(alignment: .trailing) {
@@ -75,6 +77,7 @@ struct AddingView: View {
                             Text("Add")
                                 .font(.title3)
                                 .fontWeight(.bold)
+                                .accessibilityHint(Text("tap for adding a new task"))
                         }
                         .padding(.horizontal, 50)
                         .padding(.vertical, 0)
@@ -135,6 +138,7 @@ extension AddingView {
                             .background(Color(UIColor.secondarySystemBackground))
                             .cornerRadius(20)
                             .offset(y:-10)
+                            .accessibilityHint(Text("tap for closing page"))
                     }
                 }
                 HStack(alignment: .center) {
