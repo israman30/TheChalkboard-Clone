@@ -52,6 +52,7 @@
 		4D27B9E329CA0A4300A805C8 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4D27B9E429CA0CD000A805C8 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4D27B9E529CA0DF000A805C8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		4D27B9E629CA106300A805C8 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8D6DF0B327F92FA4007AC409 /* Chalkboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chalkboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D6DF0B627F92FA4007AC409 /* ChalkboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChalkboardApp.swift; sourceTree = "<group>"; };
 		8D6DF0B827F92FA4007AC409 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -281,6 +282,7 @@
 				fr,
 				he,
 				"zh-Hans",
+				ru,
 			);
 			mainGroup = 8D6DF0AA27F92FA4007AC409;
 			productRefGroup = 8D6DF0B427F92FA4007AC409 /* Products */;
@@ -380,6 +382,7 @@
 				4D27B9E329CA0A4300A805C8 /* fr */,
 				4D27B9E429CA0CD000A805C8 /* he */,
 				4D27B9E529CA0DF000A805C8 /* zh-Hans */,
+				4D27B9E629CA106300A805C8 /* ru */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

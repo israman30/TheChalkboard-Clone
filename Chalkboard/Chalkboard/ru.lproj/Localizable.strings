@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  Chalkboard
+
+  Created by Israel Manzo on 3/19/23.
+  
+*/
+
+"Accessibility_tap_for_strikethrough_if_task_is_completed" = "нажмите, чтобы зачеркнуть, если задача выполнена";
+"Accessibility_no_item" = "НЕТ ПУНКТА";
+"Accessibility_no_title" = "БЕЗ ЗАГОЛОВКА";
+"Accessibility_no_date" = "БЕЗ ДАТЫ";
+"Accessibility_The_Chalkboarde" = "Классная доска";
+"Accessibility_tap_for_deleting_in_group" = "нажмите для удаления в группе";
+"Accessibility_tap_for_adding_a_new_task" = "нажмите, чтобы добавить новую закладкуk";
+
+"Accessibility_adding_title" = "Заголовок";
+"Accessibility_input_task" = "Входная задача";
+"Accessibility_input description" = "Входное описание";
+"Accessibility_important" = "Важный";
+"Accessibility_tap_for_make_the_task_important" = "нажмите, чтобы сделать задачу важной";
+"Accessibility_tap_for_adding_a_new_task" = "нажмите, чтобы добавить новую задачу";
+
