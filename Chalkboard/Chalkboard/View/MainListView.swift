@@ -7,6 +7,16 @@
 
 import SwiftUI
 
+struct LocalizablesConstants {
+    static let mainListStrikethroughLabel = NSLocalizedString("Accessibility_tap_for_strikethrough_if_task_is_completed", comment: "tap for strikethrough if task is completed")
+    static let mainNotItemLabel = NSLocalizedString("Accessibility_no_item", comment: "NO ITEM")
+    static let mainNotTitleLabel = NSLocalizedString("Accessibility_no_title", comment: "NO TITLE")
+    static let mainNotDateLabel = NSLocalizedString("Accessibility_no_date", comment: "NO DATE")
+    static let theChalkboardNavigationTitle = NSLocalizedString("Accessibility_The_Chalkboarde", comment: "The Chalkboard")
+    static let deletingGroupButtonHint = NSLocalizedString("Accessibility_tap_for_deleting_in_group", comment: "tap for deleting in group")
+    static let addingNewTaskButtonHint = NSLocalizedString("Accessibility_tap_for_adding_a_new_task", comment: "tap for adding a new task")
+}
+
 struct MainListView: View {
     @State var input = ""
     @State var isShowing = false
@@ -27,7 +37,7 @@ struct MainListView: View {
 //                                .opacity(task.isPriority ? 1 : 0)
                             
                             VStack(alignment: .leading) {
-                                Text(task.title ?? "NO ITEM")
+                                Text(task.title ?? LocalizablesConstants.mainNotItemLabel)
                                     .font(.title3)
                                     .fontWeight(.medium)
                                     .strikethrough(task.isCompleted, color: .red)
@@ -36,12 +46,12 @@ struct MainListView: View {
                                         task.isCompleted.toggle()
                                         self.save()
                                     }
-                                    .accessibilityHint(Text("tap for strikethrough if task is completed"))
-                                Text(task.name ?? "NO TITLE")
+                                    .accessibilityHint(Text(LocalizablesConstants.mainListStrikethroughLabel))
+                                Text(task.name ?? LocalizablesConstants.mainNotTitleLabel)
                                     .font(.body)
                                     .fontWeight(.light)
                                     .strikethrough(task.isCompleted, color: .red)
-                                Text(task.timestamp ?? "NO DATE")
+                                Text(task.timestamp ?? LocalizablesConstants.mainNotDateLabel)
                                     .font(.footnote)
                                     .foregroundColor(.secondary)
                             }
@@ -52,13 +62,13 @@ struct MainListView: View {
             }
             .padding(5)
             .listStyle(.grouped)
-            .navigationBarTitle("The Chalkboard")
+            .navigationBarTitle(LocalizablesConstants.theChalkboardNavigationTitle)
             .accessibilityAddTraits(.isHeader)
             .accessibilityHeading(.h1)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     EditButton()
-                        .accessibilityHint(Text("tap for deleting in group"))
+                        .accessibilityHint(Text(LocalizablesConstants.deletingGroupButtonHint))
                 }
                 ToolbarItem(placement: .primaryAction) {
                     Button {
@@ -68,7 +78,7 @@ struct MainListView: View {
                             .foregroundColor(Color(.label))
                             .font(.title3)
                             .frame(height: 96, alignment: .trailing)
-                            .accessibilityHint(Text("tap for adding a new task"))
+                            .accessibilityHint(Text(LocalizablesConstants.addingNewTaskButtonHint))
                     }
                 }
             }

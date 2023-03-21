@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  Chalkboard
+
+  Created by Israel Manzo on 3/19/23.
+  
+*/
+
+"Accessibility_tap_for_strikethrough_if_task_is_completed" = "tap for strikethrough if task is completed";
+"Accessibility_no_item" = "NO ITEM";
+"Accessibility_no_title" = "NO TITLE";
+"Accessibility_no_date" = "NO DATE";
+"Accessibility_The_Chalkboarde" = "The Chalkboard";
+"Accessibility_tap_for_deleting_in_group" = "tap for deleting in group";
+"Accessibility_tap_for_adding_a_new_task" = "tap for adding a new task";
