@@ -21,16 +21,16 @@ struct AddingView: View {
             headerSection
 
             VStack {
-                TextField("Title", text: $vm.titleItem)
+                TextField(LocalizablesConstants.addingTextFieldTitle, text: $vm.titleItem)
                     .padding(8)
                     .overlay(
                         RoundedRectangle(cornerRadius: 5) .stroke(Color(UIColor.secondarySystemBackground))
                     )
                     .shadow(radius: 0.2)
-                    .accessibilityLabel(Text("Input task"))
+                    .accessibilityLabel(Text(LocalizablesConstants.addingTextFieldInputTask))
                 ZStack {
                     TextEditor(text: $vm.addedItem)
-                        .accessibilityHint(Text("input description"))
+                        .accessibilityHint(Text(LocalizablesConstants.addingTextEditorDescription))
                     Text(vm.addedItem).opacity(0).padding(.all, 8)
                     
                     VStack(alignment: .trailing) {
@@ -42,11 +42,11 @@ struct AddingView: View {
                             } label: {
                                 HStack {
                                     Image(systemName: vm.isPriority ? "checkmark" : "exclamationmark.circle")
-                                    Text("Important")
+                                    Text(LocalizablesConstants.addingImportantDescription)
                                 }
                                 .font(.system(size: 12))
                                 .foregroundColor(Color(.label))
-                                .accessibilityHint(Text("tap for make the task important"))
+                                .accessibilityHint(Text(LocalizablesConstants.addingImportantDescriptionHint))
                             }
                             .padding(5)
                             .buttonStyle(.bordered)
@@ -78,7 +78,7 @@ struct AddingView: View {
                             Text("Add")
                                 .font(.title3)
                                 .fontWeight(.bold)
-                                .accessibilityHint(Text("tap for adding a new task"))
+                                .accessibilityHint(Text(LocalizablesConstants.addingNewTaskButtonHint))
                         }
                         .padding(.horizontal, 50)
                         .padding(.vertical, 0)
@@ -116,9 +116,9 @@ extension AddingView {
             VStack(alignment:.leading) {
                 HStack {
                     VStack(alignment: .leading) {
-                        Text("The Chalkboard")
+                        Text(LocalizablesConstants.theChalkboardNavigationTitle)
                             .font(.title)
-                            .accessibilityLabel("The Chalkboard")
+                            .accessibilityLabel(LocalizablesConstants.theChalkboardNavigationTitle)
                             .accessibilityAddTraits(.isHeader)
                             .accessibilityHeading(.h1)
                         
@@ -139,7 +139,7 @@ extension AddingView {
                             .background(Color(UIColor.secondarySystemBackground))
                             .cornerRadius(20)
                             .offset(y:-10)
-                            .accessibilityHint(Text("tap for closing page"))
+                            .accessibilityHint(Text(LocalizablesConstants.closingButtonDescriptionHint))
                     }
                 }
                 HStack(alignment: .center) {

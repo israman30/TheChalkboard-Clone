@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  Chalkboard
+
+  Created by Israel Manzo on 3/19/23.
+  
+*/
+
+"Accessibility_tap_for_strikethrough_if_task_is_completed" = "הקש להחלפת קו אם המשימה הושלמה";
+"Accessibility_no_item" = "אין פריט";
+"Accessibility_no_title" = "ללא כותרת";
+"Accessibility_no_date" = "אין תאריך";
+"Accessibility_The_Chalkboarde" = "הלוח";
+"Accessibility_tap_for_deleting_in_group" = "הקש למחיקה בקבוצה";
+"Accessibility_tap_for_adding_a_new_task" = "הקש להוספת משימה חדשה";
+
+"Accessibility_adding_title" = "כותרת";
+"Accessibility_input_task" = "משימת קלט";
+"Accessibility_input description" = "תיאור קלט";
+"Accessibility_important" = "חָשׁוּב";
+"Accessibility_tap_for_make_the_task_important" = "הקש כדי להפוך את המשימה לחשובה";
+"Accessibility_tap_for_adding_a_new_task" = "הקש להוספת משימה חדשה";
+

@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  Chalkboard
+
+  Created by Israel Manzo on 3/19/23.
+  
+*/
+"Accessibility_tap_for_strikethrough_if_task_is_completed" = "toque para tachar si la tarea está completa";
+"Accessibility_no_item" = "SIN OBJETO";
+"Accessibility_no_title" = "SIN TÍTULO";
+"Accessibility_no_date" = "SIN FECHA";
+"Accessibility_The_Chalkboarde" = "La pizarra";
+"Accessibility_tap_for_deleting_in_group" = "toque para eliminar en grupo";
+"Accessibility_tap_for_adding_a_new_task" = "toque para agregar una nueva tarea";
+
+"Accessibility_adding_title" = "Título";
+"Accessibility_input_task" = "Tarea de entrada";
+"Accessibility_input description" = "Descripción de entrada";
+"Accessibility_important" = "Importante";
+"Accessibility_tap_for_make_the_task_important" = "toque para hacer que la tarea sea importante";
+"Accessibility_tap_for_adding_a_new_task" = "toque para agregar una nueva tarea";

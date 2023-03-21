@@ -10,6 +10,8 @@
 		4D27B9D029C0EE4F00A805C8 /* MainListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D27B9CF29C0EE4F00A805C8 /* MainListView.swift */; };
 		4D27B9D629C12DF300A805C8 /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D27B9D529C12DF300A805C8 /* ItemViewModel.swift */; };
 		4D27B9DA29C5518700A805C8 /* CustomTextEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D27B9D929C5518700A805C8 /* CustomTextEditorView.swift */; };
+		4D27B9DD29C7FB7900A805C8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D27B9DF29C7FB7900A805C8 /* Localizable.strings */; };
+		4D27B9E229C9FCE500A805C8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D27B9E129C9FCE500A805C8 /* Constants.swift */; };
 		8D6DF0B727F92FA4007AC409 /* ChalkboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6DF0B627F92FA4007AC409 /* ChalkboardApp.swift */; };
 		8D6DF0B927F92FA4007AC409 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6DF0B827F92FA4007AC409 /* ContentView.swift */; };
 		8D6DF0BB27F92FAD007AC409 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D6DF0BA27F92FAD007AC409 /* Assets.xcassets */; };
@@ -44,6 +46,13 @@
 		4D27B9CF29C0EE4F00A805C8 /* MainListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListView.swift; sourceTree = "<group>"; };
 		4D27B9D529C12DF300A805C8 /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
 		4D27B9D929C5518700A805C8 /* CustomTextEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextEditorView.swift; sourceTree = "<group>"; };
+		4D27B9DE29C7FB7900A805C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4D27B9E029C7FB9B00A805C8 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4D27B9E129C9FCE500A805C8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4D27B9E329CA0A4300A805C8 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4D27B9E429CA0CD000A805C8 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4D27B9E529CA0DF000A805C8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		4D27B9E629CA106300A805C8 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8D6DF0B327F92FA4007AC409 /* Chalkboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chalkboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D6DF0B627F92FA4007AC409 /* ChalkboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChalkboardApp.swift; sourceTree = "<group>"; };
 		8D6DF0B827F92FA4007AC409 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -108,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				8DE23CB72805123A00E0C69B /* KeyboardHandler.swift */,
+				4D27B9E129C9FCE500A805C8 /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -151,6 +161,7 @@
 				8D6DF0BA27F92FAD007AC409 /* Assets.xcassets */,
 				8D6DF0BC27F92FAD007AC409 /* Preview Content */,
 				8D886E27280903BB00F74167 /* Chalkboard.xcdatamodeld */,
+				4D27B9DF29C7FB7900A805C8 /* Localizable.strings */,
 			);
 			path = Chalkboard;
 			sourceTree = "<group>";
@@ -266,6 +277,12 @@
 			knownRegions = (
 				en,
 				Base,
+				"es-419",
+				es,
+				fr,
+				he,
+				"zh-Hans",
+				ru,
 			);
 			mainGroup = 8D6DF0AA27F92FA4007AC409;
 			productRefGroup = 8D6DF0B427F92FA4007AC409 /* Products */;
@@ -285,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D6DF0BE27F92FAD007AC409 /* Preview Assets.xcassets in Resources */,
+				4D27B9DD29C7FB7900A805C8 /* Localizable.strings in Resources */,
 				8D6DF0BB27F92FAD007AC409 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +335,7 @@
 				8DE23CB627FE89B000E0C69B /* AddingView.swift in Sources */,
 				8D6DF0B727F92FA4007AC409 /* ChalkboardApp.swift in Sources */,
 				4D27B9D029C0EE4F00A805C8 /* MainListView.swift in Sources */,
+				4D27B9E229C9FCE500A805C8 /* Constants.swift in Sources */,
 				8DE23CB82805123A00E0C69B /* KeyboardHandler.swift in Sources */,
 				8D886E29280903BB00F74167 /* Chalkboard.xcdatamodeld in Sources */,
 			);
@@ -353,6 +372,22 @@
 			targetProxy = 8D6DF0CE27F92FAE007AC409 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4D27B9DF29C7FB7900A805C8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D27B9DE29C7FB7900A805C8 /* en */,
+				4D27B9E029C7FB9B00A805C8 /* es */,
+				4D27B9E329CA0A4300A805C8 /* fr */,
+				4D27B9E429CA0CD000A805C8 /* he */,
+				4D27B9E529CA0DF000A805C8 /* zh-Hans */,
+				4D27B9E629CA106300A805C8 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8D6DF0D527F92FAE007AC409 /* Debug */ = {

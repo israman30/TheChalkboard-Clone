@@ -27,7 +27,7 @@ struct MainListView: View {
 //                                .opacity(task.isPriority ? 1 : 0)
                             
                             VStack(alignment: .leading) {
-                                Text(task.title ?? "NO ITEM")
+                                Text(task.title ?? LocalizablesConstants.mainNotItemLabel)
                                     .font(.title3)
                                     .fontWeight(.medium)
                                     .strikethrough(task.isCompleted, color: .red)
@@ -36,12 +36,12 @@ struct MainListView: View {
                                         task.isCompleted.toggle()
                                         self.save()
                                     }
-                                    .accessibilityHint(Text("tap for strikethrough if task is completed"))
-                                Text(task.name ?? "NO TITLE")
+                                    .accessibilityHint(Text(LocalizablesConstants.mainListStrikethroughLabel))
+                                Text(task.name ?? LocalizablesConstants.mainNotTitleLabel)
                                     .font(.body)
                                     .fontWeight(.light)
                                     .strikethrough(task.isCompleted, color: .red)
-                                Text(task.timestamp ?? "NO DATE")
+                                Text(task.timestamp ?? LocalizablesConstants.mainNotDateLabel)
                                     .font(.footnote)
                                     .foregroundColor(.secondary)
                             }
@@ -52,13 +52,13 @@ struct MainListView: View {
             }
             .padding(5)
             .listStyle(.grouped)
-            .navigationBarTitle("The Chalkboard")
+            .navigationBarTitle(LocalizablesConstants.theChalkboardNavigationTitle)
             .accessibilityAddTraits(.isHeader)
             .accessibilityHeading(.h1)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     EditButton()
-                        .accessibilityHint(Text("tap for deleting in group"))
+                        .accessibilityHint(Text(LocalizablesConstants.deletingGroupButtonHint))
                 }
                 ToolbarItem(placement: .primaryAction) {
                     Button {
@@ -68,7 +68,7 @@ struct MainListView: View {
                             .foregroundColor(Color(.label))
                             .font(.title3)
                             .frame(height: 96, alignment: .trailing)
-                            .accessibilityHint(Text("tap for adding a new task"))
+                            .accessibilityHint(Text(LocalizablesConstants.addingNewTaskButtonHint))
                     }
                 }
             }
