@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  Chalkboard
+
+  Created by Israel Manzo on 3/19/23.
+  
+*/
+
+"Accessibility_tap_for_strikethrough_if_task_is_completed" = "如果任务已完成，请点击删除线";
+"Accessibility_no_item" = "没有项目";
+"Accessibility_no_title" = "无题";
+"Accessibility_no_date" = "无日期";
+"Accessibility_The_Chalkboarde" = "黑板";
+"Accessibility_tap_for_deleting_in_group" = "点击删除群组";
+"Accessibility_tap_for_adding_a_new_task" = "点击以添加新任务";
+
+"Accessibility_adding_title" = "标题";
+"Accessibility_input_task" = "输入任务";
+"Accessibility_input description" = "输入说明";
+"Accessibility_important" = "重要的";
+"Accessibility_tap_for_make_the_task_important" = "点击使任务变得重要";
+"Accessibility_tap_for_adding_a_new_task" = "点击以添加新任务";
+
