@@ -7,6 +7,23 @@
 
 import SwiftUI
 
+struct LocalizablesConstants {
+    static let mainListStrikethroughLabel = NSLocalizedString("Accessibility_tap_for_strikethrough_if_task_is_completed", comment: "tap for strikethrough if task is completed")
+    static let mainNotItemLabel = NSLocalizedString("Accessibility_no_item", comment: "NO ITEM")
+    static let mainNotTitleLabel = NSLocalizedString("Accessibility_no_title", comment: "NO TITLE")
+    static let mainNotDateLabel = NSLocalizedString("Accessibility_no_date", comment: "NO DATE")
+    static let theChalkboardNavigationTitle = NSLocalizedString("Accessibility_The_Chalkboarde", comment: "The Chalkboard")
+    static let deletingGroupButtonHint = NSLocalizedString("Accessibility_tap_for_deleting_in_group", comment: "tap for deleting in group")
+    static let addingNewTaskButtonHint = NSLocalizedString("Accessibility_tap_for_adding_a_new_task", comment: "tap for adding a new task")
+    
+    static let addingTextFieldTitle = NSLocalizedString("Accessibility_adding_title", comment: "Title")
+    static let addingTextFieldInputTask = NSLocalizedString("Accessibility_input_task", comment: "Input task")
+    static let addingTextEditorDescription = NSLocalizedString("Accessibility_input description", comment: "Input description")
+    static let addingImportantDescription = NSLocalizedString("Accessibility_important", comment: "Important")
+    static let addingImportantDescriptionHint = NSLocalizedString("Accessibility_tap_for_make_the_task_important", comment: "tap for make the task important")
+    static let closingButtonDescriptionHint = NSLocalizedString("Accessibility_tap_for_closing_page", comment: "tap for closing page")
+}
+
 struct AddingView: View {
     
     @Environment(\.dismiss) var dismiss
@@ -21,16 +38,16 @@ struct AddingView: View {
             headerSection
 
             VStack {
-                TextField("Title", text: $vm.titleItem)
+                TextField(LocalizablesConstants.addingTextFieldTitle, text: $vm.titleItem)
                     .padding(8)
                     .overlay(
                         RoundedRectangle(cornerRadius: 5) .stroke(Color(UIColor.secondarySystemBackground))
                     )
                     .shadow(radius: 0.2)
-                    .accessibilityLabel(Text("Input task"))
+                    .accessibilityLabel(Text(LocalizablesConstants.addingTextFieldInputTask))
                 ZStack {
                     TextEditor(text: $vm.addedItem)
-                        .accessibilityHint(Text("input description"))
+                        .accessibilityHint(Text(LocalizablesConstants.addingTextEditorDescription))
                     Text(vm.addedItem).opacity(0).padding(.all, 8)
                     
                     VStack(alignment: .trailing) {
@@ -42,11 +59,11 @@ struct AddingView: View {
                             } label: {
                                 HStack {
                                     Image(systemName: vm.isPriority ? "checkmark" : "exclamationmark.circle")
-                                    Text("Important")
+                                    Text(LocalizablesConstants.addingImportantDescription)
                                 }
                                 .font(.system(size: 12))
                                 .foregroundColor(Color(.label))
-                                .accessibilityHint(Text("tap for make the task important"))
+                                .accessibilityHint(Text(LocalizablesConstants.addingImportantDescriptionHint))
                             }
                             .padding(5)
                             .buttonStyle(.bordered)
@@ -78,7 +95,7 @@ struct AddingView: View {
                             Text("Add")
                                 .font(.title3)
                                 .fontWeight(.bold)
-                                .accessibilityHint(Text("tap for adding a new task"))
+                                .accessibilityHint(Text(LocalizablesConstants.addingNewTaskButtonHint))
                         }
                         .padding(.horizontal, 50)
                         .padding(.vertical, 0)
@@ -116,9 +133,9 @@ extension AddingView {
             VStack(alignment:.leading) {
                 HStack {
                     VStack(alignment: .leading) {
-                        Text("The Chalkboard")
+                        Text(LocalizablesConstants.theChalkboardNavigationTitle)
                             .font(.title)
-                            .accessibilityLabel("The Chalkboard")
+                            .accessibilityLabel(LocalizablesConstants.theChalkboardNavigationTitle)
                             .accessibilityAddTraits(.isHeader)
                             .accessibilityHeading(.h1)
                         
@@ -139,7 +156,7 @@ extension AddingView {
                             .background(Color(UIColor.secondarySystemBackground))
                             .cornerRadius(20)
                             .offset(y:-10)
-                            .accessibilityHint(Text("tap for closing page"))
+                            .accessibilityHint(Text(LocalizablesConstants.closingButtonDescriptionHint))
                     }
                 }
                 HStack(alignment: .center) {

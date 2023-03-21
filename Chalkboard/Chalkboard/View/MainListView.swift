@@ -7,16 +7,6 @@
 
 import SwiftUI
 
-struct LocalizablesConstants {
-    static let mainListStrikethroughLabel = NSLocalizedString("Accessibility_tap_for_strikethrough_if_task_is_completed", comment: "tap for strikethrough if task is completed")
-    static let mainNotItemLabel = NSLocalizedString("Accessibility_no_item", comment: "NO ITEM")
-    static let mainNotTitleLabel = NSLocalizedString("Accessibility_no_title", comment: "NO TITLE")
-    static let mainNotDateLabel = NSLocalizedString("Accessibility_no_date", comment: "NO DATE")
-    static let theChalkboardNavigationTitle = NSLocalizedString("Accessibility_The_Chalkboarde", comment: "The Chalkboard")
-    static let deletingGroupButtonHint = NSLocalizedString("Accessibility_tap_for_deleting_in_group", comment: "tap for deleting in group")
-    static let addingNewTaskButtonHint = NSLocalizedString("Accessibility_tap_for_adding_a_new_task", comment: "tap for adding a new task")
-}
-
 struct MainListView: View {
     @State var input = ""
     @State var isShowing = false
