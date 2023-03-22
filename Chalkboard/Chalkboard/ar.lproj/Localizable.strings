@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  Chalkboard
+
+  Created by Israel Manzo on 3/19/23.
+  
+*/
+
+"Accessibility_tap_for_strikethrough_if_task_is_completed" = "اضغط على يتوسطه خط في حالة اكتمال المهمة";
+"Accessibility_no_item" = "لا عنصر";
+"Accessibility_no_title" = "بلا عنوان";
+"Accessibility_no_date" = "لا تاريخ";
+"Accessibility_The_Chalkboarde" = "السبورة";
+"Accessibility_tap_for_deleting_in_group" = "اضغط للحذف في المجموعة";
+"Accessibility_tap_for_adding_a_new_task" = "اضغط لإضافة مهمة جديدة";
+
+"Accessibility_adding_title" = "عنوان";
+"Accessibility_input_task" = "مهمة الإدخال";
+"Accessibility_input description" = "وصف المدخلات";
+"Accessibility_important" = "مهم";
+"Accessibility_tap_for_make_the_task_important" = "انقر لجعل المهمة مهمة";
+"Accessibility_tap_for_adding_a_new_task" = "اضغط لإضافة مهمة جديدة";
+

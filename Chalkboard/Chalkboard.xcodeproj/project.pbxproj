@@ -55,6 +55,10 @@
 		4D27B9E529CA0DF000A805C8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		4D27B9E629CA106300A805C8 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4D6C4DDD29CB7AAE00D6BDF1 /* NotificationManagerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManagerViewModel.swift; sourceTree = "<group>"; };
+		4D6C4DDF29CBBA4200D6BDF1 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4D6C4DE029CBBAFD00D6BDF1 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4D6C4DE129CBBB7E00D6BDF1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4D6C4DE229CBBC3800D6BDF1 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8D6DF0B327F92FA4007AC409 /* Chalkboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chalkboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D6DF0B627F92FA4007AC409 /* ChalkboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChalkboardApp.swift; sourceTree = "<group>"; };
 		8D6DF0B827F92FA4007AC409 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -286,6 +290,10 @@
 				he,
 				"zh-Hans",
 				ru,
+				ja,
+				ko,
+				ar,
+				hi,
 			);
 			mainGroup = 8D6DF0AA27F92FA4007AC409;
 			productRefGroup = 8D6DF0B427F92FA4007AC409 /* Products */;
@@ -387,6 +395,10 @@
 				4D27B9E429CA0CD000A805C8 /* he */,
 				4D27B9E529CA0DF000A805C8 /* zh-Hans */,
 				4D27B9E629CA106300A805C8 /* ru */,
+				4D6C4DDF29CBBA4200D6BDF1 /* ja */,
+				4D6C4DE029CBBAFD00D6BDF1 /* ko */,
+				4D6C4DE129CBBB7E00D6BDF1 /* ar */,
+				4D6C4DE229CBBC3800D6BDF1 /* hi */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

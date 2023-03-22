@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  Chalkboard
+
+  Created by Israel Manzo on 3/19/23.
+  
+*/
+
+"Accessibility_tap_for_strikethrough_if_task_is_completed" = "कार्य पूर्ण होने पर स्ट्राइकथ्रू के लिए टैप करें";
+"Accessibility_no_item" = "कोई आइटम नही";
+"Accessibility_no_title" = "कोई शीर्षक नहीं";
+"Accessibility_no_date" = "कोई तारीख नहीं";
+"Accessibility_The_Chalkboarde" = "चॉकबोर्ड";
+"Accessibility_tap_for_deleting_in_group" = "ग्रुप में डिलीट करने के लिए टैप करें";
+"Accessibility_tap_for_adding_a_new_task" = "नया कार्य जोड़ने के लिए टैप करें";
+
+"Accessibility_adding_title" = "शीर्षक";
+"Accessibility_input_task" = "इनपुट कार्य";
+"Accessibility_input description" = "इनपुट विवरण";
+"Accessibility_important" = "महत्वपूर्ण";
+"Accessibility_tap_for_make_the_task_important" = "टास्क को महत्वपूर्ण बनाने के लिए टैप करें";
+"Accessibility_tap_for_adding_a_new_task" = "नया कार्य जोड़ने के लिए टैप करें";
+
