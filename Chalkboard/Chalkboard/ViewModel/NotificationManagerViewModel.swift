@@ -24,9 +24,13 @@ struct NotificationManagerViewModel {
         }
     }
     
-    func scheduleNotification(title: String, subtitle: String, date: Date) {
+    func scheduleNotification(title: String, subtitle: String, date: Date, isImportant: Bool = false) {
         let content = UNMutableNotificationContent()
-        content.title = title
+        if isImportant {
+            content.title = "❗️\(title)"
+        } else {
+            content.title = title
+        }
         content.subtitle = subtitle
         content.sound = .default
         content.badge = 1

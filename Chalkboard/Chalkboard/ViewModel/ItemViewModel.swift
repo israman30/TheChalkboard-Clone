@@ -42,7 +42,7 @@ class ItemViewModel: ObservableObject {
     private func save() {
         do {
             try context!.save()
-            self.notification.scheduleNotification(title: titleItem, subtitle: addedItem, date: date)
+            self.notification.scheduleNotification(title: titleItem, subtitle: addedItem, date: date, isImportant: isPriority)
         } catch {
             print("Error saving task in db: \(error.localizedDescription)")
         }
