@@ -59,6 +59,7 @@ struct MainListView: View {
                 ToolbarItem(placement: .navigationBarLeading) {
                     EditButton()
                         .accessibilityHint(Text(LocalizablesConstants.deletingGroupButtonHint))
+                        .disabled(tasks.isEmpty ? true : false)
                 }
                 ToolbarItem(placement: .primaryAction) {
                     Button {
