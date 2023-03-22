@@ -12,6 +12,7 @@ struct MainListView: View {
     @State var isShowing = false
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(sortDescriptors: [SortDescriptor(\.timestamp)]) var tasks: FetchedResults<Task>
+    let notification: NotificationManagerViewModel = .instance
     
     var body: some View {
         NavigationView {
@@ -59,6 +60,7 @@ struct MainListView: View {
                 ToolbarItem(placement: .navigationBarLeading) {
                     EditButton()
                         .accessibilityHint(Text(LocalizablesConstants.deletingGroupButtonHint))
+                        .disabled(tasks.isEmpty ? true : false)
                 }
                 ToolbarItem(placement: .primaryAction) {
                     Button {
@@ -71,6 +73,10 @@ struct MainListView: View {
                             .accessibilityHint(Text(LocalizablesConstants.addingNewTaskButtonHint))
                     }
                 }
+            }
+            .onAppear {
+                notification.requestAuthorization()
+                notification.removeNotificaion()
             }
             .sheet(isPresented: $isShowing, content: {
                 AddingView()
