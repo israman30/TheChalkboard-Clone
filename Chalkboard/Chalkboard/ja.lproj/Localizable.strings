@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  Chalkboard
+
+  Created by Israel Manzo on 3/19/23.
+  
+*/
+
+"Accessibility_tap_for_strikethrough_if_task_is_completed" = "タスクが完了したらタップして取り消し線を表示";
+"Accessibility_no_item" = "アイテムなし";
+"Accessibility_no_title" = "タイトルなし";
+"Accessibility_no_date" = "日付なし";
+"Accessibility_The_Chalkboarde" = "黒板";
+"Accessibility_tap_for_deleting_in_group" = "タップしてグループで削除";
+"Accessibility_tap_for_adding_a_new_task" = "タップして新しいタスクを追加";
+
+"Accessibility_adding_title" = "タイトル";
+"Accessibility_input_task" = "入力タスク";
+"Accessibility_input description" = "入力の説明";
+"Accessibility_important" = "重要";
+"Accessibility_tap_for_make_the_task_important" = "タスクを重要にするためにタップします";
+"Accessibility_tap_for_adding_a_new_task" = "タップして新しいタスクを追加しますk";
+
