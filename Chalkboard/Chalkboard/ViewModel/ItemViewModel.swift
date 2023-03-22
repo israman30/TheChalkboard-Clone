@@ -15,6 +15,7 @@ class ItemViewModel: ObservableObject {
     @Published var addedItem = ""
     @Published var isPriority = false
     @Published var date = Date()
+    let notification: NotificationManagerViewModel = .instance
     
     var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
@@ -41,6 +42,7 @@ class ItemViewModel: ObservableObject {
     private func save() {
         do {
             try context!.save()
+            self.notification.scheduleNotification(title: titleItem, subtitle: addedItem, date: date)
         } catch {
             print("Error saving task in db: \(error.localizedDescription)")
         }
