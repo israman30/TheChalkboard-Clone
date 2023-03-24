@@ -10,6 +10,7 @@ import SwiftUI
 struct MainListView: View {
     @State var input = ""
     @State var isShowing = false
+    @State var showUpdateSheet = false
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(sortDescriptors: [SortDescriptor(\.timestamp)]) var tasks: FetchedResults<Task>
     let notification: NotificationManagerViewModel = .instance
@@ -46,6 +47,13 @@ struct MainListView: View {
                                     .font(.footnote)
                                     .foregroundColor(.secondary)
                             }
+                            Spacer()
+                            Button {
+                                self.showUpdateSheet.toggle()
+                            } label: {
+                                Image(systemName: "square.and.pencil")
+                            }.buttonStyle(PlainButtonStyle())
+
                         }
                     }
                     .onDelete(perform: deleteTask)
@@ -81,6 +89,10 @@ struct MainListView: View {
             .sheet(isPresented: $isShowing, content: {
                 AddingView()
             })
+            .sheet(isPresented: $showUpdateSheet, content: {
+                AddingView()
+            })
+            
             
         }
         .navigationViewStyle(.stack)
