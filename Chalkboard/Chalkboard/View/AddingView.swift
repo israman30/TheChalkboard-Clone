@@ -36,7 +36,39 @@ struct AddingView: View {
                     VStack(alignment: .trailing) {
                         Spacer()
                         HStack {
+                            Text("Level:")
+                                .padding(.horizontal)
                             Spacer()
+                            HStack {
+                                Button("High") {
+                                    
+                                }
+                                .padding(4)
+                                .foregroundColor(.white)
+                                .background(Color.red)
+                                .cornerRadius(5)
+                                
+                                Button("Medium") {
+                                    
+                                }
+                                .padding(4)
+                                .foregroundColor(.white)
+                                .background(Color.yellow)
+                                .cornerRadius(5)
+                                
+                                Button("Low") {
+                                    
+                                }
+                                .padding(4)
+                                .foregroundColor(.white)
+                                .background(Color.green)
+                                .cornerRadius(5)
+                            }
+                            .font(.callout)
+                            .fontWeight(.bold)
+                            .opacity(!vm.addedItem.isEmpty ? 1 : 0)
+                            
+                            
                             Button {
                                 self.vm.isPriority.toggle()
                             } label: {
@@ -51,7 +83,7 @@ struct AddingView: View {
                             .padding(5)
                             .buttonStyle(.bordered)
                             .tint(vm.isPriority ? .red : .clear)
-                            .opacity(!vm.addedItem.isEmpty ? 1 : 0)
+                            .opacity(vm.addedItem.isEmpty ? 1 : 0)
                             
                         }
                         

@@ -26,8 +26,8 @@ struct MainListView: View {
                                 .background(task.isPriority ? .red : Color(.systemGray4))
                                 .padding(.leading, -10)
 //                                .opacity(task.isPriority ? 1 : 0)
-                            
-                            VStack(alignment: .leading) {
+
+                            VStack(alignment: .leading, spacing: 5) {
                                 Text(task.title ?? LocalizablesConstants.mainNotItemLabel)
                                     .font(.title3)
                                     .fontWeight(.medium)
@@ -42,9 +42,46 @@ struct MainListView: View {
                                     .font(.body)
                                     .fontWeight(.light)
                                     .strikethrough(task.isCompleted, color: .red)
-                                Text(task.timestamp ?? LocalizablesConstants.mainNotDateLabel)
-                                    .font(.footnote)
-                                    .foregroundColor(.secondary)
+                                
+                                
+                                HStack {
+                                    Text(task.timestamp ?? LocalizablesConstants.mainNotDateLabel)
+                                        .font(.footnote)
+                                        .foregroundColor(.secondary)
+                                    Spacer()
+                                     Text("High")
+                                        .padding(4)
+                                        .foregroundColor(.white)
+                                        .background(Color.red)
+                                        .font(.caption)
+                                        .fontWeight(.bold)
+                                        .cornerRadius(5)
+                                    
+                                    Text("Medium")
+                                       .padding(4)
+                                       .foregroundColor(.white)
+                                       .background(Color.yellow)
+                                       .font(.caption)
+                                       .fontWeight(.bold)
+                                       .cornerRadius(5)
+                                    
+                                    Text("Normal")
+                                       .padding(4)
+                                       .foregroundColor(.white)
+                                       .background(Color.gray)
+                                       .font(.caption)
+                                       .fontWeight(.bold)
+                                       .cornerRadius(5)
+                                    
+                                    Text("Low")
+                                       .padding(4)
+                                       .foregroundColor(.white)
+                                       .background(Color.green)
+                                       .font(.caption)
+                                       .fontWeight(.bold)
+                                       .cornerRadius(5)
+
+                                }
                             }
                         }
                     }
