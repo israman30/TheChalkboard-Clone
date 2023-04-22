@@ -78,9 +78,9 @@ struct MainListView: View {
                 notification.requestAuthorization()
                 notification.removeNotificaion()
             }
-            .sheet(isPresented: $isShowing, content: {
+            .fullScreenCover(isPresented: $isShowing) {
                 AddingView()
-            })
+            }
             
         }
         .navigationViewStyle(.stack)
