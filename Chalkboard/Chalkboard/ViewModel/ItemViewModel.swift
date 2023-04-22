@@ -14,6 +14,9 @@ class ItemViewModel: ObservableObject {
     @Published var titleItem = ""
     @Published var addedItem = ""
     @Published var isPriority = false
+    @Published var isHigh = false
+    @Published var isMedium = false
+    @Published var isLow = false
     @Published var date = Date()
     let notification: NotificationManagerViewModel = .instance
     

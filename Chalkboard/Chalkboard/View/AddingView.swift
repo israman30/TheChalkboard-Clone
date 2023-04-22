@@ -37,56 +37,37 @@ struct AddingView: View {
                         Spacer()
                         HStack {
                             Text("Level:")
-                                .padding(.horizontal)
+                                .font(.callout)
+                                .fontWeight(.none)
                             Spacer()
-                            HStack {
-                                Button("High") {
-                                    
-                                }
-                                .padding(4)
-                                .foregroundColor(.white)
-                                .background(Color.red)
-                                .cornerRadius(5)
-                                
-                                Button("Medium") {
-                                    
-                                }
-                                .padding(4)
-                                .foregroundColor(.white)
-                                .background(Color.yellow)
-                                .cornerRadius(5)
-                                
-                                Button("Low") {
-                                    
-                                }
-                                .padding(4)
-                                .foregroundColor(.white)
-                                .background(Color.green)
-                                .cornerRadius(5)
+                            Button("High") {
+                                self.vm.isHigh.toggle()
                             }
-                            .font(.callout)
-                            .fontWeight(.bold)
-                            .opacity(!vm.addedItem.isEmpty ? 1 : 0)
+                            .padding(4)
+                            .foregroundColor(.white)
+                            .background(vm.isHigh ? .red : .gray)
+                            .cornerRadius(5)
                             
-                            
-                            Button {
-                                self.vm.isPriority.toggle()
-                            } label: {
-                                HStack {
-                                    Image(systemName: vm.isPriority ? "checkmark" : "exclamationmark.circle")
-                                    Text(LocalizablesConstants.addingImportantDescription)
-                                }
-                                .font(.system(size: 12))
-                                .foregroundColor(Color(.label))
-                                .accessibilityHint(Text(LocalizablesConstants.addingImportantDescriptionHint))
+                            Button("Medium") {
+                                self.vm.isMedium.toggle()
                             }
-                            .padding(5)
-                            .buttonStyle(.bordered)
-                            .tint(vm.isPriority ? .red : .clear)
-                            .opacity(vm.addedItem.isEmpty ? 1 : 0)
+                            .padding(4)
+                            .foregroundColor(.white)
+                            .background(vm.isMedium ? .yellow : .gray)
+                            .cornerRadius(5)
                             
+                            Button("Low") {
+                                self.vm.isLow.toggle()
+                            }
+                            .padding(4)
+                            .foregroundColor(.white)
+                            .background(vm.isLow ? .green : .gray)
+                            .cornerRadius(5)
                         }
-                        
+                        .padding(5)
+                        .font(.callout)
+                        .fontWeight(.bold)
+                        .opacity(!vm.addedItem.isEmpty ? 1 : 0)
                     }
                     .padding(.top)
 
