@@ -19,7 +19,7 @@ class ItemViewModel: ObservableObject {
     
     var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
-        formatter.dateStyle = .full
+        formatter.dateStyle = .short
         formatter.timeStyle = .short
         return formatter
     }

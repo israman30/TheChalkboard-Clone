@@ -44,6 +44,7 @@ struct MainGridView: View {
                                 .foregroundColor(.secondary)
                         }
                         .frame(height: 150)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                         .padding()
                         .overlay {
                             RoundedRectangle(cornerRadius: 10)
@@ -55,6 +56,7 @@ struct MainGridView: View {
                         
                         
                     }
+                    .onDelete(perform: deleteTask)
                     
                 }
                 .padding()
@@ -76,12 +78,31 @@ struct MainGridView: View {
                         }
                     }
                 }
-                
+                .onAppear {
+                    notification.requestAuthorization()
+                    notification.removeNotificaion()
+                }
                 .fullScreenCover(isPresented: $isShowing) {
                     AddingView()
                 }
             }
             .navigationTitle("The Chalkboard")
+        }
+    }
+    
+    private func deleteTask(at offset: IndexSet) {
+        offset.forEach { index in
+            let task = tasks[index]
+            moc.delete(task)
+        }
+        save()
+    }
+    
+    private func save() {
+        do {
+            try moc.save()
+        } catch {
+            print("Error saving task in db: \(error.localizedDescription)")
         }
     }
 }
