@@ -12,6 +12,8 @@
 		4D27B9DA29C5518700A805C8 /* CustomTextEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D27B9D929C5518700A805C8 /* CustomTextEditorView.swift */; };
 		4D27B9DD29C7FB7900A805C8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D27B9DF29C7FB7900A805C8 /* Localizable.strings */; };
 		4D27B9E229C9FCE500A805C8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D27B9E129C9FCE500A805C8 /* Constants.swift */; };
+		4D2C643229F62078000AF59E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2C643129F62078000AF59E /* Extensions.swift */; };
+		4D2C643429F620A3000AF59E /* LevelSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2C643329F620A3000AF59E /* LevelSection.swift */; };
 		4D6C4DDE29CB7AAE00D6BDF1 /* NotificationManagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6C4DDD29CB7AAE00D6BDF1 /* NotificationManagerViewModel.swift */; };
 		8D6DF0B727F92FA4007AC409 /* ChalkboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6DF0B627F92FA4007AC409 /* ChalkboardApp.swift */; };
 		8D6DF0B927F92FA4007AC409 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6DF0B827F92FA4007AC409 /* ContentView.swift */; };
@@ -54,6 +56,8 @@
 		4D27B9E429CA0CD000A805C8 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4D27B9E529CA0DF000A805C8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		4D27B9E629CA106300A805C8 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4D2C643129F62078000AF59E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4D2C643329F620A3000AF59E /* LevelSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSection.swift; sourceTree = "<group>"; };
 		4D6C4DDD29CB7AAE00D6BDF1 /* NotificationManagerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManagerViewModel.swift; sourceTree = "<group>"; };
 		4D6C4DDF29CBBA4200D6BDF1 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4D6C4DE029CBBAFD00D6BDF1 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 			children = (
 				8D6DF0B827F92FA4007AC409 /* ContentView.swift */,
 				4D27B9CF29C0EE4F00A805C8 /* MainListView.swift */,
+				4D2C643329F620A3000AF59E /* LevelSection.swift */,
 				8DE23CB527FE89B000E0C69B /* AddingView.swift */,
 				4D27B9D929C5518700A805C8 /* CustomTextEditorView.swift */,
 			);
@@ -124,6 +129,7 @@
 			children = (
 				8DE23CB72805123A00E0C69B /* KeyboardHandler.swift */,
 				4D27B9E129C9FCE500A805C8 /* Constants.swift */,
+				4D2C643129F62078000AF59E /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -340,12 +346,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D6C4DDE29CB7AAE00D6BDF1 /* NotificationManagerViewModel.swift in Sources */,
+				4D2C643429F620A3000AF59E /* LevelSection.swift in Sources */,
 				8D6DF0B927F92FA4007AC409 /* ContentView.swift in Sources */,
 				4D27B9D629C12DF300A805C8 /* ItemViewModel.swift in Sources */,
 				4D27B9DA29C5518700A805C8 /* CustomTextEditorView.swift in Sources */,
 				8D886E2B2809043A00F74167 /* DataController.swift in Sources */,
 				8DE23CB627FE89B000E0C69B /* AddingView.swift in Sources */,
 				8D6DF0B727F92FA4007AC409 /* ChalkboardApp.swift in Sources */,
+				4D2C643229F62078000AF59E /* Extensions.swift in Sources */,
 				4D27B9D029C0EE4F00A805C8 /* MainListView.swift in Sources */,
 				4D27B9E229C9FCE500A805C8 /* Constants.swift in Sources */,
 				8DE23CB82805123A00E0C69B /* KeyboardHandler.swift in Sources */,

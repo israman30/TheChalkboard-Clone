@@ -22,8 +22,8 @@ struct MainListView: View {
                         HStack {
                             VStack {}
                                 .frame(maxHeight: .infinity)
-                                .frame(width: 5)
-                                .background(task.isPriority ? .red : Color(.systemGray4))
+                                .frame(width: 1)
+                                .background(Color.customGreen)
                                 .padding(.leading, -10)
 //                                .opacity(task.isPriority ? 1 : 0)
 
@@ -49,38 +49,8 @@ struct MainListView: View {
                                         .font(.footnote)
                                         .foregroundColor(.secondary)
                                     Spacer()
-                                     Text("High")
-                                        .padding(4)
-                                        .foregroundColor(.white)
-                                        .background(Color.red)
-                                        .font(.caption)
-                                        .fontWeight(.bold)
-                                        .cornerRadius(5)
-                                    
-                                    Text("Medium")
-                                       .padding(4)
-                                       .foregroundColor(.white)
-                                       .background(Color.yellow)
-                                       .font(.caption)
-                                       .fontWeight(.bold)
-                                       .cornerRadius(5)
-                                    
-                                    Text("Normal")
-                                       .padding(4)
-                                       .foregroundColor(.white)
-                                       .background(Color.gray)
-                                       .font(.caption)
-                                       .fontWeight(.bold)
-                                       .cornerRadius(5)
-                                    
-                                    Text("Low")
-                                       .padding(4)
-                                       .foregroundColor(.white)
-                                       .background(Color.green)
-                                       .font(.caption)
-                                       .fontWeight(.bold)
-                                       .cornerRadius(5)
-
+                                     
+                                    LevelSection(task: task)
                                 }
                             }
                         }
@@ -115,7 +85,7 @@ struct MainListView: View {
                 notification.requestAuthorization()
                 notification.removeNotificaion()
             }
-            .sheet(isPresented: $isShowing, content: {
+            .fullScreenCover(isPresented: $isShowing, content: {
                 AddingView()
             })
             

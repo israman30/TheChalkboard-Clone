@@ -42,6 +42,8 @@ struct AddingView: View {
                             Spacer()
                             Button("High") {
                                 self.vm.isHigh.toggle()
+                                self.vm.isMedium = false
+                                self.vm.isLow = false
                             }
                             .padding(4)
                             .foregroundColor(.white)
@@ -50,6 +52,8 @@ struct AddingView: View {
                             
                             Button("Medium") {
                                 self.vm.isMedium.toggle()
+                                self.vm.isHigh = false
+                                self.vm.isLow = false
                             }
                             .padding(4)
                             .foregroundColor(.white)
@@ -58,6 +62,8 @@ struct AddingView: View {
                             
                             Button("Low") {
                                 self.vm.isLow.toggle()
+                                self.vm.isHigh = false
+                                self.vm.isMedium = false
                             }
                             .padding(4)
                             .foregroundColor(.white)

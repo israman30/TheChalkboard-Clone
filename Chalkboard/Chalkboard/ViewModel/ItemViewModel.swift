@@ -37,6 +37,9 @@ class ItemViewModel: ObservableObject {
         newTask.title = titleItem
         newTask.name = addedItem
         newTask.isPriority = isPriority
+        newTask.isHigh = isHigh
+        newTask.isMedium = isMedium
+        newTask.isLow = isLow
         newTask.timestamp = dateFormatter.string(from: date)
         save()
         close()
