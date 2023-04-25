@@ -30,7 +30,7 @@ struct MainListView: View {
                             VStack(alignment: .leading, spacing: 5) {
                                 Text(task.title ?? LocalizablesConstants.mainNotItemLabel)
                                     .font(.title)
-                                    .fontWeight(.medium)
+                                    .fontWeight(.bold)
                                     .strikethrough(task.isCompleted, color: .red)
                                     .contentShape(Rectangle())
                                     .onTapGesture {
@@ -47,6 +47,7 @@ struct MainListView: View {
                                 HStack {
                                     Text(task.timestamp ?? LocalizablesConstants.mainNotDateLabel)
                                         .font(.footnote)
+                                        .fontWeight(.bold)
                                         .foregroundColor(.secondary)
                                     Spacer()
                                      
