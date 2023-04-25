@@ -29,7 +29,7 @@ struct MainListView: View {
 
                             VStack(alignment: .leading, spacing: 5) {
                                 Text(task.title ?? LocalizablesConstants.mainNotItemLabel)
-                                    .font(.title3)
+                                    .font(.title)
                                     .fontWeight(.medium)
                                     .strikethrough(task.isCompleted, color: .red)
                                     .contentShape(Rectangle())

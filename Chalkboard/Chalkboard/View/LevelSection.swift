@@ -14,38 +14,28 @@ struct LevelSection: View {
     var body: some View {
         HStack {
             if task.isLow {
-                Text("Low")
-                   .padding(4)
-                   .foregroundColor(.white)
-                   .background(Color.green)
-                   .font(.caption)
-                   .fontWeight(.bold)
-                   .cornerRadius(5)
+                TagView(text: "Low", color: .green)
             } else if task.isMedium {
-                Text("Medium")
-                   .padding(4)
-                   .foregroundColor(.white)
-                   .background(Color.yellow)
-                   .font(.caption)
-                   .fontWeight(.bold)
-                   .cornerRadius(5)
+                TagView(text: "Medium", color: .yellow)
             } else if task.isHigh {
-                Text("High")
-                   .padding(4)
-                   .foregroundColor(.white)
-                   .background(Color.red)
-                   .font(.caption)
-                   .fontWeight(.bold)
-                   .cornerRadius(5)
+                TagView(text: "High", color: .red)
             } else {
-                Text("Task")
-                    .padding(4)
-                    .foregroundColor(.white)
-                    .background(Color.gray)
-                    .font(.caption)
-                    .fontWeight(.bold)
-                    .cornerRadius(5)
+                TagView(text: "Task", color: .gray)
             }
         }
+        .font(.body)
+        .foregroundColor(.white)
+    }
+}
+
+struct TagView: View {
+    let text: String
+    let color: Color
+    var body: some View {
+        Text(text)
+            .padding(4)
+            .background(color)
+            .fontWeight(.bold)
+            .cornerRadius(5)
     }
 }
