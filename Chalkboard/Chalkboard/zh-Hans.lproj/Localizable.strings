@@ -21,3 +21,6 @@
 "Accessibility_tap_for_make_the_task_important" = "点击使任务变得重要";
 "Accessibility_tap_for_adding_a_new_task" = "点击以添加新任务";
 
+"Accessiblity_high_level" = "高的";
+"Accessiblity_medium_level" = "中等的";
+"Accessiblity_low_level" = "低的";

@@ -21,3 +21,6 @@
 "Accessibility_tap_for_make_the_task_important" = "टास्क को महत्वपूर्ण बनाने के लिए टैप करें";
 "Accessibility_tap_for_adding_a_new_task" = "नया कार्य जोड़ने के लिए टैप करें";
 
+"Accessiblity_high_level" = "उच्च";
+"Accessiblity_medium_level" = "मध्यम";
+"Accessiblity_low_level" = "कम";

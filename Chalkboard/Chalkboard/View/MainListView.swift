@@ -22,15 +22,15 @@ struct MainListView: View {
                         HStack {
                             VStack {}
                                 .frame(maxHeight: .infinity)
-                                .frame(width: 5)
-                                .background(task.isPriority ? .red : Color(.systemGray4))
+                                .frame(width: 1)
+                                .background(Color.customGreen)
                                 .padding(.leading, -10)
 //                                .opacity(task.isPriority ? 1 : 0)
-                            
-                            VStack(alignment: .leading) {
+
+                            VStack(alignment: .leading, spacing: 5) {
                                 Text(task.title ?? LocalizablesConstants.mainNotItemLabel)
-                                    .font(.title3)
-                                    .fontWeight(.medium)
+                                    .font(.title)
+                                    .fontWeight(.bold)
                                     .strikethrough(task.isCompleted, color: .red)
                                     .contentShape(Rectangle())
                                     .onTapGesture {
@@ -42,9 +42,17 @@ struct MainListView: View {
                                     .font(.body)
                                     .fontWeight(.light)
                                     .strikethrough(task.isCompleted, color: .red)
-                                Text(task.timestamp ?? LocalizablesConstants.mainNotDateLabel)
-                                    .font(.footnote)
-                                    .foregroundColor(.secondary)
+                                
+                                
+                                HStack {
+                                    Text(task.timestamp ?? LocalizablesConstants.mainNotDateLabel)
+                                        .font(.footnote)
+                                        .fontWeight(.bold)
+                                        .foregroundColor(.secondary)
+                                    Spacer()
+                                     
+                                    LevelSection(task: task)
+                                }
                             }
                         }
                     }
@@ -78,7 +86,7 @@ struct MainListView: View {
                 notification.requestAuthorization()
                 notification.removeNotificaion()
             }
-            .sheet(isPresented: $isShowing, content: {
+            .fullScreenCover(isPresented: $isShowing, content: {
                 AddingView()
             })
             

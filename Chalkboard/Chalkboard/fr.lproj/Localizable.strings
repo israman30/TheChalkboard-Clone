@@ -21,3 +21,6 @@
 "Accessibility_tap_for_make_the_task_important" = "appuyez pour rendre la tâche importante";
 "Accessibility_tap_for_adding_a_new_task" = "appuyez pour ajouter une nouvelle tâche";
 
+"Accessiblity_high_level" = "Haut";
+"Accessiblity_medium_level" = "Moyen";
+"Accessiblity_low_level" = "Faible";

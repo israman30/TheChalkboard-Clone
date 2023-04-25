@@ -36,25 +36,44 @@ struct AddingView: View {
                     VStack(alignment: .trailing) {
                         Spacer()
                         HStack {
+                            Text("Level:")
+                                .font(.callout)
+                                .fontWeight(.none)
                             Spacer()
-                            Button {
-                                self.vm.isPriority.toggle()
-                            } label: {
-                                HStack {
-                                    Image(systemName: vm.isPriority ? "checkmark" : "exclamationmark.circle")
-                                    Text(LocalizablesConstants.addingImportantDescription)
-                                }
-                                .font(.system(size: 12))
-                                .foregroundColor(Color(.label))
-                                .accessibilityHint(Text(LocalizablesConstants.addingImportantDescriptionHint))
+                            Button("High") {
+                                self.vm.isHigh.toggle()
+                                self.vm.isMedium = false
+                                self.vm.isLow = false
                             }
-                            .padding(5)
-                            .buttonStyle(.bordered)
-                            .tint(vm.isPriority ? .red : .clear)
-                            .opacity(!vm.addedItem.isEmpty ? 1 : 0)
+                            .padding(4)
+                            .foregroundColor(.white)
+                            .background(vm.isHigh ? .red : .gray)
+                            .cornerRadius(5)
                             
+                            Button("Medium") {
+                                self.vm.isMedium.toggle()
+                                self.vm.isHigh = false
+                                self.vm.isLow = false
+                            }
+                            .padding(4)
+                            .foregroundColor(.white)
+                            .background(vm.isMedium ? .yellow : .gray)
+                            .cornerRadius(5)
+                            
+                            Button("Low") {
+                                self.vm.isLow.toggle()
+                                self.vm.isHigh = false
+                                self.vm.isMedium = false
+                            }
+                            .padding(4)
+                            .foregroundColor(.white)
+                            .background(vm.isLow ? .green : .gray)
+                            .cornerRadius(5)
                         }
-                        
+                        .padding(5)
+                        .font(.callout)
+                        .fontWeight(.bold)
+                        .opacity(!vm.addedItem.isEmpty ? 1 : 0)
                     }
                     .padding(.top)
 

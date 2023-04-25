@@ -21,3 +21,6 @@
 "Accessibility_tap_for_make_the_task_important" = "нажмите, чтобы сделать задачу важной";
 "Accessibility_tap_for_adding_a_new_task" = "нажмите, чтобы добавить новую задачу";
 
+"Accessiblity_high_level" = "Высокий";
+"Accessiblity_medium_level" = "Середина";
+"Accessiblity_low_level" = "Низкий";

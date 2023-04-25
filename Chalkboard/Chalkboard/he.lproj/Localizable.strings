@@ -21,3 +21,6 @@
 "Accessibility_tap_for_make_the_task_important" = "הקש כדי להפוך את המשימה לחשובה";
 "Accessibility_tap_for_adding_a_new_task" = "הקש להוספת משימה חדשה";
 
+"Accessiblity_high_level" = "גָבוֹהַ";
+"Accessiblity_medium_level" = "בינוני";
+"Accessiblity_low_level" = "נָמוּך";

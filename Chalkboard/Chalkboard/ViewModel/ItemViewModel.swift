@@ -14,6 +14,9 @@ class ItemViewModel: ObservableObject {
     @Published var titleItem = ""
     @Published var addedItem = ""
     @Published var isPriority = false
+    @Published var isHigh = false
+    @Published var isMedium = false
+    @Published var isLow = false
     @Published var date = Date()
     let notification: NotificationManagerViewModel = .instance
     
@@ -34,6 +37,9 @@ class ItemViewModel: ObservableObject {
         newTask.title = titleItem
         newTask.name = addedItem
         newTask.isPriority = isPriority
+        newTask.isHigh = isHigh
+        newTask.isMedium = isMedium
+        newTask.isLow = isLow
         newTask.timestamp = dateFormatter.string(from: date)
         save()
         close()

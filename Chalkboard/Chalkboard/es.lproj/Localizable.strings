@@ -19,3 +19,7 @@
 "Accessibility_important" = "Importante";
 "Accessibility_tap_for_make_the_task_important" = "toque para hacer que la tarea sea importante";
 "Accessibility_tap_for_adding_a_new_task" = "toque para agregar una nueva tarea";
+
+"Accessiblity_high_level" = "Alto";
+"Accessiblity_medium_level" = "Medio";
+"Accessiblity_low_level" = "Bajo";

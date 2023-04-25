@@ -21,3 +21,6 @@
 "Accessibility_tap_for_make_the_task_important" = "انقر لجعل المهمة مهمة";
 "Accessibility_tap_for_adding_a_new_task" = "اضغط لإضافة مهمة جديدة";
 
+"Accessiblity_high_level" = "عالي";
+"Accessiblity_medium_level" = "واسطة";
+"Accessiblity_low_level" = "قليل";

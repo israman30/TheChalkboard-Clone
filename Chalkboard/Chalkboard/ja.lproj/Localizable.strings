@@ -21,3 +21,6 @@
 "Accessibility_tap_for_make_the_task_important" = "タスクを重要にするためにタップします";
 "Accessibility_tap_for_adding_a_new_task" = "タップして新しいタスクを追加しますk";
 
+"Accessiblity_high_level" = "高い";
+"Accessiblity_medium_level" = "中くらい";
+"Accessiblity_low_level" = "低い";
