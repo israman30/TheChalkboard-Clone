@@ -22,4 +22,8 @@ struct LocalizablesConstants {
     static let addingImportantDescription = NSLocalizedString("Accessibility_important", comment: "Important")
     static let addingImportantDescriptionHint = NSLocalizedString("Accessibility_tap_for_make_the_task_important", comment: "tap for make the task important")
     static let closingButtonDescriptionHint = NSLocalizedString("Accessibility_tap_for_closing_page", comment: "tap for closing page")
+    
+    static let highLevel = NSLocalizedString("Accessiblity_high_level", comment: "High")
+    static let mediumLevel = NSLocalizedString("Accessiblity_medium_level", comment: "Medium")
+    static let lowLevel = NSLocalizedString("Accessiblity_low_level", comment: "Low")
 }

@@ -14,11 +14,11 @@ struct LevelSection: View {
     var body: some View {
         HStack {
             if task.isLow {
-                TagView(text: "Low", color: .green)
+                TagView(text: LocalizablesConstants.lowLevel, color: .green)
             } else if task.isMedium {
-                TagView(text: "Medium", color: .yellow)
+                TagView(text: LocalizablesConstants.mediumLevel, color: .yellow)
             } else if task.isHigh {
-                TagView(text: "High", color: .red)
+                TagView(text: LocalizablesConstants.highLevel, color: .red)
             } else {
                 TagView(text: "Task", color: .gray)
             }

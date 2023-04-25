@@ -21,3 +21,6 @@
 "Accessibility_tap_for_make_the_task_important" = "작업을 중요하게 만들기 위해 탭하세요.";
 "Accessibility_tap_for_adding_a_new_task" = "새 작업을 추가하려면 탭하세요.";
 
+"Accessiblity_high_level" = "높은";
+"Accessiblity_medium_level" = "중간";
+"Accessiblity_low_level" = "낮은";
